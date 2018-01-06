@@ -9,21 +9,25 @@ public class GenericUser : MonoBehaviour {
     PhotonView m_PhotonView;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         myID = this.gameObject.GetComponent<PhotonView>().ownerId;
         m_PhotonView = GetComponent<PhotonView>();
         DisableScripts();
 
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
-
-        if (myID == gm.Round)
+        if (m_PhotonView.isMine)
         {
-            playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
-            setMage();
-        } else
-        {
-            playerPosition.GetComponent<Renderer>().material.color = new Color(1f, 0f, 0f);
-            setTheif();
+            if (myID == gm.Round)
+            {
+                playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
+                setMage();
+            }
+            else
+            {
+                playerPosition.GetComponent<Renderer>().material.color = new Color(1f, 0f, 0f);
+                setTheif();
+            }
         }
     }
 

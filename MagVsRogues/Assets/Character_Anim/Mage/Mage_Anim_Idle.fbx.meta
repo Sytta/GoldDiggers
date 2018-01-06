@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6703240ffda43db4a803154efaa4efd1
 timeCreated: 1515277854
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
+=======
+guid: fce1bb1ce1a5ecc4b898962925d1f51e
+timeCreated: 1515279176
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
   fileIDToRecycleName:
     100000: alchemist_Body
     100002: Crowd_Rig_Clean:annotation1
@@ -173,14 +181,28 @@ ModelImporter:
     400162: Geo
     400164: group1
     400166: //RootNode
+<<<<<<< HEAD
+=======
+    2100000: 'Material #39'
+    2100002: 'Material #40'
+    2100004: lambert1
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
     4300000: alchemist_Body
     7400000: Take 001
     9500000: //RootNode
     13700000: alchemist_Body
+<<<<<<< HEAD
+=======
+  externalObjects: {}
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+<<<<<<< HEAD
+=======
+    materialLocation: 1
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -193,12 +215,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+<<<<<<< HEAD
+=======
+    importAnimatedCustomProperties: 0
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+<<<<<<< HEAD
+=======
+    extraUserProperties: []
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -206,13 +236,25 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+<<<<<<< HEAD
     importBlendShapes: 1
+=======
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+<<<<<<< HEAD
+=======
+    preserveHierarchy: 0
+    indexFormat: 0
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -222,6 +264,10 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+<<<<<<< HEAD
+=======
+    normalCalculationMode: 4
+>>>>>>> aeb6dc3e535a03596ca2352190b6363f1f397f91
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
