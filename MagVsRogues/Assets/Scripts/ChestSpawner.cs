@@ -11,8 +11,9 @@ public class ChestSpawner : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int i = Random.Range(0, Positions.Capacity);
-        GameObject newChest = PhotonNetwork.Instantiate("Chest", Positions[i], Quaternion.identity, 0);
-        newChest.gameObject.transform.eulerAngles = Rotations[i];
+        Quaternion rotation = Quaternion.Euler(Rotations[i]);
+        GameObject newChest = PhotonNetwork.Instantiate("Chest", Positions[i], rotation, 0);
+        //newChest.gameObject.transform.eulerAngles = Rotations[i];
         // TODO give powerups !!!
         float s = Random.Range(1.0f, GoldMultiplier);
         newChest.gameObject.GetComponent<ChestController>().gold = (int)(newChest.gameObject.GetComponent<ChestController>().gold * s);
