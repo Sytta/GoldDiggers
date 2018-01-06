@@ -13,6 +13,7 @@ TagManager:
   - Room_4
   - Room_Throne
   - Room_Entrance
+  - GameManager
   - Terrain
   layers:
   - Default
