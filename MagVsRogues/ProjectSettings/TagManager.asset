@@ -7,6 +7,13 @@ TagManager:
   - Character 1
   - Character 2
   - Chest
+  - Room_1
+  - Room_2
+  - Room_3
+  - Room_4
+  - Room_5
+  - Room_Throne
+  - Room_Entrance
   layers:
   - Default
   - TransparentFX
