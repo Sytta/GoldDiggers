@@ -32,9 +32,15 @@ public class ChestController : MonoBehaviour
         gold -= ammount;
         if (gold < 0)
             gold = 0;
-
+        this.gameObject.GetComponent<PhotonView>().RPC("UpdateSync", PhotonTargets.All, gold);
         UpdateMesh();
         return taken - gold;
+    }
+
+    [PunRPC]
+    void UpdateSync(int g)
+    {
+        gold = g;
     }
 
     public bool isEmpty()

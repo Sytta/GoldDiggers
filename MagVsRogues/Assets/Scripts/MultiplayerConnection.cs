@@ -1,5 +1,6 @@
 using Photon;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -104,7 +105,6 @@ public class MultiplayerConnection : PunBehaviour
         Debug.Log("Joined room: " + PhotonNetwork.room.Name);
         this.previousRoom = PhotonNetwork.room.Name;
         PlayerPrefs.SetString(previousRoomPlayerPrefKey, this.previousRoom);
-
     }
 
     public override void OnPhotonJoinRoomFailed(object[] codeAndMsg)

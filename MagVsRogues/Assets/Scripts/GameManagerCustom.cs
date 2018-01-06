@@ -4,6 +4,7 @@ using Photon;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 using ExitGames.Client.Photon;
 
@@ -18,7 +19,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] private RectTransform DisconnectedPanel;
 
     [SerializeField] private int PlayerCount = 3;
-
+    [SerializeField] private List<GameObject> initialiser;
     public void Start()
     {
         RefreshUIViews();
@@ -109,7 +110,11 @@ public class GameManagerCustom : PunBehaviour
             //////////// START GAME ////////////
             UiScreens.SetActive(false);
             CreatePlayerObject();
-            PhotonNetwork.Instantiate("Chest", new Vector3(0f, 3f, 0f), Quaternion.identity, 0);
+            foreach (var go in initialiser)
+            {
+                if (go != null)
+                    go.SetActive(true);
+            }
         }
         else
         {
