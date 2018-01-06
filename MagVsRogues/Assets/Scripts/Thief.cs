@@ -38,8 +38,6 @@ public class Thief: MonoBehaviour
         gameManger = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
         TeleporterLocations = gameManger.teleportLocations;
 
-
-
         a = (magicMaxSpeedUp - magicMinSpeedUp) / (magicMaxPPS - magicMinPPS);
         b = magicMaxSpeedUp - a * magicMaxPPS;
         // TODO Get time from animation
@@ -60,6 +58,19 @@ public class Thief: MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         canLoot = false;
+    }
+
+    public void SpawnThief(int location)
+    {
+        if(location == 2)
+        {
+            this.transform.position = new Vector3(0.5f, -2f, -7.5f);
+        }
+        else if (location == 3)
+        {
+            this.transform.position = new Vector3(4.5f, -2f, -7.5f);
+
+        }
     }
 
     private IEnumerator WaitForLoot()

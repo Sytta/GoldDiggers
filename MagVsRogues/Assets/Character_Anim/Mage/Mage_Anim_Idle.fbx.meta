@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: 6703240ffda43db4a803154efaa4efd1
+timeCreated: 1515277854
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: alchemist_Body
+    100002: Crowd_Rig_Clean:annotation1
+    100004: Crowd_Rig_Clean:BodyJ
+    100006: Crowd_Rig_Clean:Clavicules_Ctrl_Droite
+    100008: Crowd_Rig_Clean:Clavicules_Ctrl_Gauche
+    100010: Crowd_Rig_Clean:Controller_Visibility_UPDATENOTE
+    100012: Crowd_Rig_Clean:Ctrl_Elbow_Right
+    100014: Crowd_Rig_Clean:Ctrl_Foot_Left
+    100016: Crowd_Rig_Clean:Ctrl_Foot_Right
+    100018: Crowd_Rig_Clean:Ctrl_GroupeMain
+    100020: Crowd_Rig_Clean:Ctrl_Hand_Left_IK
+    100022: Crowd_Rig_Clean:Ctrl_Hand_Right
+    100024: Crowd_Rig_Clean:Ctrl_Hand_Right_IK
+    100026: Crowd_Rig_Clean:Ctrl_Head
+    100028: Crowd_Rig_Clean:Ctrl_head
+    100030: Crowd_Rig_Clean:Ctrl_IK_FK_LEFT_ARM
+    100032: Crowd_Rig_Clean:Ctrl_IK_FK_RIGHT_ARM
+    100034: Crowd_Rig_Clean:Ctrl_Main
+    100036: Crowd_Rig_Clean:Ctrl_MainHips
+    100038: Crowd_Rig_Clean:Ctrl_Neck
+    100040: Crowd_Rig_Clean:Ctrl_Shoulder_Left_FK
+    100042: Crowd_Rig_Clean:Ctrl_Shoulder_Right_FK
+    100044: Crowd_Rig_Clean:Ctrl_Spine_01
+    100046: Crowd_Rig_Clean:Ctrl_Spine_02
+    100048: Crowd_Rig_Clean:CtrlPelvis
+    100050: Crowd_Rig_Clean:Elbow_CtrlPoleVector_Left
+    100052: Crowd_Rig_Clean:Elbow_CtrlPoleVector_Right
+    100054: Crowd_Rig_Clean:ElbowJ_01_Left_REAL
+    100056: Crowd_Rig_Clean:ElbowJ_01_Right_REAL
+    100058: Crowd_Rig_Clean:Eye_ManCrowd_01
+    100060: Crowd_Rig_Clean:EyeCtrl_Left
+    100062: Crowd_Rig_Clean:EyeCtrl_Main
+    100064: Crowd_Rig_Clean:EyeCtrl_Right
+    100066: Crowd_Rig_Clean:FootCtrl_Left
+    100068: Crowd_Rig_Clean:FootCtrl_Right
+    100070: Crowd_Rig_Clean:FootJ_01_Left
+    100072: Crowd_Rig_Clean:FootJ_01_Right
+    100074: Crowd_Rig_Clean:FootJ_End_Left
+    100076: Crowd_Rig_Clean:FootJ_End_Right
+    100078: Crowd_Rig_Clean:FootPivTipytoe_Left
+    100080: Crowd_Rig_Clean:FootPivTipytoe_Right
+    100082: Crowd_Rig_Clean:FootRollPiv_Left
+    100084: Crowd_Rig_Clean:FootRollPiv_Right
+    100086: Crowd_Rig_Clean:Hand_End_Left_REAL
+    100088: Crowd_Rig_Clean:Hand_End_Right_REAL
+    100090: Crowd_Rig_Clean:Head_01
+    100092: Crowd_Rig_Clean:Head_End
+    100094: Crowd_Rig_Clean:Heel_Piv_Left
+    100096: Crowd_Rig_Clean:HeelPiv_Right
+    100098: Crowd_Rig_Clean:IkFootBall_Left
+    100100: Crowd_Rig_Clean:IkFootBall_Right
+    100102: Crowd_Rig_Clean:IkFootEnd_Left
+    100104: Crowd_Rig_Clean:IkFootEnd_Right
+    100106: Crowd_Rig_Clean:IkLeg_Left
+    100108: Crowd_Rig_Clean:IkLeg_Right
+    100110: Crowd_Rig_Clean:LegJ_01_Left
+    100112: Crowd_Rig_Clean:LegJ_01_Right
+    100114: Crowd_Rig_Clean:LegJ_02_Left
+    100116: Crowd_Rig_Clean:LegJ_02_Right
+    100118: Crowd_Rig_Clean:LegJ_03_Left
+    100120: Crowd_Rig_Clean:LegJ_03_Right
+    100122: Crowd_Rig_Clean:LegPoleVector_Left
+    100124: Crowd_Rig_Clean:LegPoleVector_Right
+    100126: Crowd_Rig_Clean:Man_Geo
+    100128: Crowd_Rig_Clean:ManCrowd_01
+    100130: Crowd_Rig_Clean:NeckJ_01
+    100132: Crowd_Rig_Clean:Pelvis
+    100134: Crowd_Rig_Clean:Scale_Controller
+    100136: Crowd_Rig_Clean:ShoulderJ_01_Left_REAL
+    100138: Crowd_Rig_Clean:ShoulderJ_01_Right_REAL
+    100140: Crowd_Rig_Clean:SpaculaJ_01_Left_REAL
+    100142: Crowd_Rig_Clean:SpaculaJ_01_Right_REAL
+    100144: Crowd_Rig_Clean:SpineJ_01
+    100146: Crowd_Rig_Clean:SpineJ_02
+    100148: Crowd_Rig_Clean:SpineJ_03
+    100150: Crowd_Rig_Clean:ToeRollPiv_Left
+    100152: Crowd_Rig_Clean:ToeRollPiv_Right
+    100154: Crowd_Rig_Clean:WristJ_01_Left_REAL
+    100156: Crowd_Rig_Clean:WristJ_01_Right_REAL
+    100158: Ctrl_Elbow_Right
+    100160: Ctrl_Hand_Right
+    100162: Geo
+    100164: group1
+    100166: //RootNode
+    400000: alchemist_Body
+    400002: Crowd_Rig_Clean:annotation1
+    400004: Crowd_Rig_Clean:BodyJ
+    400006: Crowd_Rig_Clean:Clavicules_Ctrl_Droite
+    400008: Crowd_Rig_Clean:Clavicules_Ctrl_Gauche
+    400010: Crowd_Rig_Clean:Controller_Visibility_UPDATENOTE
+    400012: Crowd_Rig_Clean:Ctrl_Elbow_Right
+    400014: Crowd_Rig_Clean:Ctrl_Foot_Left
+    400016: Crowd_Rig_Clean:Ctrl_Foot_Right
+    400018: Crowd_Rig_Clean:Ctrl_GroupeMain
+    400020: Crowd_Rig_Clean:Ctrl_Hand_Left_IK
+    400022: Crowd_Rig_Clean:Ctrl_Hand_Right
+    400024: Crowd_Rig_Clean:Ctrl_Hand_Right_IK
+    400026: Crowd_Rig_Clean:Ctrl_Head
+    400028: Crowd_Rig_Clean:Ctrl_head
+    400030: Crowd_Rig_Clean:Ctrl_IK_FK_LEFT_ARM
+    400032: Crowd_Rig_Clean:Ctrl_IK_FK_RIGHT_ARM
+    400034: Crowd_Rig_Clean:Ctrl_Main
+    400036: Crowd_Rig_Clean:Ctrl_MainHips
+    400038: Crowd_Rig_Clean:Ctrl_Neck
+    400040: Crowd_Rig_Clean:Ctrl_Shoulder_Left_FK
+    400042: Crowd_Rig_Clean:Ctrl_Shoulder_Right_FK
+    400044: Crowd_Rig_Clean:Ctrl_Spine_01
+    400046: Crowd_Rig_Clean:Ctrl_Spine_02
+    400048: Crowd_Rig_Clean:CtrlPelvis
+    400050: Crowd_Rig_Clean:Elbow_CtrlPoleVector_Left
+    400052: Crowd_Rig_Clean:Elbow_CtrlPoleVector_Right
+    400054: Crowd_Rig_Clean:ElbowJ_01_Left_REAL
+    400056: Crowd_Rig_Clean:ElbowJ_01_Right_REAL
+    400058: Crowd_Rig_Clean:Eye_ManCrowd_01
+    400060: Crowd_Rig_Clean:EyeCtrl_Left
+    400062: Crowd_Rig_Clean:EyeCtrl_Main
+    400064: Crowd_Rig_Clean:EyeCtrl_Right
+    400066: Crowd_Rig_Clean:FootCtrl_Left
+    400068: Crowd_Rig_Clean:FootCtrl_Right
+    400070: Crowd_Rig_Clean:FootJ_01_Left
+    400072: Crowd_Rig_Clean:FootJ_01_Right
+    400074: Crowd_Rig_Clean:FootJ_End_Left
+    400076: Crowd_Rig_Clean:FootJ_End_Right
+    400078: Crowd_Rig_Clean:FootPivTipytoe_Left
+    400080: Crowd_Rig_Clean:FootPivTipytoe_Right
+    400082: Crowd_Rig_Clean:FootRollPiv_Left
+    400084: Crowd_Rig_Clean:FootRollPiv_Right
+    400086: Crowd_Rig_Clean:Hand_End_Left_REAL
+    400088: Crowd_Rig_Clean:Hand_End_Right_REAL
+    400090: Crowd_Rig_Clean:Head_01
+    400092: Crowd_Rig_Clean:Head_End
+    400094: Crowd_Rig_Clean:Heel_Piv_Left
+    400096: Crowd_Rig_Clean:HeelPiv_Right
+    400098: Crowd_Rig_Clean:IkFootBall_Left
+    400100: Crowd_Rig_Clean:IkFootBall_Right
+    400102: Crowd_Rig_Clean:IkFootEnd_Left
+    400104: Crowd_Rig_Clean:IkFootEnd_Right
+    400106: Crowd_Rig_Clean:IkLeg_Left
+    400108: Crowd_Rig_Clean:IkLeg_Right
+    400110: Crowd_Rig_Clean:LegJ_01_Left
+    400112: Crowd_Rig_Clean:LegJ_01_Right
+    400114: Crowd_Rig_Clean:LegJ_02_Left
+    400116: Crowd_Rig_Clean:LegJ_02_Right
+    400118: Crowd_Rig_Clean:LegJ_03_Left
+    400120: Crowd_Rig_Clean:LegJ_03_Right
+    400122: Crowd_Rig_Clean:LegPoleVector_Left
+    400124: Crowd_Rig_Clean:LegPoleVector_Right
+    400126: Crowd_Rig_Clean:Man_Geo
+    400128: Crowd_Rig_Clean:ManCrowd_01
+    400130: Crowd_Rig_Clean:NeckJ_01
+    400132: Crowd_Rig_Clean:Pelvis
+    400134: Crowd_Rig_Clean:Scale_Controller
+    400136: Crowd_Rig_Clean:ShoulderJ_01_Left_REAL
+    400138: Crowd_Rig_Clean:ShoulderJ_01_Right_REAL
+    400140: Crowd_Rig_Clean:SpaculaJ_01_Left_REAL
+    400142: Crowd_Rig_Clean:SpaculaJ_01_Right_REAL
+    400144: Crowd_Rig_Clean:SpineJ_01
+    400146: Crowd_Rig_Clean:SpineJ_02
+    400148: Crowd_Rig_Clean:SpineJ_03
+    400150: Crowd_Rig_Clean:ToeRollPiv_Left
+    400152: Crowd_Rig_Clean:ToeRollPiv_Right
+    400154: Crowd_Rig_Clean:WristJ_01_Left_REAL
+    400156: Crowd_Rig_Clean:WristJ_01_Right_REAL
+    400158: Ctrl_Elbow_Right
+    400160: Ctrl_Hand_Right
+    400162: Geo
+    400164: group1
+    400166: //RootNode
+    4300000: alchemist_Body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: alchemist_Body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

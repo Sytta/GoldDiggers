@@ -42,6 +42,7 @@ public class GenericUser : MonoBehaviour {
     void setTheif()
     {
         this.GetComponent<Thief>().enabled = (true);
+        this.GetComponent<Thief>().SpawnThief(myID);
         this.GetComponent<Mage>().enabled = (false);
         // TODO Swap UI and swap skins
     }

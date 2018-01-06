@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: e807af48f043ebf48a7471bc168e5bfa
+timeCreated: 1515277855
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MAge_Rig_01:alchemist_Body
+    100004: MAge_Rig_01:Crowd_Rig_Clean:annotation1
+    100006: MAge_Rig_01:Crowd_Rig_Clean:BodyJ
+    100008: MAge_Rig_01:Crowd_Rig_Clean:Clavicules_Ctrl_Droite
+    100010: MAge_Rig_01:Crowd_Rig_Clean:Clavicules_Ctrl_Gauche
+    100012: MAge_Rig_01:Crowd_Rig_Clean:Controller_Visibility_UPDATENOTE
+    100014: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Elbow_Right
+    100016: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Foot_Left
+    100018: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Foot_Right
+    100020: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_GroupeMain
+    100022: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Hand_Left_IK
+    100024: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Hand_Right
+    100026: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Hand_Right_IK
+    100028: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Head
+    100030: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_head
+    100032: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_IK_FK_LEFT_ARM
+    100034: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_IK_FK_RIGHT_ARM
+    100036: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Main
+    100038: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_MainHips
+    100040: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Neck
+    100042: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Shoulder_Left_FK
+    100044: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Shoulder_Right_FK
+    100046: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Spine_01
+    100048: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Spine_02
+    100050: MAge_Rig_01:Crowd_Rig_Clean:CtrlPelvis
+    100052: MAge_Rig_01:Crowd_Rig_Clean:Elbow_CtrlPoleVector_Left
+    100054: MAge_Rig_01:Crowd_Rig_Clean:Elbow_CtrlPoleVector_Right
+    100056: MAge_Rig_01:Crowd_Rig_Clean:ElbowJ_01_Left_REAL
+    100058: MAge_Rig_01:Crowd_Rig_Clean:ElbowJ_01_Right_REAL
+    100060: MAge_Rig_01:Crowd_Rig_Clean:Eye_ManCrowd_01
+    100062: MAge_Rig_01:Crowd_Rig_Clean:EyeCtrl_Left
+    100064: MAge_Rig_01:Crowd_Rig_Clean:EyeCtrl_Main
+    100066: MAge_Rig_01:Crowd_Rig_Clean:EyeCtrl_Right
+    100068: MAge_Rig_01:Crowd_Rig_Clean:FootCtrl_Left
+    100070: MAge_Rig_01:Crowd_Rig_Clean:FootCtrl_Right
+    100072: MAge_Rig_01:Crowd_Rig_Clean:FootJ_01_Left
+    100074: MAge_Rig_01:Crowd_Rig_Clean:FootJ_01_Right
+    100076: MAge_Rig_01:Crowd_Rig_Clean:FootJ_End_Left
+    100078: MAge_Rig_01:Crowd_Rig_Clean:FootJ_End_Right
+    100080: MAge_Rig_01:Crowd_Rig_Clean:FootPivTipytoe_Left
+    100082: MAge_Rig_01:Crowd_Rig_Clean:FootPivTipytoe_Right
+    100084: MAge_Rig_01:Crowd_Rig_Clean:FootRollPiv_Left
+    100086: MAge_Rig_01:Crowd_Rig_Clean:FootRollPiv_Right
+    100088: MAge_Rig_01:Crowd_Rig_Clean:Hand_End_Left_REAL
+    100090: MAge_Rig_01:Crowd_Rig_Clean:Hand_End_Right_REAL
+    100092: MAge_Rig_01:Crowd_Rig_Clean:Head_01
+    100094: MAge_Rig_01:Crowd_Rig_Clean:Head_End
+    100096: MAge_Rig_01:Crowd_Rig_Clean:Heel_Piv_Left
+    100098: MAge_Rig_01:Crowd_Rig_Clean:HeelPiv_Right
+    100100: MAge_Rig_01:Crowd_Rig_Clean:IkFootBall_Left
+    100102: MAge_Rig_01:Crowd_Rig_Clean:IkFootBall_Right
+    100104: MAge_Rig_01:Crowd_Rig_Clean:IkFootEnd_Left
+    100106: MAge_Rig_01:Crowd_Rig_Clean:IkFootEnd_Right
+    100108: MAge_Rig_01:Crowd_Rig_Clean:IkLeg_Left
+    100110: MAge_Rig_01:Crowd_Rig_Clean:IkLeg_Right
+    100112: MAge_Rig_01:Crowd_Rig_Clean:LegJ_01_Left
+    100114: MAge_Rig_01:Crowd_Rig_Clean:LegJ_01_Right
+    100116: MAge_Rig_01:Crowd_Rig_Clean:LegJ_02_Left
+    100118: MAge_Rig_01:Crowd_Rig_Clean:LegJ_02_Right
+    100120: MAge_Rig_01:Crowd_Rig_Clean:LegJ_03_Left
+    100122: MAge_Rig_01:Crowd_Rig_Clean:LegJ_03_Right
+    100124: MAge_Rig_01:Crowd_Rig_Clean:LegPoleVector_Left
+    100126: MAge_Rig_01:Crowd_Rig_Clean:LegPoleVector_Right
+    100128: MAge_Rig_01:Crowd_Rig_Clean:Man_Geo
+    100130: MAge_Rig_01:Crowd_Rig_Clean:ManCrowd_01
+    100132: MAge_Rig_01:Crowd_Rig_Clean:NeckJ_01
+    100134: MAge_Rig_01:Crowd_Rig_Clean:Pelvis
+    100136: MAge_Rig_01:Crowd_Rig_Clean:Scale_Controller
+    100138: MAge_Rig_01:Crowd_Rig_Clean:ShoulderJ_01_Left_REAL
+    100140: MAge_Rig_01:Crowd_Rig_Clean:ShoulderJ_01_Right_REAL
+    100142: MAge_Rig_01:Crowd_Rig_Clean:SpaculaJ_01_Left_REAL
+    100144: MAge_Rig_01:Crowd_Rig_Clean:SpaculaJ_01_Right_REAL
+    100146: MAge_Rig_01:Crowd_Rig_Clean:SpineJ_01
+    100148: MAge_Rig_01:Crowd_Rig_Clean:SpineJ_02
+    100150: MAge_Rig_01:Crowd_Rig_Clean:SpineJ_03
+    100152: MAge_Rig_01:Crowd_Rig_Clean:ToeRollPiv_Left
+    100154: MAge_Rig_01:Crowd_Rig_Clean:ToeRollPiv_Right
+    100156: MAge_Rig_01:Crowd_Rig_Clean:WristJ_01_Left_REAL
+    100158: MAge_Rig_01:Crowd_Rig_Clean:WristJ_01_Right_REAL
+    100160: MAge_Rig_01:Ctrl_Elbow_Right
+    100162: MAge_Rig_01:Ctrl_Hand_Right
+    100164: MAge_Rig_01:Geo
+    100166: MAge_Rig_01:group1
+    400000: //RootNode
+    400002: MAge_Rig_01:alchemist_Body
+    400004: MAge_Rig_01:Crowd_Rig_Clean:annotation1
+    400006: MAge_Rig_01:Crowd_Rig_Clean:BodyJ
+    400008: MAge_Rig_01:Crowd_Rig_Clean:Clavicules_Ctrl_Droite
+    400010: MAge_Rig_01:Crowd_Rig_Clean:Clavicules_Ctrl_Gauche
+    400012: MAge_Rig_01:Crowd_Rig_Clean:Controller_Visibility_UPDATENOTE
+    400014: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Elbow_Right
+    400016: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Foot_Left
+    400018: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Foot_Right
+    400020: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_GroupeMain
+    400022: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Hand_Left_IK
+    400024: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Hand_Right
+    400026: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Hand_Right_IK
+    400028: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Head
+    400030: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_head
+    400032: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_IK_FK_LEFT_ARM
+    400034: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_IK_FK_RIGHT_ARM
+    400036: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Main
+    400038: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_MainHips
+    400040: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Neck
+    400042: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Shoulder_Left_FK
+    400044: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Shoulder_Right_FK
+    400046: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Spine_01
+    400048: MAge_Rig_01:Crowd_Rig_Clean:Ctrl_Spine_02
+    400050: MAge_Rig_01:Crowd_Rig_Clean:CtrlPelvis
+    400052: MAge_Rig_01:Crowd_Rig_Clean:Elbow_CtrlPoleVector_Left
+    400054: MAge_Rig_01:Crowd_Rig_Clean:Elbow_CtrlPoleVector_Right
+    400056: MAge_Rig_01:Crowd_Rig_Clean:ElbowJ_01_Left_REAL
+    400058: MAge_Rig_01:Crowd_Rig_Clean:ElbowJ_01_Right_REAL
+    400060: MAge_Rig_01:Crowd_Rig_Clean:Eye_ManCrowd_01
+    400062: MAge_Rig_01:Crowd_Rig_Clean:EyeCtrl_Left
+    400064: MAge_Rig_01:Crowd_Rig_Clean:EyeCtrl_Main
+    400066: MAge_Rig_01:Crowd_Rig_Clean:EyeCtrl_Right
+    400068: MAge_Rig_01:Crowd_Rig_Clean:FootCtrl_Left
+    400070: MAge_Rig_01:Crowd_Rig_Clean:FootCtrl_Right
+    400072: MAge_Rig_01:Crowd_Rig_Clean:FootJ_01_Left
+    400074: MAge_Rig_01:Crowd_Rig_Clean:FootJ_01_Right
+    400076: MAge_Rig_01:Crowd_Rig_Clean:FootJ_End_Left
+    400078: MAge_Rig_01:Crowd_Rig_Clean:FootJ_End_Right
+    400080: MAge_Rig_01:Crowd_Rig_Clean:FootPivTipytoe_Left
+    400082: MAge_Rig_01:Crowd_Rig_Clean:FootPivTipytoe_Right
+    400084: MAge_Rig_01:Crowd_Rig_Clean:FootRollPiv_Left
+    400086: MAge_Rig_01:Crowd_Rig_Clean:FootRollPiv_Right
+    400088: MAge_Rig_01:Crowd_Rig_Clean:Hand_End_Left_REAL
+    400090: MAge_Rig_01:Crowd_Rig_Clean:Hand_End_Right_REAL
+    400092: MAge_Rig_01:Crowd_Rig_Clean:Head_01
+    400094: MAge_Rig_01:Crowd_Rig_Clean:Head_End
+    400096: MAge_Rig_01:Crowd_Rig_Clean:Heel_Piv_Left
+    400098: MAge_Rig_01:Crowd_Rig_Clean:HeelPiv_Right
+    400100: MAge_Rig_01:Crowd_Rig_Clean:IkFootBall_Left
+    400102: MAge_Rig_01:Crowd_Rig_Clean:IkFootBall_Right
+    400104: MAge_Rig_01:Crowd_Rig_Clean:IkFootEnd_Left
+    400106: MAge_Rig_01:Crowd_Rig_Clean:IkFootEnd_Right
+    400108: MAge_Rig_01:Crowd_Rig_Clean:IkLeg_Left
+    400110: MAge_Rig_01:Crowd_Rig_Clean:IkLeg_Right
+    400112: MAge_Rig_01:Crowd_Rig_Clean:LegJ_01_Left
+    400114: MAge_Rig_01:Crowd_Rig_Clean:LegJ_01_Right
+    400116: MAge_Rig_01:Crowd_Rig_Clean:LegJ_02_Left
+    400118: MAge_Rig_01:Crowd_Rig_Clean:LegJ_02_Right
+    400120: MAge_Rig_01:Crowd_Rig_Clean:LegJ_03_Left
+    400122: MAge_Rig_01:Crowd_Rig_Clean:LegJ_03_Right
+    400124: MAge_Rig_01:Crowd_Rig_Clean:LegPoleVector_Left
+    400126: MAge_Rig_01:Crowd_Rig_Clean:LegPoleVector_Right
+    400128: MAge_Rig_01:Crowd_Rig_Clean:Man_Geo
+    400130: MAge_Rig_01:Crowd_Rig_Clean:ManCrowd_01
+    400132: MAge_Rig_01:Crowd_Rig_Clean:NeckJ_01
+    400134: MAge_Rig_01:Crowd_Rig_Clean:Pelvis
+    400136: MAge_Rig_01:Crowd_Rig_Clean:Scale_Controller
+    400138: MAge_Rig_01:Crowd_Rig_Clean:ShoulderJ_01_Left_REAL
+    400140: MAge_Rig_01:Crowd_Rig_Clean:ShoulderJ_01_Right_REAL
+    400142: MAge_Rig_01:Crowd_Rig_Clean:SpaculaJ_01_Left_REAL
+    400144: MAge_Rig_01:Crowd_Rig_Clean:SpaculaJ_01_Right_REAL
+    400146: MAge_Rig_01:Crowd_Rig_Clean:SpineJ_01
+    400148: MAge_Rig_01:Crowd_Rig_Clean:SpineJ_02
+    400150: MAge_Rig_01:Crowd_Rig_Clean:SpineJ_03
+    400152: MAge_Rig_01:Crowd_Rig_Clean:ToeRollPiv_Left
+    400154: MAge_Rig_01:Crowd_Rig_Clean:ToeRollPiv_Right
+    400156: MAge_Rig_01:Crowd_Rig_Clean:WristJ_01_Left_REAL
+    400158: MAge_Rig_01:Crowd_Rig_Clean:WristJ_01_Right_REAL
+    400160: MAge_Rig_01:Ctrl_Elbow_Right
+    400162: MAge_Rig_01:Ctrl_Hand_Right
+    400164: MAge_Rig_01:Geo
+    400166: MAge_Rig_01:group1
+    4300000: MAge_Rig_01:alchemist_Body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: MAge_Rig_01:alchemist_Body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
