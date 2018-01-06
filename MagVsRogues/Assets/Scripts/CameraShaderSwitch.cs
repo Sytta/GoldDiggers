@@ -5,11 +5,10 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CameraShaderSwitch : MonoBehaviour
 {
-    private List<Renderer> thiefs = new List<Renderer>();
-
+    private Dictionary<int,Renderer> thiefs = new Dictionary<int, Renderer>();
     private GameManagerCustom gm;
     private PhotonView photonview;
-
+    public CameraSimple mainCamera;
     public Shader seeThroughShader;
     public List<Shader> originalShaders = new List<Shader>();
 
@@ -22,33 +21,35 @@ public class CameraShaderSwitch : MonoBehaviour
         if (Input.GetKey("p"))
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
-            if (GetComponent<GenericUser>().myID == gm.Round && thiefs.Count < 1)
+            var myPlayerId = mainCamera.Target.GetComponent<GenericUser>().myID;
+            if (myPlayerId == gm.Round)
             {
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                 Debug.Log("player count : " + players.Length);
                 for (int i = 0; i < players.Length; i++)
                 {
-                    photonview = players[i].GetComponent<PhotonView>();
-                    if (photonview.ownerId != PhotonNetwork.player.ID)
+                    var playerId = players[i].GetComponent<GenericUser>().myID;
+                    if (!thiefs.ContainsKey(playerId) && playerId != myPlayerId)
                     {
-                        thiefs.Add(players[i].GetComponentInChildren<Renderer>());
+                        Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
+                        thiefs.Add(playerId, players[i].GetComponentInChildren<Renderer>());
                         originalShaders.Add(players[i].GetComponentInChildren<Renderer>().material.shader);
                     }
                 }
-
             }
 
             SeeThrough();
 
         } else if (originalShaders.Count > 0)
         {
+            Debug.Log("RECOVER");
             Recover();
         }
     }
 
     void SeeThrough()
     {
-        foreach (Renderer thief in thiefs)
+        foreach (Renderer thief in thiefs.Values)
         {
             thief.material.shader = seeThroughShader;
         }
@@ -56,10 +57,16 @@ public class CameraShaderSwitch : MonoBehaviour
 
     void Recover()
     {
-        for (int i = 0; i < thiefs.Count; i++)
+        //for (int i = 0; i < thiefs.Count; i++)
+        //{
+        //    thiefs[i].material.shader = originalShaders[i];
+        //}
+        int cnt = 0;
+        foreach (Renderer thief in thiefs.Values)
         {
-            thiefs[i].material.shader = originalShaders[i];
+            thief.material.shader = originalShaders[cnt++];
         }
+
     }
 
     //private Color _default;
