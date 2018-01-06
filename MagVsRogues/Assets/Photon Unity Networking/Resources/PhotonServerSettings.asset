@@ -43,4 +43,5 @@ MonoBehaviour:
   - RequestForPickupTimes
   - TaggedPlayer
   - UpdateSync
+  - Prison
   DisableAutoOpenWizard: 1

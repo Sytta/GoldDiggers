@@ -18,6 +18,7 @@ public class TeleporterDiablo : MonoBehaviour {
         if (other.tag == "Player")
         {
             coll = other.gameObject;
+            Debug.Log(coll.gameObject.GetComponent<GenericUser>().myID);
         }
         else
         {
@@ -34,7 +35,7 @@ public class TeleporterDiablo : MonoBehaviour {
     void Update () {
         if (coll != null && this.gameObject.activeSelf)
         {
-            coll.gameObject.GetComponent<Thief>().GetComponent<PhotonView>().RPC("Jail", PhotonTargets.All, prisonCoord);
+            coll.gameObject.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.Others, prisonCoord);
         }
 	}
 }
