@@ -25,13 +25,13 @@ public class CameraShaderSwitch : MonoBehaviour
             if (myPlayerId == gm.Round)
             {
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                Debug.Log("player count : " + players.Length);
+                //Debug.Log("player count : " + players.Length);
                 for (int i = 0; i < players.Length; i++)
                 {
                     var playerId = players[i].GetComponent<GenericUser>().myID;
                     if (!thiefs.ContainsKey(playerId) && playerId != myPlayerId)
                     {
-                        Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
+                        //Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
                         thiefs.Add(playerId, players[i].GetComponentInChildren<Renderer>());
                         originalShaders.Add(players[i].GetComponentInChildren<Renderer>().material.shader);
                     }
@@ -42,7 +42,7 @@ public class CameraShaderSwitch : MonoBehaviour
 
         } else if (originalShaders.Count > 0)
         {
-            Debug.Log("RECOVER");
+            //Debug.Log("RECOVER");
             Recover();
         }
     }
@@ -51,7 +51,8 @@ public class CameraShaderSwitch : MonoBehaviour
     {
         foreach (Renderer thief in thiefs.Values)
         {
-            thief.material.shader = seeThroughShader;
+            if (thief.material.shader != null)
+                thief.material.shader = seeThroughShader;
         }
     }
 
@@ -64,7 +65,8 @@ public class CameraShaderSwitch : MonoBehaviour
         int cnt = 0;
         foreach (Renderer thief in thiefs.Values)
         {
-            thief.material.shader = originalShaders[cnt++];
+            if (thief.material.shader != null)
+                thief.material.shader = originalShaders[cnt++];
         }
 
     }
