@@ -34,15 +34,15 @@ public class GenericUser : MonoBehaviour {
 
     void setMage()
     {
-        this.GetComponent<Theif>().gameObject.SetActive(false);
-        this.GetComponent<Mage>().gameObject.SetActive(true);
+        this.GetComponent<Theif>().enabled = (false);
+        this.GetComponent<Mage>().enabled = (true);
         // TODO Swap UI and swap skins
     }
 
     void setTheif()
     {
-        this.GetComponent<Theif>().gameObject.SetActive(true);
-        this.GetComponent<Mage>().gameObject.SetActive(false);
+        this.GetComponent<Theif>().enabled = (true);
+        this.GetComponent<Mage>().enabled = (false);
         // TODO Swap UI and swap skins
     }
 
