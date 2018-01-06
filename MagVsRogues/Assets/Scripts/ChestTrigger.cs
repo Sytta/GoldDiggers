@@ -22,22 +22,20 @@ public class ChestTrigger : MonoBehaviour
         animatonSpeed = 1.0f;
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Chest")
         {
-            canLoot = true;
+            coll = other.gameObject;
+            canLoot = !coll.GetComponent<ChestController>().isEmpty();
         }
-        coll = other.gameObject;
+        else
+            canLoot = false;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Chest")
-        {
-            canLoot = false;
-        }
-        coll = null;
+        canLoot = false;
     }
 
     private IEnumerator WaitForLoot()
@@ -50,9 +48,12 @@ public class ChestTrigger : MonoBehaviour
             timeModifier = 1;
         timeMultiplier = 0;
         keyDownCounter = 0;
+        Debug.Log("Getting $$$ in " + animatonSpeed / timeModifier + " second(s)" );
         yield return new WaitForSecondsRealtime(animatonSpeed / timeModifier);
 
         goldYield += coll.GetComponent<ChestController>().DecreaseGold(goldAmount);
+
+        Debug.Log("Got :" + goldYield + "g");
         isLooting = false;
     }
 
@@ -60,18 +61,22 @@ public class ChestTrigger : MonoBehaviour
 
     private void Update()
     {
-        if(canLoot)
+        if(canLoot && coll != null)
         {
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.Z))
             {
-                if(isLooting == false)
-                    StartCoroutine(WaitForLoot());
+                if (isLooting == false)
+                {
+                    canLoot = !coll.GetComponent<ChestController>().isEmpty();
+                    if(canLoot)
+                        StartCoroutine(WaitForLoot());
+                }
             }
 
             if(isLooting)
             {
                 timeMultiplier += Time.deltaTime;
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.Z))
                 {
                     keyDownCounter += 1;
                 }

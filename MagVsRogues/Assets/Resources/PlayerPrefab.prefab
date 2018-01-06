@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 114616614841091702}
   - component: {fileID: 136556301266651572}
+  - component: {fileID: 114661271139389932}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -1730,6 +1731,19 @@ MonoBehaviour:
   BackwardSpeed: 2
   StrafeSpeed: 4
   RotateSpeed: 180
+--- !u!114 &114661271139389932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2d55d6b1418da40bf60453c37a9040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldAmount: 5
+  magicPPS: 10
 --- !u!136 &136556301266651572
 CapsuleCollider:
   m_ObjectHideFlags: 1

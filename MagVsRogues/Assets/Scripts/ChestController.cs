@@ -13,15 +13,15 @@ public class ChestController : MonoBehaviour
     void Start()
     {
         initialGold = gold;
-        initialHight = goldPile.position.y + magicH;
+        initialHight = goldPile.localPosition.y - magicH;
     }
 
 
 
     void UpdateMesh()
     {
-        var z = (float)gold / initialGold * initialHight;
-        goldPile.position = new Vector3(goldPile.position.x, goldPile.position.y, 1 - z);
+        var y = (float)gold / initialGold * initialHight + magicH;
+        goldPile.localPosition = new Vector3(goldPile.localPosition.x, y , goldPile.localPosition.z);
         if (gold <= 0)
             goldPile.gameObject.active = false;
     }
