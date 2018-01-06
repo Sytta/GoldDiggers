@@ -24,7 +24,7 @@ public class GoldDistribute : MonoBehaviour {
         }
 
         chests[chests.Length - 1].GetComponent<ChestController>().gold = total;
-        chests[chests.Length - 1].GetComponent<PhotonView>().RPC("UpdateSync", PhotonTargets.All, total);
+        chests[chests.Length - 1].GetComponent<PhotonView>().RPC("initGold", PhotonTargets.All, total);
     }
 	
 	// Update is called once per frame
