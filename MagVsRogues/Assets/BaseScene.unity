@@ -880,6 +880,7 @@ GameObject:
   - component: {fileID: 1565348786}
   - component: {fileID: 1565348785}
   - component: {fileID: 1565348784}
+  - component: {fileID: 1565348788}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -957,6 +958,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1565348788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565348782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f16255a57bbcb4fbd7209818fc968b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeThroughShader: {fileID: 4800000, guid: 7562b1042bbbed047beb852748c87eba, type: 3}
+  originalShaders: []
 --- !u!114 &1570420217 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114310200719901842, guid: 3d50d5d0c69e84c3c8964b27c91635a5,
@@ -1185,7 +1199,7 @@ GameObject:
   - component: {fileID: 1860739898}
   m_Layer: 0
   m_Name: Scripts
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
