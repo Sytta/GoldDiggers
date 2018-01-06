@@ -108,7 +108,6 @@ public class GameManagerCustom : PunBehaviour
             //////////// START GAME ////////////
             UiScreens.SetActive(false);
             CreatePlayerObject();
-            PhotonNetwork.Instantiate("Chest", new Vector3(0f, 3f, 0f), Quaternion.identity, 0);
         }
         else
         {
