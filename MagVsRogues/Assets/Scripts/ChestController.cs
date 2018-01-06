@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class ChestController : MonoBehaviour
 {
-    public float magicH = -0.02f;
+    public float magicH = -0.2f;
     public int gold;
     public Transform goldPile;
     private int initialGold;
@@ -13,15 +13,15 @@ public class ChestController : MonoBehaviour
     void Start()
     {
         initialGold = gold;
-        initialHight = goldPile.localPosition.y - magicH;
+        initialHight = goldPile.localPosition.z - magicH;
     }
 
 
 
     void UpdateMesh()
     {
-        var y = (float)gold / initialGold * initialHight + magicH;
-        goldPile.localPosition = new Vector3(goldPile.localPosition.x, y , goldPile.localPosition.z);
+        var z = (float)gold / initialGold * initialHight + magicH;
+        goldPile.localPosition = new Vector3(goldPile.localPosition.x, goldPile.localPosition.y , z);
         if (gold <= 0)
             goldPile.gameObject.active = false;
     }
