@@ -108,6 +108,7 @@ public class GameManagerCustom : PunBehaviour
             //////////// START GAME ////////////
             UiScreens.SetActive(false);
             CreatePlayerObject();
+            PhotonNetwork.Instantiate("Chest", new Vector3(0f, 3f, 0f), Quaternion.identity, 0);
         }
         else
         {
@@ -147,7 +148,6 @@ public class GameManagerCustom : PunBehaviour
         Vector3 position = new Vector3( 0f, 2.5f, 0f );
 
         GameObject newPlayerObject = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
-
         if (newPlayerObject != null)
             Camera.Target = newPlayerObject.transform;
     }

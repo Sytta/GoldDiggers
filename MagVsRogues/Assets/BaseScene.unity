@@ -942,7 +942,7 @@ MonoBehaviour:
   ConnectUiView: {fileID: 1244915656}
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
-  PlayerCount: 1
+  PlayerCount: 2
 --- !u!1001 &1934584451
 Prefab:
   m_ObjectHideFlags: 0
