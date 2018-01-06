@@ -1,6 +1,5 @@
 using Photon;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
