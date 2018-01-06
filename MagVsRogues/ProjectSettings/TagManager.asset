@@ -15,6 +15,7 @@ TagManager:
   - Room_Entrance
   - GameManager
   - Terrain
+  - Teleporter
   layers:
   - Default
   - TransparentFX

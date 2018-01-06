@@ -18,39 +18,39 @@ public class PlayerTelleportController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyUp(KeyCode.T))
+	    void Update () {
+            if (Input.GetKeyUp(KeyCode.T))
+            {
+                gameManger.FindMage();
+                mageCharacter = gameManger.magePlayer;
+                if (mageCharacter == this.gameObject)
+                {
+                    return;
+                }
+                else
+                {
+                    var teleportLocation = SelectTeleport();
+                    this.transform.position = teleportLocation.position;
+                }
+
+            }
+	    }
+
+        private Transform SelectTeleport()
         {
-            gameManger.FindMage();
-            mageCharacter = gameManger.magePlayer;
-            if (mageCharacter == this.gameObject)
-            {
-                return;
-            }
-            else
-            {
-                var teleportLocation = SelectTeleport();
-                this.transform.position = teleportLocation.position;
-            }
+            Transform selectedTeleport = TeleporterLocations[0];
+            List<Transform> sortedTeleports = 
+                (TeleporterLocations.OrderBy
+                (x => Vector3.Distance
+                            (mageCharacter.transform.position, 
+                            x.position)
+                            )
+                )
+                .ToList();
+
+            int random = Random.Range(0, sortedTeleports.Count - 1);
+
+            return sortedTeleports[random];
 
         }
-	}
-
-    private Transform SelectTeleport()
-    {
-        Transform selectedTeleport = TeleporterLocations[0];
-        List<Transform> sortedTeleports = 
-            (TeleporterLocations.OrderBy
-            (x => Vector3.Distance
-                        (mageCharacter.transform.position, 
-                        x.position)
-                        )
-            )
-            .ToList();
-
-        int random = Random.Range(0, sortedTeleports.Count - 1);
-
-        return sortedTeleports[random];
-
-    }
 }

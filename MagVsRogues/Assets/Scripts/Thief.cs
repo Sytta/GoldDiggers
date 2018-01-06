@@ -153,4 +153,10 @@ public class Thief: MonoBehaviour
         }
     }
 
+    [PunRPC]
+    void Prison(Vector3 p)
+    {
+        this.gameObject.transform.position = p;
+    }
+
 }
