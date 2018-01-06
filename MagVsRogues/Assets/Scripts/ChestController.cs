@@ -26,7 +26,7 @@ public class ChestController : MonoBehaviour
             goldPile.gameObject.active = false;
     }
 
-    public int decreseGold(int ammount)
+    public int DecreaseGold(int ammount)
     {
         int taken = gold;
         gold -= ammount;
