@@ -12,13 +12,18 @@ public class CameraShaderSwitch : MonoBehaviour
     public Shader seeThroughShader;
     public List<Shader> originalShaders = new List<Shader>();
 
+
+    public float visionCooldown = 15.0f;
+    public float visionTimer = 15.0f;
+    public bool canUseVision = true;
+
     //public Color myColor; // color you want the camera to render it as
     //public Material material; // material you want the camera to change
     //public string colorPropertyName; // name of the color property in the material's shader
 
     private void Update()
     {
-        if (Input.GetKey("p"))
+        if (Input.GetKey("p") && canUseVision)
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
             var myPlayerId = mainCamera.Target.GetComponent<GenericUser>().myID;
@@ -42,8 +47,21 @@ public class CameraShaderSwitch : MonoBehaviour
 
         } else if (originalShaders.Count > 0)
         {
-            //Debug.Log("RECOVER");
+            canUseVision = false;
             Recover();
+        }
+
+        if (!canUseVision)
+        {
+            if(visionTimer >= 0.0f)
+            {
+                visionTimer -= Time.deltaTime;
+            }
+            if(visionTimer <= 0.0f)
+            {
+                canUseVision = true;
+                visionTimer = visionCooldown;
+            }
         }
     }
 
@@ -65,7 +83,7 @@ public class CameraShaderSwitch : MonoBehaviour
         int cnt = 0;
         foreach (Renderer thief in thiefs.Values)
         {
-            if (thief.material.shader != null)
+            if (thief != null  && thief.material != null && thief.material.shader != null)
                 thief.material.shader = originalShaders[cnt++];
         }
 
