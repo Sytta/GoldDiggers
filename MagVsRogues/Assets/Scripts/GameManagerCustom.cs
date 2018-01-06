@@ -122,6 +122,7 @@ public class GameManagerCustom : PunBehaviour
                 if (go != null)
                     go.SetActive(true);
             }
+       
         }
         else
         {
@@ -166,17 +167,23 @@ public class GameManagerCustom : PunBehaviour
             Camera.Target = newPlayerObject.transform;
         var newPlayerId = newPlayerObject.GetComponent<PhotonView>().ownerId;
 
-        if (!playerDictionary.ContainsKey(newPlayerId))
-        {
-            playerDictionary.Add(newPlayerId, newPlayerObject);
-        }
-
-        if(newPlayerId == 1)
-        {
-            magePlayer = newPlayerObject;
-        }
+       
     }
 
+    public void FindMage()
+    {
+        var players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach(var player in players)
+        {
+            var mageNumber = Round;
+            if(player.GetComponent<GenericUser>().myID == mageNumber)
+            {
+                magePlayer = player;
+                return;
+            }
+        }
+    }
 
     public void ChangeMageCharacter(int id)
     {

@@ -8,7 +8,7 @@ public class PlayerTelleportController : MonoBehaviour {
     public bool canTeleport = false;
     public List<Transform> TeleporterLocations;
     public GameManagerCustom gameManger;
-    private GameObject mageCharacter;
+    private GameObject mageCharacter; 
     
     void Start()
     {
@@ -21,15 +21,23 @@ public class PlayerTelleportController : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyUp(KeyCode.T))
         {
+            gameManger.FindMage();
+            mageCharacter = gameManger.magePlayer;
+            if (mageCharacter == this.gameObject)
+            {
+                return;
+            }
+            else
+            {
+                var teleportLocation = SelectTeleport();
+                this.transform.position = teleportLocation.position;
+            }
 
-            var teleportLocation = SelectTeleport();
-            this.transform.position = teleportLocation.position;
         }
 	}
 
     private Transform SelectTeleport()
     {
-        mageCharacter = gameManger.magePlayer;
         Transform selectedTeleport = TeleporterLocations[0];
         List<Transform> sortedTeleports = 
             (TeleporterLocations.OrderBy
