@@ -29,11 +29,12 @@ public class RPGMovement : MonoBehaviour
 
     void Update()
     {
+
         if( m_PhotonView.isMine == true )
         {
             ResetSpeedValues();
 
-            UpdateRotateMovement();
+            //UpdateRotateMovement();
 
             UpdateForwardMovement();
             UpdateBackwardMovement();
@@ -121,29 +122,29 @@ public class RPGMovement : MonoBehaviour
 
     void UpdateStrafeMovement()
     {
-        if( Input.GetKey( KeyCode.Q ) == true )
+        if( Input.GetKey( KeyCode.A ) == true )
         {
             m_CurrentMovement = -transform.right * StrafeSpeed;
         }
 
-        if( Input.GetKey( KeyCode.E ) == true )
+        if( Input.GetKey( KeyCode.D ) == true )
         {
             m_CurrentMovement = transform.right * StrafeSpeed;
         }
     }
 
-    void UpdateRotateMovement()
-    {
-        if( Input.GetKey( KeyCode.A ) || Input.GetAxisRaw("Horizontal") < -0.1f )
-        {
-            m_CurrentTurnSpeed = -RotateSpeed;
-            transform.Rotate(0.0f, -RotateSpeed * Time.deltaTime, 0.0f);
-        }
+    //void UpdateRotateMovement()
+    //{
+    //    if( Input.GetKey( KeyCode.A ) || Input.GetAxisRaw("Horizontal") < -0.1f )
+    //    {
+    //        m_CurrentTurnSpeed = -RotateSpeed;
+    //        transform.Rotate(0.0f, -RotateSpeed * Time.deltaTime, 0.0f);
+    //    }
 
-        if( Input.GetKey( KeyCode.D ) || Input.GetAxisRaw("Horizontal") > 0.1f )
-        {
-            m_CurrentTurnSpeed = RotateSpeed;
-            transform.Rotate(0.0f, RotateSpeed * Time.deltaTime, 0.0f);
-        }
-    }
+    //    if( Input.GetKey( KeyCode.D ) || Input.GetAxisRaw("Horizontal") > 0.1f )
+    //    {
+    //        m_CurrentTurnSpeed = RotateSpeed;
+    //        transform.Rotate(0.0f, RotateSpeed * Time.deltaTime, 0.0f);
+    //    }
+    //}
 }
