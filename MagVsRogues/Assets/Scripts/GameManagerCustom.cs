@@ -11,6 +11,7 @@ public class GameManagerCustom : PunBehaviour
 {
     public CameraSimple Camera;
 
+    [SerializeField] public int Round { get; set; }
     [SerializeField] private GameObject UiScreens;
     [SerializeField] private RectTransform ConnectUiView;
     [SerializeField] private RectTransform WaitingUiView;
