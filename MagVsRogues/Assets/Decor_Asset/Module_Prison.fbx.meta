@@ -36,6 +36,8 @@ ModelImporter:
     100056: polySurface7
     100058: polySurface9
     100060: Porte_Prison 1
+    100062: Barreau_prison
+    100064: Porte_prison
     400000: Barreau_Prison1
     400002: //RootNode
     400004: Porte_Prison
@@ -67,6 +69,8 @@ ModelImporter:
     400056: polySurface7
     400058: polySurface9
     400060: Porte_Prison 1
+    400062: Barreau_prison
+    400064: Porte_prison
     2100000: lambert1
     2100002: blinn4
     2100004: Acier_Prison
@@ -100,6 +104,8 @@ ModelImporter:
     2300054: polySurface7
     2300056: polySurface9
     2300058: Porte_Prison 1
+    2300060: Barreau_prison
+    2300062: Porte_prison
     3300000: Barreau_Prison1
     3300002: Porte_Prison
     3300004: Prison
@@ -130,6 +136,8 @@ ModelImporter:
     3300054: polySurface7
     3300056: polySurface9
     3300058: Porte_Prison 1
+    3300060: Barreau_prison
+    3300062: Porte_prison
     4300000: Prison
     4300002: Barreau_Prison1
     4300004: Porte_Prison
@@ -159,6 +167,8 @@ ModelImporter:
     4300052: pCube44
     4300054: pCube45
     4300056: pCube46
+    4300058: Barreau_prison
+    4300060: Porte_prison
     9500000: //RootNode
   externalObjects: {}
   materials:
