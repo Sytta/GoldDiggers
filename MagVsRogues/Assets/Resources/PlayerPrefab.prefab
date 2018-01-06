@@ -766,7 +766,6 @@ GameObject:
   - component: {fileID: 114616614841091702}
   - component: {fileID: 136556301266651572}
   - component: {fileID: 114388806202206362}
-  - component: {fileID: 114222616963817614}
   - component: {fileID: 114839308939682316}
   - component: {fileID: 114329476407828776}
   m_Layer: 8
@@ -1787,20 +1786,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372376121131744}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114222616963817614
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6783bc25e8f0545bdcc65eb585d8f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canTeleport: 0
-  TeleporterLocations: []
-  gameManger: {fileID: 0}
 --- !u!114 &114329476407828776
 MonoBehaviour:
   m_ObjectHideFlags: 1
