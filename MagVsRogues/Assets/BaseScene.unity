@@ -899,6 +899,8 @@ MonoBehaviour:
   InputField: {fileID: 1570420217}
   UserId: 
   previousRoom: 
+  initialiser:
+  - {fileID: 791914368}
 --- !u!114 &1860739897
 MonoBehaviour:
   m_ObjectHideFlags: 0
