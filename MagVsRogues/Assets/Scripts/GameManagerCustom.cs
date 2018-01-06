@@ -58,21 +58,9 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-        // TODO CHANGE
-        if (PhotonNetwork.room.PlayerCount > 2)
-        {
-            ////////// TURN MANAGEMENT /////////////
-
-        }
-
     }
 
     #region Core Gameplay Methods
-    public void EndGame()
-    {
-        Debug.Log("EndGame");
-    }
-
     private void UpdatePlayerTexts()
     {
         
@@ -98,7 +86,7 @@ public class GameManagerCustom : PunBehaviour
     void RefreshUIViews()
     {
         ConnectUiView.gameObject.SetActive(!PhotonNetwork.inRoom);
-        WaitingUiView.gameObject.SetActive(PhotonNetwork.inRoom && PhotonNetwork.room.PlayerCount != PlayerCount);
+        WaitingUiView.gameObject.SetActive(PhotonNetwork.inRoom && PhotonNetwork.room.PlayerCount < PlayerCount);
     }
 
 
@@ -115,7 +103,7 @@ public class GameManagerCustom : PunBehaviour
     {
         RefreshUIViews();
 
-        if (PhotonNetwork.room.PlayerCount == PlayerCount)
+        if (PhotonNetwork.room.PlayerCount >= PlayerCount)
         {
             //////////// START GAME ////////////
             UiScreens.SetActive(false);
