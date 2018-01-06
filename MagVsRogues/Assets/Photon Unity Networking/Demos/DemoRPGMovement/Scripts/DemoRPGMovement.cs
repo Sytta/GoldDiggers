@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DemoRPGMovement : MonoBehaviour 
 {
-    public RPGCamera Camera;
+    public ThirdPersonCameraSimple Camera;
 
     void OnJoinedRoom()
     {
@@ -16,6 +16,8 @@ public class DemoRPGMovement : MonoBehaviour
 
         GameObject newPlayerObject = PhotonNetwork.Instantiate( "Char_2", position, Quaternion.identity, 0 );
 
-        Camera.Target = newPlayerObject.transform;
+        Camera.target = newPlayerObject.transform;
+
+
     }
 }

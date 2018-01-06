@@ -4514,7 +4514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &809721056
 Transform:
   m_ObjectHideFlags: 0
@@ -6162,6 +6162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046309925}
   - component: {fileID: 1046309924}
+  - component: {fileID: 1046309926}
   m_Layer: 0
   m_Name: RPG Camera
   m_TagString: Player
@@ -6175,7 +6176,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046309923}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45d2cd5ac7ae5de4d91fd395f8d61afd, type: 3}
   m_Name: 
@@ -6199,6 +6200,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1046309926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046309923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba057993f6fd5d4283d1c2e318fde01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockCursor: 1
+  mouseSensitivity: 5
+  target: {fileID: 0}
+  dstFromTarget: 2
+  pitchMinMax: {x: 25, y: 25}
+  rotationSmoothTime: 0.12
 --- !u!4 &1050395253 stripped
 Transform:
   m_PrefabParentObject: {fileID: 409632, guid: 471c1eb32c770a54ea8a1c3ffbda1de6, type: 2}
@@ -9151,7 +9169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3059a2d50d44347a80ee255a939e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 1046309924}
+  Camera: {fileID: 1046309926}
 --- !u!114 &1506814779
 MonoBehaviour:
   m_ObjectHideFlags: 0

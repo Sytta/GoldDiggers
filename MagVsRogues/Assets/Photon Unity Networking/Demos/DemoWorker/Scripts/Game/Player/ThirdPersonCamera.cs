@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ThirdPersonCamera : MonoBehaviour
+public class ThirdPersonCamera2 : MonoBehaviour
 {
 
     public Transform cameraTransform;
