@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:MagVsRogues/Assets/Plugins/RootMotion/FinalIK/_Integration.meta
 guid: 46abb989212c39945942ca1577ab9b58
 folderAsset: yes
 timeCreated: 1515237607
 licenseType: Free
+=======
+guid: fd35cb16d5e64408eb3f5b252bc0c154
+folderAsset: yes
+timeCreated: 1453117947
+licenseType: Store
+>>>>>>> 1f4daa5f0cc635290d580ec92b2121ed6eb3cf5f:MagVsRogues/Assets/Plugins/RootMotion/FinalIK/_Integration.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
