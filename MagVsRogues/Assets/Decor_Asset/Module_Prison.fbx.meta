@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: bf983aa04a4fd0942a9c00f8c736c9b4
+timeCreated: 1515231829
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Barreau_Prison1
+    100002: //RootNode
+    100004: Porte_Prison
+    100006: Prison
+    100008: pCube31
+    100010: pCube32
+    100012: pCube37
+    100014: pCube38
+    100016: pCube39
+    100018: pCube40
+    100020: pCube41
+    100022: pCube42
+    100024: pCube43
+    100026: pCube44
+    100028: pCube45
+    100030: pCube46
+    100032: pCube47
+    100034: pCube48
+    100036: polySurface1
+    100038: polySurface10
+    100040: polySurface11
+    100042: polySurface12
+    100044: polySurface15
+    100046: polySurface2
+    100048: polySurface3
+    100050: polySurface4
+    100052: polySurface5
+    100054: polySurface6
+    100056: polySurface7
+    100058: polySurface9
+    100060: Porte_Prison 1
+    100062: Barreau_prison
+    100064: Porte_prison
+    400000: Barreau_Prison1
+    400002: //RootNode
+    400004: Porte_Prison
+    400006: Prison
+    400008: pCube31
+    400010: pCube32
+    400012: pCube37
+    400014: pCube38
+    400016: pCube39
+    400018: pCube40
+    400020: pCube41
+    400022: pCube42
+    400024: pCube43
+    400026: pCube44
+    400028: pCube45
+    400030: pCube46
+    400032: pCube47
+    400034: pCube48
+    400036: polySurface1
+    400038: polySurface10
+    400040: polySurface11
+    400042: polySurface12
+    400044: polySurface15
+    400046: polySurface2
+    400048: polySurface3
+    400050: polySurface4
+    400052: polySurface5
+    400054: polySurface6
+    400056: polySurface7
+    400058: polySurface9
+    400060: Porte_Prison 1
+    400062: Barreau_prison
+    400064: Porte_prison
+    2100000: lambert1
+    2100002: blinn4
+    2100004: Acier_Prison
+    2300000: Barreau_Prison1
+    2300002: Porte_Prison
+    2300004: Prison
+    2300006: pCube31
+    2300008: pCube32
+    2300010: pCube37
+    2300012: pCube38
+    2300014: pCube39
+    2300016: pCube40
+    2300018: pCube41
+    2300020: pCube42
+    2300022: pCube43
+    2300024: pCube44
+    2300026: pCube45
+    2300028: pCube46
+    2300030: pCube47
+    2300032: pCube48
+    2300034: polySurface1
+    2300036: polySurface10
+    2300038: polySurface11
+    2300040: polySurface12
+    2300042: polySurface15
+    2300044: polySurface2
+    2300046: polySurface3
+    2300048: polySurface4
+    2300050: polySurface5
+    2300052: polySurface6
+    2300054: polySurface7
+    2300056: polySurface9
+    2300058: Porte_Prison 1
+    2300060: Barreau_prison
+    2300062: Porte_prison
+    3300000: Barreau_Prison1
+    3300002: Porte_Prison
+    3300004: Prison
+    3300006: pCube31
+    3300008: pCube32
+    3300010: pCube37
+    3300012: pCube38
+    3300014: pCube39
+    3300016: pCube40
+    3300018: pCube41
+    3300020: pCube42
+    3300022: pCube43
+    3300024: pCube44
+    3300026: pCube45
+    3300028: pCube46
+    3300030: pCube47
+    3300032: pCube48
+    3300034: polySurface1
+    3300036: polySurface10
+    3300038: polySurface11
+    3300040: polySurface12
+    3300042: polySurface15
+    3300044: polySurface2
+    3300046: polySurface3
+    3300048: polySurface4
+    3300050: polySurface5
+    3300052: polySurface6
+    3300054: polySurface7
+    3300056: polySurface9
+    3300058: Porte_Prison 1
+    3300060: Barreau_prison
+    3300062: Porte_prison
+    4300000: Prison
+    4300002: Barreau_Prison1
+    4300004: Porte_Prison
+    4300006: polySurface1
+    4300008: polySurface2
+    4300010: polySurface3
+    4300012: polySurface4
+    4300014: polySurface5
+    4300016: polySurface6
+    4300018: polySurface7
+    4300020: polySurface9
+    4300022: polySurface10
+    4300024: polySurface11
+    4300026: polySurface12
+    4300028: pCube31
+    4300030: pCube32
+    4300032: pCube37
+    4300034: pCube38
+    4300036: polySurface15
+    4300038: pCube47
+    4300040: pCube48
+    4300042: pCube40
+    4300044: pCube41
+    4300046: pCube42
+    4300048: pCube43
+    4300050: pCube39
+    4300052: pCube44
+    4300054: pCube45
+    4300056: pCube46
+    4300058: Barreau_prison
+    4300060: Porte_prison
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
