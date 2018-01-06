@@ -12,7 +12,7 @@ public class DemoRPGMovement : MonoBehaviour
 
     void CreatePlayerObject()
     {
-        Vector3 position = new Vector3( 33.5f, 1.5f, 20.5f );
+        Vector3 position = new Vector3(-0.4f, 1.599893f, -7.19f);
 
         GameObject newPlayerObject = PhotonNetwork.Instantiate( "Robot Kyle RPG", position, Quaternion.identity, 0 );
 
