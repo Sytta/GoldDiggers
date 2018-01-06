@@ -34,14 +34,14 @@ public class GenericUser : MonoBehaviour {
 
     void setMage()
     {
-        this.GetComponent<Theif>().enabled = (false);
+        this.GetComponent<Thief>().enabled = (false);
         this.GetComponent<Mage>().enabled = (true);
         // TODO Swap UI and swap skins
     }
 
     void setTheif()
     {
-        this.GetComponent<Theif>().enabled = (true);
+        this.GetComponent<Thief>().enabled = (true);
         this.GetComponent<Mage>().enabled = (false);
         // TODO Swap UI and swap skins
     }
@@ -49,6 +49,6 @@ public class GenericUser : MonoBehaviour {
     void DisableScripts()
     {
         GetComponent<Mage>().enabled = m_PhotonView.isMine;
-        GetComponent<Theif>().enabled = m_PhotonView.isMine;
+        GetComponent<Thief>().enabled = m_PhotonView.isMine;
     }
 }

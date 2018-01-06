@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 114388806202206362}
   - component: {fileID: 114222616963817614}
   - component: {fileID: 114839308939682316}
-  - component: {fileID: 114516537716149876}
+  - component: {fileID: 114329476407828776}
   m_Layer: 8
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -1594,8 +1594,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 11400000}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 1
+  instantiationId: 1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!137 &13700000
@@ -1607,7 +1607,6 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1623,7 +1622,6 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1759,7 +1757,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1775,7 +1772,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1805,6 +1801,28 @@ MonoBehaviour:
   canTeleport: 0
   TeleporterLocations: []
   gameManger: {fileID: 0}
+--- !u!114 &114329476407828776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab928229a3fc1234dacf3770a92b4c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldAmount: 5
+  magicMinPPS: 4
+  magicMaxPPS: 20
+  magicMinSpeedUp: 1
+  magicMaxSpeedUp: 5
+  teleportCooldown: 15
+  teleportTimer: 15
+  canTeleport: 1
+  hasTeleportPower: 0
+  TeleporterLocations: []
+  gameManger: {fileID: 0}
 --- !u!114 &114388806202206362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1818,22 +1836,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myID: -1
   playerPosition: {fileID: 4310054492741280}
---- !u!114 &114516537716149876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47064057bbfcf1e448f7c893dfa72cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldAmount: 5
-  magicMinPPS: 4
-  magicMaxPPS: 20
-  magicMinSpeedUp: 1
-  magicMaxSpeedUp: 5
 --- !u!114 &114616614841091702
 MonoBehaviour:
   m_ObjectHideFlags: 1

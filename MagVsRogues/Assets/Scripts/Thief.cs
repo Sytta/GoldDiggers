@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
-public class Theif : MonoBehaviour
+public class Thief: MonoBehaviour
 {
     private bool canLoot = false;
     private bool isLooting = false;
@@ -19,8 +21,25 @@ public class Theif : MonoBehaviour
     [SerializeField] private float magicMinSpeedUp = 1;
     [SerializeField] private float magicMaxSpeedUp = 5;
     private float a, b;
+
+
+    // TELEPORT LOGIC
+    public float teleportCooldown = 15.0f;
+    public float teleportTimer = 15.0f;
+    public bool canTeleport = true;
+    public bool hasTeleportPower = false;
+    public List<Transform> TeleporterLocations;
+    public GameManagerCustom gameManger;
+    private GameObject mageCharacter;
+
     private void Start()
     {
+        //Teleport logic
+        gameManger = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
+        TeleporterLocations = gameManger.teleportLocations;
+
+
+
         a = (magicMaxSpeedUp - magicMinSpeedUp) / (magicMaxPPS - magicMinPPS);
         b = magicMaxSpeedUp - a * magicMaxPPS;
         // TODO Get time from animation
@@ -62,6 +81,23 @@ public class Theif : MonoBehaviour
         isLooting = false;
     }
 
+    private Transform SelectTeleport()
+    {
+        Transform selectedTeleport = TeleporterLocations[0];
+        List<Transform> sortedTeleports =
+            (TeleporterLocations.OrderBy
+            (x => Vector3.Distance
+                        (mageCharacter.transform.position,
+                        x.position)
+                        )
+            )
+            .ToList();
+
+        int random = Random.Range(0, sortedTeleports.Count - 1);
+
+        return sortedTeleports[random];
+
+    }
 
 
     private void Update()
@@ -88,6 +124,32 @@ public class Theif : MonoBehaviour
             }
 
 
+        }
+
+        if (Input.GetKeyUp(KeyCode.T) && canTeleport)
+        {
+            gameManger.FindMage();
+            mageCharacter = gameManger.magePlayer;
+            {
+                var teleportLocation = SelectTeleport();
+                this.transform.position = teleportLocation.position;
+            }
+            canTeleport = false;
+        }
+
+        if(!canTeleport && hasTeleportPower)
+        {
+            // Decrement cooldown only if cooldown is active
+            if(teleportTimer >= 0.0f)
+            {
+                teleportTimer -= Time.deltaTime;
+            }
+            // If cooldown is over, we can now use it again.
+            if(teleportTimer <= 0.0f)
+            {
+                canTeleport = true;
+                teleportTimer = teleportCooldown;
+            }
         }
     }
 
