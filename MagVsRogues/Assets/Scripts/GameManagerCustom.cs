@@ -156,7 +156,7 @@ public class GameManagerCustom : PunBehaviour
 
     void CreatePlayerObject()
     {
-        Vector3 position = new Vector3( 33.5f, 1.5f, 20.5f );
+        Vector3 position = new Vector3( 0f, 2.5f, 0f );
 
         GameObject newPlayerObject = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
 
