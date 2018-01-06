@@ -14,10 +14,15 @@ public class ChestTrigger : MonoBehaviour
     private float timeModifier = 1.0f;
 
     [SerializeField] private int goldAmount = 5;
-    [SerializeField] private float magicPPS = 10;
-
+    [SerializeField] private float magicMinPPS = 4;
+    [SerializeField] private float magicMaxPPS = 20;
+    [SerializeField] private float magicMinSpeedUp = 1;
+    [SerializeField] private float magicMaxSpeedUp = 5;
+    private float a, b;
     private void Start()
     {
+        a = (magicMaxSpeedUp - magicMinSpeedUp) / (magicMaxPPS - magicMinPPS);
+        b = magicMaxSpeedUp - a * magicMaxPPS;
         // TODO Get time from animation
         animatonSpeed = 1.0f;
     }
@@ -43,7 +48,7 @@ public class ChestTrigger : MonoBehaviour
         isLooting = true;
         // TODO Set animation speed here
         if (timeMultiplier >= 0)
-            timeModifier = Mathf.Max(keyDownCounter / timeMultiplier - magicPPS, 1);
+            timeModifier = Mathf.Max(a * (keyDownCounter / timeMultiplier) + b, 1);
         else
             timeModifier = 1;
         timeMultiplier = 0;

@@ -1743,7 +1743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAmount: 5
-  magicPPS: 10
+  magicMinPPS: 4
+  magicMaxPPS: 20
+  magicMinSpeedUp: 1
+  magicMaxSpeedUp: 10
 --- !u!136 &136556301266651572
 CapsuleCollider:
   m_ObjectHideFlags: 1

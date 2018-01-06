@@ -485,7 +485,7 @@ Prefab:
     - target: {fileID: 114136690000886992, guid: 7d162beacece6c348b36a97204895287,
         type: 2}
       propertyPath: gold
-      value: 9
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4335967342241404, guid: 7d162beacece6c348b36a97204895287, type: 2}
       propertyPath: m_LocalPosition.y
