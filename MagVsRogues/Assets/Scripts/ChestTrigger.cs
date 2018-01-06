@@ -6,7 +6,7 @@ public class ChestTrigger : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(coll.
+        //if(coll.
     }
 
     
