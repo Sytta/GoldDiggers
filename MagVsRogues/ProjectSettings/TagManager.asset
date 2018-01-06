@@ -14,6 +14,7 @@ TagManager:
   - Room_5
   - Room_Throne
   - Room_Entrance
+  - GameManager
   layers:
   - Default
   - TransparentFX
