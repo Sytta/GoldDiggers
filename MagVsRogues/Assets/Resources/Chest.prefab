@@ -198,7 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5291fe95591493644ac1ea864d2fd6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 0
+  magicH: -0.2
+  gold: 200
   goldPile: {fileID: 4335967342241404}
 --- !u!143 &143338512015937816
 CharacterController:
