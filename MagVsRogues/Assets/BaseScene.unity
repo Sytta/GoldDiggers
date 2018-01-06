@@ -1267,7 +1267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1486001578
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1915,7 +1915,6 @@ MonoBehaviour:
   ConnectUiView: {fileID: 222050419}
   WaitingUiView: {fileID: 76553787}
   DisconnectedPanel: {fileID: 816747999}
-  PlayerPrefab: {fileID: 0}
 --- !u!1 &1950186647
 GameObject:
   m_ObjectHideFlags: 0
