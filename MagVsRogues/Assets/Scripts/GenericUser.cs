@@ -19,9 +19,11 @@ public class GenericUser : MonoBehaviour {
         if (myID == gm.Round)
         {
             playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
+            setMage();
         } else
         {
             playerPosition.GetComponent<Renderer>().material.color = new Color(1f, 0f, 0f);
+            setTheif();
         }
     }
 
@@ -30,9 +32,23 @@ public class GenericUser : MonoBehaviour {
 
     }
 
+    void setMage()
+    {
+        this.GetComponent<Theif>().gameObject.SetActive(false);
+        this.GetComponent<Mage>().gameObject.SetActive(true);
+        // TODO Swap UI and swap skins
+    }
+
+    void setTheif()
+    {
+        this.GetComponent<Theif>().gameObject.SetActive(true);
+        this.GetComponent<Mage>().gameObject.SetActive(false);
+        // TODO Swap UI and swap skins
+    }
+
     void DisableScripts()
     {
-        var mageScript = GetComponent<MageScript>().enabled = m_PhotonView.isMine;
-
+        GetComponent<Mage>().enabled = m_PhotonView.isMine;
+        GetComponent<Theif>().enabled = m_PhotonView.isMine;
     }
 }

@@ -765,10 +765,10 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 114616614841091702}
   - component: {fileID: 136556301266651572}
-  - component: {fileID: 114661271139389932}
-  - component: {fileID: 114334257454195280}
   - component: {fileID: 114388806202206362}
   - component: {fileID: 114222616963817614}
+  - component: {fileID: 114839308939682316}
+  - component: {fileID: 114516537716149876}
   m_Layer: 8
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -1607,6 +1607,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1622,6 +1623,7 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1757,6 +1759,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1772,6 +1775,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1801,17 +1805,6 @@ MonoBehaviour:
   canTeleport: 0
   TeleporterLocations: []
   gameManger: {fileID: 0}
---- !u!114 &114334257454195280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cf7d17e9a891c5418cce6bbd69a542e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114388806202206362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1825,6 +1818,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myID: -1
   playerPosition: {fileID: 4310054492741280}
+--- !u!114 &114516537716149876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47064057bbfcf1e448f7c893dfa72cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldAmount: 5
+  magicMinPPS: 4
+  magicMaxPPS: 20
+  magicMinSpeedUp: 1
+  magicMaxSpeedUp: 5
 --- !u!114 &114616614841091702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1840,22 +1849,18 @@ MonoBehaviour:
   BackwardSpeed: 2
   StrafeSpeed: 4
   RotateSpeed: 180
---- !u!114 &114661271139389932
+--- !u!114 &114839308939682316
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100100}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2d55d6b1418da40bf60453c37a9040, type: 3}
+  m_Script: {fileID: 11500000, guid: 10cf03c6ba976f44e963e8eae212b193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldAmount: 5
-  magicMinPPS: 4
-  magicMaxPPS: 20
-  magicMinSpeedUp: 1
-  magicMaxSpeedUp: 5
+  size: 2
 --- !u!136 &136556301266651572
 CapsuleCollider:
   m_ObjectHideFlags: 1
