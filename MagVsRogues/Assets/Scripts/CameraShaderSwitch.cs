@@ -22,9 +22,10 @@ public class CameraShaderSwitch : MonoBehaviour
         if (Input.GetKey("p"))
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
-            if (PhotonNetwork.player.ID == gm.Round && thiefs.Count < 1)
+            if (GetComponent<GenericUser>().myID == gm.Round && thiefs.Count < 1)
             {
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                Debug.Log("player count : " + players.Length);
                 for (int i = 0; i < players.Length; i++)
                 {
                     photonview = players[i].GetComponent<PhotonView>();
@@ -34,9 +35,11 @@ public class CameraShaderSwitch : MonoBehaviour
                         originalShaders.Add(players[i].GetComponentInChildren<Renderer>().material.shader);
                     }
                 }
+
             }
 
             SeeThrough();
+
         } else if (originalShaders.Count > 0)
         {
             Recover();
