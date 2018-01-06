@@ -240,6 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 185198103}
   - component: {fileID: 185198102}
+  - component: {fileID: 185198104}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Player
@@ -253,7 +254,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185198101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c2de1d8ff1aa43a29cfe3fdc8d51d82, type: 3}
   m_Name: 
@@ -263,6 +264,10 @@ MonoBehaviour:
   MinimumDistance: 1
   ScrollModifier: 2
   TurnModifier: 2
+  m_CameraTransform: {fileID: 0}
+  m_LookAtPoint: {x: 0, y: 0, z: 0}
+  m_LocalForwardVector: {x: 0, y: 0, z: 0}
+  m_Distance: 0
 --- !u!4 &185198103
 Transform:
   m_ObjectHideFlags: 0
@@ -277,6 +282,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185198104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185198101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f360a6dce841ca6468682a759101f140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockCursor: 0
+  mouseSensitivity: 10
+  Target: {fileID: 0}
+  dstFromTarget: 5
+  pitchMinMax: {x: 15, y: 35}
+  rotationSmoothTime: 0.12
 --- !u!1 &222050418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,7 +1932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe4b46f167e2441bbc14797417e0f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 185198102}
+  Camera: {fileID: 185198104}
   UiScreens: {fileID: 434197312}
   ConnectUiView: {fileID: 222050419}
   WaitingUiView: {fileID: 76553787}

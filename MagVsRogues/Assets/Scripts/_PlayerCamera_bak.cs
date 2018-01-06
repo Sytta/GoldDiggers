@@ -37,7 +37,7 @@ public class PlayerCamera : MonoBehaviour
 
     void UpdateDistance()
     {
-        //m_Distance = Mathf.Clamp(m_Distance - Input.GetAxis("Horizontal") * ScrollModifier, MinimumDistance, MaximumDistance);
+        m_Distance = Mathf.Clamp(m_Distance - Input.GetAxis("Horizontal") * ScrollModifier, MinimumDistance, MaximumDistance);
     }
 
     void UpdateZoom()
