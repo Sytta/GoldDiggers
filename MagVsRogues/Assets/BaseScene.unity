@@ -304,7 +304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &791914369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,8 +899,6 @@ MonoBehaviour:
   InputField: {fileID: 1570420217}
   UserId: 
   previousRoom: 
-  initialiser:
-  - {fileID: 791914368}
 --- !u!114 &1860739897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,6 +927,8 @@ MonoBehaviour:
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
   PlayerCount: 2
+  initialiser:
+  - {fileID: 791914368}
 --- !u!1001 &1934584451
 Prefab:
   m_ObjectHideFlags: 0

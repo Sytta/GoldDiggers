@@ -18,8 +18,6 @@ public class MultiplayerConnection : PunBehaviour
 
     const string NickNamePlayerPrefsKey = "NickName";
 
-    [SerializeField]
-    private List<GameObject> initialiser;
 
     void Start()
     {
@@ -107,13 +105,6 @@ public class MultiplayerConnection : PunBehaviour
         Debug.Log("Joined room: " + PhotonNetwork.room.Name);
         this.previousRoom = PhotonNetwork.room.Name;
         PlayerPrefs.SetString(previousRoomPlayerPrefKey, this.previousRoom);
-
-        foreach( var go in initialiser)
-        {
-            if (go != null)
-                go.SetActive(true);
-        }
-
     }
 
     public override void OnPhotonJoinRoomFailed(object[] codeAndMsg)

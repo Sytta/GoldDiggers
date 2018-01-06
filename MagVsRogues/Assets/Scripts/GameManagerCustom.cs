@@ -4,6 +4,7 @@ using Photon;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 using ExitGames.Client.Photon;
 
@@ -17,7 +18,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] private RectTransform DisconnectedPanel;
 
     [SerializeField] private int PlayerCount = 3;
-
+    [SerializeField] private List<GameObject> initialiser;
     public void Start()
     {
         RefreshUIViews();
@@ -108,6 +109,11 @@ public class GameManagerCustom : PunBehaviour
             //////////// START GAME ////////////
             UiScreens.SetActive(false);
             CreatePlayerObject();
+            foreach (var go in initialiser)
+            {
+                if (go != null)
+                    go.SetActive(true);
+            }
         }
         else
         {
