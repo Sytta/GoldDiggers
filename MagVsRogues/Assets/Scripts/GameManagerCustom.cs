@@ -20,10 +20,16 @@ public class GameManagerCustom : PunBehaviour
 
     [SerializeField] private int PlayerCount = 3;
     [SerializeField] private List<GameObject> initialiser;
+
+    public GameObject magePlayer;
+    public Dictionary<int,GameObject> playerDictionary;
+
+
     public void Start()
     {
         RefreshUIViews();
         Round = 1;
+        playerDictionary = new Dictionary<int, GameObject>();
     }
 
     public void Update()
@@ -158,6 +164,32 @@ public class GameManagerCustom : PunBehaviour
 
         if (newPlayerObject != null)
             Camera.Target = newPlayerObject.transform;
+        var newPlayerId = newPlayerObject.GetComponent<PhotonView>().ownerId;
+
+        if (!playerDictionary.ContainsKey(newPlayerId))
+        {
+            playerDictionary.Add(newPlayerId, newPlayerObject);
+        }
+
+        if(newPlayerId == 1)
+        {
+            magePlayer = newPlayerObject;
+        }
     }
 
+
+    public void ChangeMageCharacter(int id)
+    {
+        int currId = 0;
+        foreach(var kvp in playerDictionary)
+        {
+            if(kvp.Value == magePlayer)
+            {
+                currId = kvp.Key;
+            }
+        }
+        currId = (currId++) % (playerDictionary.Count);
+
+        magePlayer = playerDictionary[currId];
+    }
 }
