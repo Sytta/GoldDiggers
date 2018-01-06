@@ -9,14 +9,14 @@ using ExitGames.Client.Photon;
 
 public class GameManagerCustom : PunBehaviour
 {
-    public PlayerCamera Camera;
+    public CameraSimple Camera;
 
     [SerializeField] private GameObject UiScreens;
     [SerializeField] private RectTransform ConnectUiView;
     [SerializeField] private RectTransform WaitingUiView;
     [SerializeField] private RectTransform DisconnectedPanel;
 
-    int PlayerCount = 2;
+    int PlayerCount = 1;
 
     public void Start()
     {
@@ -58,7 +58,7 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-
+        // TODO CHANGE
         if (PhotonNetwork.room.PlayerCount > 2)
         {
             ////////// TURN MANAGEMENT /////////////
