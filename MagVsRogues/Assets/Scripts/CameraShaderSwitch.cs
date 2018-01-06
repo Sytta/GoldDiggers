@@ -25,13 +25,13 @@ public class CameraShaderSwitch : MonoBehaviour
             if (myPlayerId == gm.Round)
             {
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                Debug.Log("player count : " + players.Length);
+                //Debug.Log("player count : " + players.Length);
                 for (int i = 0; i < players.Length; i++)
                 {
                     var playerId = players[i].GetComponent<GenericUser>().myID;
                     if (!thiefs.ContainsKey(playerId) && playerId != myPlayerId)
                     {
-                        Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
+                        //Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
                         thiefs.Add(playerId, players[i].GetComponentInChildren<Renderer>());
                         originalShaders.Add(players[i].GetComponentInChildren<Renderer>().material.shader);
                     }
@@ -42,7 +42,7 @@ public class CameraShaderSwitch : MonoBehaviour
 
         } else if (originalShaders.Count > 0)
         {
-            Debug.Log("RECOVER");
+            //Debug.Log("RECOVER");
             Recover();
         }
     }
