@@ -16,7 +16,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] private RectTransform WaitingUiView;
     [SerializeField] private RectTransform DisconnectedPanel;
 
-    int PlayerCount = 1;
+    public int PlayerCount = 2;
 
     public void Start()
     {
