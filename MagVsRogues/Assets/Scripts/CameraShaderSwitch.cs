@@ -51,7 +51,8 @@ public class CameraShaderSwitch : MonoBehaviour
     {
         foreach (Renderer thief in thiefs.Values)
         {
-            thief.material.shader = seeThroughShader;
+            if (thief.material.shader != null)
+                thief.material.shader = seeThroughShader;
         }
     }
 
@@ -64,7 +65,8 @@ public class CameraShaderSwitch : MonoBehaviour
         int cnt = 0;
         foreach (Renderer thief in thiefs.Values)
         {
-            thief.material.shader = originalShaders[cnt++];
+            if (thief.material.shader != null)
+                thief.material.shader = originalShaders[cnt++];
         }
 
     }
