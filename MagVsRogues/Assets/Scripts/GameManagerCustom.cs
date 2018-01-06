@@ -165,9 +165,12 @@ public class GameManagerCustom : PunBehaviour
 
         if (newPlayerObject != null)
             Camera.Target = newPlayerObject.transform;
-        var newPlayerId = newPlayerObject.GetComponent<PhotonView>().ownerId;
 
-       
+
+        var newPlayerId = newPlayerObject.GetComponent<PhotonView>().ownerId;
+        Debug.Log("spawned player with id : " + newPlayerId);
+      
+
     }
 
     public void FindMage()
