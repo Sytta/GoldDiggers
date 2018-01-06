@@ -1479,6 +1479,12 @@ MonoBehaviour:
   - {fileID: 1432585357}
   - {fileID: 925590787}
   - {fileID: 1564619892}
+  teleportLocations:
+  - {fileID: 674884996}
+  - {fileID: 1635761188}
+  - {fileID: 1759050270}
+  - {fileID: 1432585358}
+  - {fileID: 925590788}
   magePlayer: {fileID: 0}
 --- !u!1001 &1934584451
 Prefab:

@@ -20,7 +20,7 @@ public class GameManagerCustom : PunBehaviour
 
     [SerializeField] private int PlayerCount = 3;
     [SerializeField] private List<GameObject> initialiser;
-
+    [SerializeField] public List<Transform> teleportLocations;
     public GameObject magePlayer;
     public Dictionary<int,GameObject> playerDictionary;
 
