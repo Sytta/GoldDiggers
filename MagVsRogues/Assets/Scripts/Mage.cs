@@ -13,13 +13,13 @@ public class Mage : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (diablo == null)
+        {
+            diablo = Instantiate(Resources.Load("Diablo", typeof(GameObject))) as GameObject;
+            diablo.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (diablo == null)
-            {
-                diablo = Instantiate(Resources.Load("Diablo", typeof(GameObject))) as GameObject;
-                diablo.SetActive(false);
-            }
             if (!diablo.activeSelf)
             {
                 diablo.SetActive(true);
