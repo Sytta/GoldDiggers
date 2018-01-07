@@ -59,7 +59,7 @@ public class GameManagerCustom : PunBehaviour
             if (playerNumber == mageNumber)
             {
                 magePlayer = player;
-                playerGenericUser.setMage();
+                player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, player);
                 Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
                 float[] send = new float[4];
                 send[0] = startLocation.x;
@@ -72,7 +72,7 @@ public class GameManagerCustom : PunBehaviour
             }
             else
             {
-                playerGenericUser.setTheif();
+                player.GetComponent<PhotonView>().RPC("setTheif", PhotonTargets.All, player);
                 float offsetX = spawnNumber == 2 ? -4.5f : 0.5f;
                 Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
 
@@ -132,7 +132,7 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-        if(PhotonNetwork.player.ID == 1001)
+        if(PhotonNetwork.player.ID == 1)
         {
             if (runningGameTime)
             {

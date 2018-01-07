@@ -21,12 +21,12 @@ public class GenericUser : MonoBehaviour {
             if (myID == gm.Round)
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
-                setMage();
+                setMage(myID);
             }
             else
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(1f, 0f, 0f);
-                setTheif();
+                setTheif(myID);
             }
         }
     }
@@ -36,18 +36,26 @@ public class GenericUser : MonoBehaviour {
 
     }
 
-    public void setMage()
+    [PunRPC]
+    public void setMage(int player)
     {
-        this.GetComponent<Thief>().enabled = (false);
-        this.GetComponent<Mage>().enabled = (true);
+        if(player == myID)
+        { 
+            this.GetComponent<Thief>().enabled = (false);
+            this.GetComponent<Mage>().enabled = (true);
+        }
         // TODO Swap UI and swap skins
     }
 
-    public void setTheif()
+    [PunRPC]
+    public void setTheif(int player)
     {
-        this.GetComponent<Thief>().enabled = (true);
-        this.GetComponent<Thief>().SpawnThief(myID);
-        this.GetComponent<Mage>().enabled = (false);
+        if (player == myID)
+        {
+            this.GetComponent<Thief>().enabled = (true);
+            this.GetComponent<Thief>().SpawnThief(myID);
+            this.GetComponent<Mage>().enabled = (false);
+        }
         // TODO Swap UI and swap skins
     }
 
