@@ -5996,7 +5996,7 @@ MonoBehaviour:
   ConnectUiView: {fileID: 1244915656}
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
-  HUD: {fileID: 0}
+  HUD: {fileID: 540190628}
   PlayerCount: 2
   initialiser:
   - {fileID: 674884995}
@@ -6011,7 +6011,7 @@ MonoBehaviour:
   - {fileID: 1759050270}
   - {fileID: 1432585358}
   - {fileID: 925590788}
-  magePlayer: {fileID: 540190628}
+  magePlayer: {fileID: 0}
   roundTotalTime: 10
   gameTime: 10
   runningGameTime: 0
