@@ -703,7 +703,6 @@ GameObject:
   - component: {fileID: 136911029322240608}
   - component: {fileID: 114528134974041596}
   - component: {fileID: 114300342402571726}
-  - component: {fileID: 114718514479672048}
   m_Layer: 8
   m_Name: Mage
   m_TagString: Player
@@ -2642,7 +2641,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1497554244460092}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10cf03c6ba976f44e963e8eae212b193, type: 3}
   m_Name: 
@@ -2677,34 +2676,6 @@ MonoBehaviour:
   myID: 0
   currentGold: 0
   playerPosition: {fileID: 4121093504606250}
---- !u!114 &114718514479672048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1497554244460092}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab928229a3fc1234dacf3770a92b4c14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLooting: 0
-  goldAmount: 5
-  magicMinPPS: 4
-  magicMaxPPS: 20
-  magicMinSpeedUp: 1
-  magicMaxSpeedUp: 5
-  teleportCooldown: 15
-  teleportTimer: 15
-  canTeleport: 1
-  hasTeleportPower: 0
-  TeleporterLocations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  gameManger: {fileID: 0}
 --- !u!136 &136911029322240608
 CapsuleCollider:
   m_ObjectHideFlags: 1
