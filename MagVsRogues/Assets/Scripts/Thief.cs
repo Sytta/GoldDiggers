@@ -60,6 +60,12 @@ public class Thief: MonoBehaviour
         canLoot = false;
     }
 
+    public void Bust()
+    {
+        goldYield = (int)(goldYield / 2);
+        this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
+    }
+
     public void SpawnThief(int location)
     {   
         if(location == 2)
