@@ -25,6 +25,7 @@ public class GameManagerCustom : PunBehaviour
     public GameObject magePlayer;
     public Dictionary<int, GameObject> playerDictionary;
 
+    [SerializeField] private float scoreBoardShowTime = 3.0f;
     public float roundTotalTime = 60.0f;
     public float gameTime = 60.0f;
     public bool runningGameTime = false;
@@ -120,16 +121,22 @@ public class GameManagerCustom : PunBehaviour
 
     private IEnumerator ShowScores()
     {
-        HUD.GetComponent<UIService>().ShowScores();
+        //HUD.GetComponent<UIService>().ShowScores();
+        HUD.GetComponent<UIService>().ShowRoundScores();
         if (Round < 3)
         {
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(scoreBoardShowTime);
             HUD.GetComponent<UIService>().CloseScores();
 			Round++;
             if (PhotonNetwork.player.ID == 1)
             {
                 RoundReset();
             }
+        }
+        else
+        {
+            yield return new WaitForSeconds(scoreBoardShowTime);
+            HUD.GetComponent<UIService>().ShowTotalScores();
         }
     }
 

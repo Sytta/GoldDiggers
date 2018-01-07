@@ -20,6 +20,10 @@ public class UIService : MonoBehaviour
 
     [Header("Scores")]
     [SerializeField] private GameObject scoreboard;
+    [SerializeField] private GameObject roundTitle;
+    [SerializeField] private GameObject finalTitle;
+    [SerializeField] private GameObject roundScoreContainer;
+    [SerializeField] private GameObject totalScoreContainer;
     [SerializeField] private Text[] playerNames;
     [SerializeField] private Text[] playerRoundScores;
     [SerializeField] private Text[] playerTotalScores;
@@ -66,6 +70,36 @@ public class UIService : MonoBehaviour
         {
             playerNames[i].text = PhotonPlayer.Find(i+1).NickName;
             playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
+            playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
+        }
+    }
+
+    public void ShowRoundScores()
+    {
+        scoreboard.SetActive(true);
+        roundTitle.SetActive(true);
+        finalTitle.SetActive(false);
+        roundScoreContainer.SetActive(true);
+        totalScoreContainer.SetActive(false);
+
+        for (int i = 0; i < playerRoundScores.Length; i++)
+        {
+            playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
+            playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
+        }
+    }
+
+    public void ShowTotalScores()
+    {
+        scoreboard.SetActive(true);
+        roundTitle.SetActive(false);
+        finalTitle.SetActive(true);
+        roundScoreContainer.SetActive(false);
+        totalScoreContainer.SetActive(true);
+
+        for (int i = 0; i < playerTotalScores.Length; i++)
+        {
+            playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
             playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
     }
