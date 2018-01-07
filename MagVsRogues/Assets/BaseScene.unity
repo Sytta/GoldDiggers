@@ -4709,7 +4709,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cff6e6b12601fdf4a953cca3be30645a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 54987da16d6e88c4aa56e1d499aeb863, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11555,7 +11555,7 @@ MonoBehaviour:
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
   HUD: {fileID: 540190628}
-  PlayerCount: 3
+  PlayerCount: 1
   initialiser:
   - {fileID: 1896675114}
   - {fileID: 1414354775}
