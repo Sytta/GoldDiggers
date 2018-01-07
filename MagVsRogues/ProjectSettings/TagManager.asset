@@ -16,6 +16,7 @@ TagManager:
   - GameManager
   - Terrain
   - Teleporter
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - 
   - Player
   - PlayerPosition
-  - 
+  - Toit
   - 
   - 
   - 
