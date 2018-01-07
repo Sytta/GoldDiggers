@@ -1622,8 +1622,9 @@ MonoBehaviour:
   returnTime: 0.4
   sphereCastRadius: 0.1
   visualiseInEditor: 0
-  closestDistance: 0.5
+  closestDistance: 1
   dontClipTag: Player
+  minTresh: 1
 --- !u!1 &187889741
 GameObject:
   m_ObjectHideFlags: 0
@@ -8164,7 +8165,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3, z: 1}
+  m_Size: {x: 1, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1468489587 stripped
 Transform:
@@ -10626,7 +10627,7 @@ MonoBehaviour:
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
   HUD: {fileID: 540190628}
-  PlayerCount: 3
+  PlayerCount: 1
   initialiser:
   - {fileID: 1896675114}
   - {fileID: 1414354775}

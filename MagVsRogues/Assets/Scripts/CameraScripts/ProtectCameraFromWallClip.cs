@@ -23,6 +23,8 @@ namespace UnityStandardAssets.Cameras
         private RaycastHit[] m_Hits;              // the hits between the camera and the target
         private RayHitComparer m_RayHitComparer;  // variable to compare raycast hit distances
 
+        public float minTresh = 1.0f;
+
 
         private void Start()
         {
@@ -75,6 +77,9 @@ namespace UnityStandardAssets.Cameras
                 // if there was no collision do a sphere cast to see if there were any other collisions
                 m_Hits = Physics.SphereCastAll(m_Ray, sphereCastRadius, m_OriginalDist + sphereCastRadius);
             }
+
+            if (m_CurrentDist < minTresh)
+                return;
 
             // sort the collisions by distance
             Array.Sort(m_Hits, m_RayHitComparer);
