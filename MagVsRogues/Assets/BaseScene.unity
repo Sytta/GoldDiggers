@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 185198103}
   - component: {fileID: 185198102}
   - component: {fileID: 185198104}
+  - component: {fileID: 185198105}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -450,6 +451,23 @@ MonoBehaviour:
   dstFromTarget: 0.1
   pitchMinMax: {x: 15, y: 35}
   rotationSmoothTime: 0.12
+  camera: {fileID: 1565348783}
+  alphaValue: 0.5
+  transparentLayers:
+    serializedVersion: 2
+    m_Bits: 4294960383
+--- !u!65 &185198105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185198101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!224 &196499497 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224166206538105146, guid: 3d50d5d0c69e84c3c8964b27c91635a5,
@@ -2715,7 +2733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1360751448194448, guid: 3d50d5d0c69e84c3c8964b27c91635a5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d50d5d0c69e84c3c8964b27c91635a5, type: 2}
@@ -2757,7 +2775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100344, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
       propertyPath: m_TagString
@@ -2766,6 +2784,14 @@ Prefab:
     - target: {fileID: 100360, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100358, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100356, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
@@ -2914,7 +2940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bf983aa04a4fd0942a9c00f8c736c9b4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf983aa04a4fd0942a9c00f8c736c9b4, type: 3}
