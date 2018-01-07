@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114192641652780834}
   - component: {fileID: 135019911162911128}
   - component: {fileID: 114314705044905740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Diablo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
