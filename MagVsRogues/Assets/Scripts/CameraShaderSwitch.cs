@@ -24,6 +24,8 @@ public class CameraShaderSwitch : MonoBehaviour
 
     private void Update()
     {
+		if (mainCamera.Target == null)
+			return;
         var myPlayer = mainCamera.Target.GetComponent<GenericUser>();
         if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
         {

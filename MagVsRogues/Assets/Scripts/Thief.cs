@@ -45,6 +45,7 @@ public class Thief: MonoBehaviour
         // TODO Get time from animation
         animatonSpeed = 1.958f;
 
+		hasTeleportPower = true;
         animator = GetComponent<Animator>();
     }
 
