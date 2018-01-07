@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GenericUser : MonoBehaviour {
     public int myID = -1;
+    public int currentGold = 0;
     private GameManagerCustom gm;
     [SerializeField] private Transform playerPosition;
     PhotonView m_PhotonView;
@@ -22,6 +23,7 @@ public class GenericUser : MonoBehaviour {
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
                 setMage(myID);
+                currentGold = gm.initialiser[5].GetComponent<GoldDistribute>().MageGold;
             }
             else
             {
@@ -47,13 +49,14 @@ public class GenericUser : MonoBehaviour {
         // TODO Swap UI and swap skins
     }
 
+
     [PunRPC]
     public void setTheif(int player)
     {
         if (player == myID)
         {
             this.GetComponent<Thief>().enabled = (true);
-            //this.GetComponent<Thief>().SpawnThief(myID);
+            this.GetComponent<Thief>().SpawnThief(myID);
             this.GetComponent<Mage>().enabled = (false);
         }
         // TODO Swap UI and swap skins
@@ -63,6 +66,18 @@ public class GenericUser : MonoBehaviour {
     {
         GetComponent<Mage>().enabled = m_PhotonView.isMine;
         GetComponent<Thief>().enabled = m_PhotonView.isMine;
+    }
+
+    public void Teleport(Vector3 v, GameObject go)
+    {
+
+        float[] send = new float[4];
+        send[0] = v.x;
+        send[1] = v.y;
+        send[2] = v.z;
+        send[3] = go.GetComponent<GenericUser>().myID;
+
+        this.gameObject.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
     }
 
     [PunRPC]

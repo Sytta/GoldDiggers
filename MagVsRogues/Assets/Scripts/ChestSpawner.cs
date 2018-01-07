@@ -10,6 +10,16 @@ public class ChestSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        spawn();
+    }
+
+    // Update is called once per frame
+    void Update () {
+		
+	}
+
+    public void spawn()
+    {
         int i = Random.Range(0, Positions.Capacity);
         Quaternion rotation = Quaternion.Euler(Rotations[i]);
         GameObject newChest = PhotonNetwork.Instantiate("Chest", Positions[i], rotation, 0);
@@ -18,11 +28,5 @@ public class ChestSpawner : MonoBehaviour {
         float s = Random.Range(1.0f, GoldMultiplier);
         newChest.gameObject.GetComponent<ChestController>().gold = (int)(newChest.gameObject.GetComponent<ChestController>().gold * s);
         //newChest.gameObject.transform.localScale *= s;
-
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

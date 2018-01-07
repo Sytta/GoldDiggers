@@ -19,7 +19,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] private RectTransform DisconnectedPanel;
 
     [SerializeField] private int PlayerCount = 3;
-    [SerializeField] private List<GameObject> initialiser;
+    [SerializeField] public List<GameObject> initialiser;
     [SerializeField] public List<Transform> teleportLocations;
     public GameObject magePlayer;
     public Dictionary<int,GameObject> playerDictionary;
@@ -27,12 +27,31 @@ public class GameManagerCustom : PunBehaviour
     public float roundTotalTime = 60.0f;
     public float gameTime = 60.0f;
     public bool runningGameTime = false;
+
+    private int GoldThief1 = 0;
+    private int GoldThief2 = 0;
+    private int GoldMage = -1;
     int spawnNumber = 2;
 
+    [PunRPC]
+    public void stolenCash(int[] data)
+    {
+        int ammount = data[0];
+        int thief = data[1];
+
+        if (thief == 2)
+            GoldThief1 += ammount;
+        else
+            GoldThief2 += ammount;
+        
+        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold - GoldThief1 - GoldThief2;
+        Debug.Log(GoldMage);
+    }
 
     public void StartGame()
     {
         runningGameTime = true;
+        EventManager.Instance.QueueEvent(new OnRoundStarted());
     }
 
     public void StopGameTime()
@@ -61,13 +80,7 @@ public class GameManagerCustom : PunBehaviour
                 magePlayer = player;
                 player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
                 Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
-                float[] send = new float[4];
-                send[0] = startLocation.x;
-                send[1] = startLocation.y;
-                send[2] = startLocation.z;
-                send[3] = playerNumber;
-
-                player.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
+                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
             }
             else
@@ -77,22 +90,18 @@ public class GameManagerCustom : PunBehaviour
                 Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
 
                 spawnNumber = spawnNumber == 2 ? 1 : 2;
-                float[] send = new float[4];
-                send[0] = startLocation.x;
-                send[1] = startLocation.y;
-                send[2] = startLocation.z;
-                send[3] = playerNumber;
-
-                player.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
+                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
             }
         }
+        initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
     }
 
     public void Start()
     {
         RefreshUIViews();
         Round = 1;
+        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
         playerDictionary = new Dictionary<int, GameObject>();
         StartGame();
     }
@@ -132,7 +141,7 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-        if(PhotonNetwork.player.ID == 1)
+        if (PhotonNetwork.player.ID == 1)
         {
             if (runningGameTime)
             {
@@ -141,12 +150,11 @@ public class GameManagerCustom : PunBehaviour
             if (gameTime <= 0.0f && runningGameTime)
             {
                 Debug.Log("END ROUND");
-                //StopGameTime();
-                //ResetTime();
-                //RoundReset();
+                StopGameTime();
+                ResetTime();
+                RoundReset();
             }
         }
-      
 
     }
 

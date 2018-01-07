@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 5a3f78c7820d44d459b3ea8fc3b284f7
+timeCreated: 1515293591
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Torche_murale
+    100002: Torche_murale1
+    100004: Torche_murale10
+    100006: Torche_murale11
+    100008: Torche_murale12
+    100010: Torche_murale13
+    100012: Torche_murale2
+    100014: Torche_murale3
+    100016: Torche_murale4
+    100018: Torche_murale5
+    100020: Torche_murale6
+    100022: Torche_murale7
+    100024: Torche_murale8
+    100026: Torche_murale9
+    100028: //RootNode
+    100030: Torche_murale14
+    100032: Torche_murale15
+    100034: Torche_murale16
+    400000: Torche_murale
+    400002: Torche_murale1
+    400004: Torche_murale10
+    400006: Torche_murale11
+    400008: Torche_murale12
+    400010: Torche_murale13
+    400012: Torche_murale2
+    400014: Torche_murale3
+    400016: Torche_murale4
+    400018: Torche_murale5
+    400020: Torche_murale6
+    400022: Torche_murale7
+    400024: Torche_murale8
+    400026: Torche_murale9
+    400028: //RootNode
+    400030: Torche_murale14
+    400032: Torche_murale15
+    400034: Torche_murale16
+    2100000: 'Material #46'
+    2100002: Torches_murale
+    2300000: Torche_murale
+    2300002: Torche_murale1
+    2300004: Torche_murale10
+    2300006: Torche_murale11
+    2300008: Torche_murale12
+    2300010: Torche_murale13
+    2300012: Torche_murale2
+    2300014: Torche_murale3
+    2300016: Torche_murale4
+    2300018: Torche_murale5
+    2300020: Torche_murale6
+    2300022: Torche_murale7
+    2300024: Torche_murale8
+    2300026: Torche_murale9
+    2300028: Torche_murale14
+    2300030: Torche_murale15
+    2300032: Torche_murale16
+    3300000: Torche_murale
+    3300002: Torche_murale1
+    3300004: Torche_murale10
+    3300006: Torche_murale11
+    3300008: Torche_murale12
+    3300010: Torche_murale13
+    3300012: Torche_murale2
+    3300014: Torche_murale3
+    3300016: Torche_murale4
+    3300018: Torche_murale5
+    3300020: Torche_murale6
+    3300022: Torche_murale7
+    3300024: Torche_murale8
+    3300026: Torche_murale9
+    3300028: Torche_murale14
+    3300030: Torche_murale15
+    3300032: Torche_murale16
+    4300000: Torche_murale
+    4300002: Torche_murale1
+    4300004: Torche_murale2
+    4300006: Torche_murale3
+    4300008: Torche_murale4
+    4300010: Torche_murale5
+    4300012: Torche_murale6
+    4300014: Torche_murale7
+    4300016: Torche_murale8
+    4300018: Torche_murale9
+    4300020: Torche_murale10
+    4300022: Torche_murale11
+    4300024: Torche_murale12
+    4300026: Torche_murale13
+    4300028: Torche_murale14
+    4300030: Torche_murale15
+    4300032: Torche_murale16
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

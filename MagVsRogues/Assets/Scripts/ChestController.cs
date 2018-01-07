@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CharacterController))]
 public class ChestController : MonoBehaviour
 {
     public float magicH = -0.2f;
     public int gold;
     public Transform goldPile;
-    private int initialGold;
+    public int initialGold;
     private float initialHight;
 
     void Start()
@@ -15,7 +14,6 @@ public class ChestController : MonoBehaviour
         initialGold = gold;
         initialHight = goldPile.localPosition.z - magicH;
     }
-
 
 
     void UpdateMesh()
@@ -32,9 +30,11 @@ public class ChestController : MonoBehaviour
         gold -= ammount;
         if (gold < 0)
             gold = 0;
-        this.gameObject.GetComponent<PhotonView>().RPC("UpdateSync", PhotonTargets.All, gold);
+        int withdraw = taken - gold;
+        gold += withdraw;
+        this.gameObject.GetComponent<PhotonView>().RPC("Withdraw", PhotonTargets.All, withdraw);
         UpdateMesh();
-        return taken - gold;
+        return withdraw;
     }
 
     [PunRPC]
@@ -44,6 +44,12 @@ public class ChestController : MonoBehaviour
         UpdateMesh();
     }
 
+    [PunRPC]
+    void Withdraw(int g)
+    {
+        gold -= g;
+        UpdateMesh();
+    }
 
     [PunRPC]
     void initGold(int g)
@@ -56,4 +62,6 @@ public class ChestController : MonoBehaviour
     {
         return gold <= 0;
     }
+
+
 }
