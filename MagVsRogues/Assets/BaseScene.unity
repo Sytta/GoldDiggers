@@ -1762,7 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741fc552e75514c458e8bd459f3b68ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MageGold: 20000
+  MageGold: 200
 --- !u!1 &1565348782
 GameObject:
   m_ObjectHideFlags: 0

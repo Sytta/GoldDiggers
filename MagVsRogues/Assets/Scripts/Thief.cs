@@ -61,17 +61,15 @@ public class Thief: MonoBehaviour
     }
 
     public void SpawnThief(int location)
-    {   /*
+    {   
         if(location == 2)
         {
-            this.transform.position = new Vector3(0.5f, -2f, -7.5f);
+            this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(0.5f, -2f, -7.5f), this.gameObject);
         }
         else if (location == 3)
         {
-            this.transform.position = new Vector3(4.5f, -2f, -7.5f);
-
+            this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(-4.5f, -2f, -7.5f), this.gameObject);
         }
-        */
     }
 
     private IEnumerator WaitForLoot()
@@ -134,8 +132,6 @@ public class Thief: MonoBehaviour
                     keyDownCounter += 1;
                 }
             }
-
-
         }
 
         if (Input.GetKeyUp(KeyCode.T) && canTeleport)
@@ -144,7 +140,8 @@ public class Thief: MonoBehaviour
             mageCharacter = gameManger.magePlayer;
             {
                 var teleportLocation = SelectTeleport();
-                this.transform.position = teleportLocation.position;
+                this.gameObject.GetComponent<GenericUser>().Teleport(teleportLocation.position, this.gameObject);
+
             }
             canTeleport = false;
         }
@@ -164,15 +161,4 @@ public class Thief: MonoBehaviour
             }
         }
     }
-
-    //[PunRPC]
-    //void Prison(float[] p)
-    //{
-    //    if ((int)(p[3]) == this.gameObject.GetComponent<GenericUser>().myID)
-    //    {
-    //        Vector3 pos = new Vector3(p[0], p[1], p[2]);
-    //        this.gameObject.transform.position = pos;
-    //    }
-    //}
-
 }
