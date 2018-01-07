@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114484976548642584}
   - component: {fileID: 114295942755941424}
   - component: {fileID: 65586705068568596}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chest
   m_TagString: Chest
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 33956348437581692}
   - component: {fileID: 23327469021700028}
   - component: {fileID: 95565963983298278}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23491618448277280}
   - component: {fileID: 114881613372836990}
   - component: {fileID: 114192641652780834}
-  - component: {fileID: 135019911162911128}
   - component: {fileID: 114314705044905740}
-  m_Layer: 0
+  - component: {fileID: 136385530101772604}
+  m_Layer: 2
   m_Name: Diablo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,8 +191,8 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
---- !u!135 &135019911162911128
-SphereCollider:
+--- !u!136 &136385530101772604
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -200,6 +200,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Radius: 0.5
+  m_Height: 2500
+  m_Direction: 1
+  m_Center: {x: 0, y: 1000, z: 0}
