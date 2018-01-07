@@ -73,7 +73,7 @@ public class CameraSimple : MonoBehaviour
             {
                 if (objectHit.GetComponent<Renderer>() != null)
                 {
-                    Debug.Log("Putting " + objectHit + " to transparent");
+                    //Debug.Log("Putting " + objectHit + " to transparent");
                     Material[] mats = objectHit.GetComponent<Renderer>().materials;
                     ms.Add(objectHit);
                     foreach (Material mat in mats)
