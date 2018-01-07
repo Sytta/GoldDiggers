@@ -104,7 +104,6 @@ public class GameManagerCustom : PunBehaviour
         Round = 1;
         GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
         playerDictionary = new Dictionary<int, GameObject>();
-        StartGame();
     }
 
     public void Update()
@@ -215,7 +214,7 @@ public class GameManagerCustom : PunBehaviour
                 if (go != null)
                     go.SetActive(true);
             }
-
+            StartGame();
         }
         else
         {
@@ -232,6 +231,7 @@ public class GameManagerCustom : PunBehaviour
             //////////// START GAME ////////////
             UiScreens.SetActive(false);
             CreatePlayerObject();
+            StartGame();
         }
     }
 

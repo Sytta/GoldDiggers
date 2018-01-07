@@ -63,8 +63,14 @@ public class Thief: MonoBehaviour
     [PunRPC]
     public void Bust()
     {
-        goldYield = (int)(goldYield / 2);
+        int[] data = new int[2];
+        data[0] = -1 * (int)(goldYield / 2);
+        data[1] = this.GetComponent<GenericUser>().myID;
+        goldYield += data[0];
         this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
+
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<PhotonView>().RPC("stolenCash", PhotonTargets.All, data);
+
     }
 
     public void SpawnThief(int location)
