@@ -80,10 +80,10 @@ public class GameManagerCustom : PunBehaviour
 
     public void RoundReset()
     {
-        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.Others, ScoringEndRound);
-        if (Round < 3)
+        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.All, ScoringEndRound);
+        if (Round <= 3)
         {
-            Round++;
+            //Round++;
             Debug.Log("Starting round : " + Round);
             StartGame();
             var players = GameObject.FindGameObjectsWithTag("Player");
@@ -125,6 +125,7 @@ public class GameManagerCustom : PunBehaviour
         {
             yield return new WaitForSeconds(5.0f);
             HUD.GetComponent<UIService>().CloseScores();
+			Round++;
             if (PhotonNetwork.player.ID == 1)
             {
                 RoundReset();
@@ -197,27 +198,19 @@ public class GameManagerCustom : PunBehaviour
                 //RoundReset();
                 if (Round == 1)
                 {
-                    ScoringEndRound = new Vector3(GoldMage, 0, 0);
+					ScoringEndRound = new Vector3(GoldMage, GoldThief1, GoldThief2);
                 }
                 else if (Round == 2)
                 {
-                    ScoringEndRound = new Vector3(0, GoldMage, 0);
+					ScoringEndRound = new Vector3(GoldThief2, GoldMage, GoldThief1);
                 }
                 else if (Round == 3)
                 {
-                    ScoringEndRound = new Vector3(0, 0, GoldMage);
-
-                }
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach( GameObject p in players )
-                {
-                    int id = p.GetComponent<GenericUser>().myID;
-                    if (id != Round)
-                        ScoringEndRound[id - 1] = p.GetComponent<GenericUser>().currentGold;
+					ScoringEndRound = new Vector3(GoldThief1, GoldThief2, GoldMage);
 
                 }
                 this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.Others, ScoringEndRound);
-                ScoringOverall += ScoringEndRound;
+                //ScoringOverall += ScoringEndRound;
 				ResetTime();
 
             }
