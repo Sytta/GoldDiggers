@@ -38,6 +38,11 @@ public class GameManagerCustom : PunBehaviour
     public Vector3 ScoringEndRound;
     int spawnNumber = 2;
 
+    private void OnDestroy()
+    {
+        PhotonNetwork.Disconnect();
+    }
+
     [PunRPC]
     public void stolenCash(int[] data)
     {
@@ -238,15 +243,12 @@ public class GameManagerCustom : PunBehaviour
         foreach (var player in players)
         {
             var mageNumber = Round;
-            if (player.GetComponent<GenericUser>().myID == PhotonNetwork.player.ID)
+            if (player.GetComponent<GenericUser>().myID == this.GetComponent<PhotonView>().viewID)
             {
                 CreatePlayerObject(player.GetComponent<GenericUser>().myID);
                 //this.GetComponent<PhotonView>().ownerId = player.GetComponent<GenericUser>().myID;
-                if (player.GetComponent<PhotonView>().isMine)
-                {
-                    PhotonNetwork.Destroy(player);
-                }
-
+                PhotonNetwork.Destroy(player);
+                
             }
         }
         
