@@ -754,6 +754,11 @@ MonoBehaviour:
   dstFromTarget: 0.1
   pitchMinMax: {x: 15, y: 35}
   rotationSmoothTime: 0.12
+  camera: {fileID: 1565348783}
+  alphaValue: 0.1
+  transparentLayers:
+    serializedVersion: 2
+    m_Bits: 4294960383
 --- !u!1 &187889741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6292,6 +6297,34 @@ Prefab:
     - target: {fileID: 100360, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100346, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100340, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100350, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100160, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100348, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100356, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100358, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
