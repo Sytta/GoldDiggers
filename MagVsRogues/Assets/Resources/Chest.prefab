@@ -449,7 +449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESS 'Z' TO LOOT CHEST
+  m_Text: MASH 'LMB' TO LOOT CHEST
 --- !u!114 &114717761989638520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -472,8 +472,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114453660332898800}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 3
+  instantiationId: 3
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114758151274514654

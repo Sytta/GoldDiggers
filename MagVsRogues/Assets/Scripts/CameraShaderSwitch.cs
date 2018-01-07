@@ -23,7 +23,7 @@ public class CameraShaderSwitch : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey("p") && canUseVision)
+		if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
             var myPlayerId = mainCamera.Target.GetComponent<GenericUser>().myID;
@@ -53,7 +53,7 @@ public class CameraShaderSwitch : MonoBehaviour
             
             Recover();
         }
-		if (Input.GetKeyUp ("p") && canUseVision) {
+		if (Input.GetKeyUp(KeyCode.Mouse1) && canUseVision) {
 			canUseVision = false;
 		}
 
