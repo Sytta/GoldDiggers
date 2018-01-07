@@ -8,7 +8,6 @@ public class UIService : MonoBehaviour
     [SerializeField] private Image timerFill;
     [SerializeField] private float roundTime = 60.0f;
     [SerializeField] private Text timerTxt;
-    private float timer;
 
     [Header("Gold")]
     [SerializeField] private float maxGold = 1000;
@@ -19,47 +18,32 @@ public class UIService : MonoBehaviour
     [SerializeField] private Transform powerUpsContainer;
     [SerializeField] private GameObject powerUpPrefab;
 
+    private GameManagerCustom gameManager;
+
 	// Use this for initialization
 	void Start()
 	{
-        EventManager.Instance.AddListener<OnRoundStarted>(Handle);
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManagerCustom>();
+
         EventManager.Instance.AddListener<OnGoldModified>(Handle);
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-			
+        RefreshTimerVisuals();	
 	}
-
-    private IEnumerator TimerCountdown()
-    {
-        while (timer != 0.0f)
-        {
-            yield return new WaitForSeconds(1.0f);
-            timer--;
-            RefreshTimerVisuals();
-        }
-    }
 
     private void RefreshTimerVisuals()
     {
-        timerFill.fillAmount = timer / roundTime;
-        timerTxt.text = timer.ToString();
+        timerFill.fillAmount = gameManager.gameTime / gameManager.roundTotalTime;
+        timerTxt.text = ((int)(gameManager.gameTime)).ToString();
     }
 
     private void RefreshGoldVisuals(int gold)
     {
         goldThiefTxt.text = gold.ToString();
         goldMageTxt.text = (maxGold - gold).ToString();
-    }
-
-    public void Handle(OnRoundStarted e)
-    {
-        timer = roundTime;
-        RefreshTimerVisuals();
-        StopAllCoroutines();
-        StartCoroutine(TimerCountdown());
     }
 
     public void Handle(OnGoldModified e)
