@@ -401,7 +401,7 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: deb27153da4dfd94b858a519facd581b, type: 3}
   m_PrefabInternal: {fileID: 1016142631}
---- !u!65 &97602377
+--- !u!65 &97602380
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1100,7 +1100,7 @@ Light:
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: deb27153da4dfd94b858a519facd581b, type: 3}
   m_PrefabInternal: {fileID: 1016142631}
---- !u!65 &244967476
+--- !u!65 &244967479
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1116,7 +1116,7 @@ BoxCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: deb27153da4dfd94b858a519facd581b, type: 3}
   m_PrefabInternal: {fileID: 1016142631}
---- !u!65 &259264154
+--- !u!65 &259264157
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1511,22 +1511,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &430933427 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: deb27153da4dfd94b858a519facd581b, type: 3}
-  m_PrefabInternal: {fileID: 1016142631}
---- !u!65 &430933428
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430933427}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &462804887
 Prefab:
   m_ObjectHideFlags: 0
@@ -1705,7 +1689,7 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100008, guid: deb27153da4dfd94b858a519facd581b, type: 3}
   m_PrefabInternal: {fileID: 1016142631}
---- !u!65 &519873936
+--- !u!65 &519873939
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3146,7 +3130,7 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: fa6cf24c9e937904798655833bf17c6a, type: 3}
   m_PrefabInternal: {fileID: 378951534}
---- !u!65 &1043358680
+--- !u!65 &1043358683
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
