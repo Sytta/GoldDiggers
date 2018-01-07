@@ -123,6 +123,7 @@ public class UIService : MonoBehaviour
 
     public void Handle(OnPowerUpCreated e)
     {
+		Debug.Log ("CREATING POWER UP : " + e.Type);
         GameObject powerUp = Instantiate(powerUpPrefab, powerUpsContainer);
         PowerUpUI uiComp = powerUp.GetComponent<PowerUpUI>();
         if (uiComp != null)
@@ -131,6 +132,8 @@ public class UIService : MonoBehaviour
 
     public void Handle(OnPowerUpReset e)
     {
+		Debug.Log ("RESETING POWER UP : ");
+
         foreach (Transform child in powerUpsContainer)
         {
             GameObject.Destroy(child.gameObject);
