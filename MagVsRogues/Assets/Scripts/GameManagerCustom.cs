@@ -161,7 +161,9 @@ public class GameManagerCustom : PunBehaviour
     {
         Vector3 position = new Vector3( 0f, 2.5f, 0f );
 
-        GameObject newPlayerObject = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
+        //GameObject newPlayerObject = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
+
+        GameObject newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
 
         if (newPlayerObject != null)
             Camera.Target = newPlayerObject.transform;
