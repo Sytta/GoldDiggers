@@ -77,11 +77,11 @@ public class Thief: MonoBehaviour
     {   
         if(location == 2)
         {
-            this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(0.5f, -2f, -7.5f), this.gameObject);
+            this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(0.5f, -2f, -5.5f), this.gameObject);
         }
         else if (location == 3)
         {
-            this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(-4.5f, -2f, -7.5f), this.gameObject);
+            this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(-4.5f, -2f, -5.5f), this.gameObject);
         }
     }
 

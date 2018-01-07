@@ -198,7 +198,7 @@ public class GameManagerCustom : PunBehaviour
                 //RoundReset();
                 if (Round == 1)
                 {
-					ScoringEndRound = new Vector3(GoldMage, GoldThief2, GoldThief1);
+					ScoringEndRound = new Vector3(GoldMage, GoldThief1, GoldThief2);
                 }
                 else if (Round == 2)
                 {
