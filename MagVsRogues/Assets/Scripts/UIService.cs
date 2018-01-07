@@ -28,6 +28,7 @@ public class UIService : MonoBehaviour
     [SerializeField] private Text[] playerRoundScores;
     [SerializeField] private Text[] playerTotalScores;
     [SerializeField] private GameObject endGameMessage;
+    [SerializeField] private Button menuButton;
 
     private GameManagerCustom gameManager;
 
@@ -35,6 +36,8 @@ public class UIService : MonoBehaviour
 	void Start()
 	{
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManagerCustom>();
+
+        menuButton.onClick.AddListener(OnMenuClicked);
 
         EventManager.Instance.AddListener<OnPowerUpCreated>(Handle);
         EventManager.Instance.AddListener<OnPowerUpReset>(Handle);
@@ -52,6 +55,11 @@ public class UIService : MonoBehaviour
         RefreshGoldVisuals();
 	}
 
+    void OnMenuClicked()
+    {
+        Application.LoadLevel("MainMenu");
+    }
+
     private void RefreshTimerVisuals()
     {
         timerFill.fillAmount = gameManager.gameTime / gameManager.roundTotalTime;
@@ -64,18 +72,6 @@ public class UIService : MonoBehaviour
         goldMageTxt.text = gameManager.GoldMage.ToString();
     }
 
-    public void ShowScores()
-    {
-        scoreboard.SetActive(true);
-        for (int i = 0; i < playerTotalScores.Length; i++)
-        {
-            if (PhotonPlayer.Find(i + 1) != null)
-                playerNames[i].text = PhotonPlayer.Find(i+1).NickName;
-            playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
-            playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
-        }
-    }
-
     public void ShowRoundScores()
     {
         scoreboard.SetActive(true);
@@ -83,6 +79,7 @@ public class UIService : MonoBehaviour
         finalTitle.SetActive(false);
         roundScoreContainer.SetActive(true);
         totalScoreContainer.SetActive(false);
+        menuButton.gameObject.SetActive(false);
 
         for (int i = 0; i < playerRoundScores.Length; i++)
         {
@@ -99,6 +96,7 @@ public class UIService : MonoBehaviour
         finalTitle.SetActive(true);
         roundScoreContainer.SetActive(false);
         totalScoreContainer.SetActive(true);
+        menuButton.gameObject.SetActive(true);
 
         for (int i = 0; i < playerTotalScores.Length; i++)
         {
