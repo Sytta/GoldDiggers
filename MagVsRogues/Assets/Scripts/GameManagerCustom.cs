@@ -73,6 +73,11 @@ public class GameManagerCustom : PunBehaviour
         Round = (Round) % 3 + 1;
         Debug.Log("Starting round : " + Round);
         StartGame();
+
+        GoldThief1 = 0;
+        GoldThief2 = 0;
+        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
+        ScoringEndRound = new Vector3(0, 0, 0);
         var players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var player in players)
         {
