@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
 
         m_AnimatorSpeed = Mathf.MoveTowards(m_AnimatorSpeed, speed, Time.deltaTime * 5f);
-        Debug.Log("Animation speed " + m_AnimatorSpeed);
+        //Debug.Log("Animation speed " + m_AnimatorSpeed);
 
         
         m_Animator.SetFloat("Speed", Mathf.Abs(m_AnimatorSpeed));
