@@ -6,8 +6,10 @@ public class PowerUpUI : MonoBehaviour
 {
     [SerializeField] private Image powerUpBackground;
     [SerializeField] private Image powerUpCooldown;
+    [SerializeField] private Text powerUpKey;
     [SerializeField] private float cooldown;
     [SerializeField] private Sprite[] powerUpImgs;
+    [SerializeField] private string[] powerUpKeys;
     private float timer;
     private PowerUpType type;
 
@@ -17,6 +19,7 @@ public class PowerUpUI : MonoBehaviour
         type = t;
         powerUpBackground.sprite = powerUpImgs[(int)type];
         powerUpCooldown.sprite = powerUpImgs[(int)type];
+        powerUpKey.text = powerUpKeys[(int)type];
 
         cooldown = cd;
         timer = cooldown;
