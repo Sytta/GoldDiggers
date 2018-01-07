@@ -25,6 +25,7 @@ public class GameManagerCustom : PunBehaviour
     public GameObject magePlayer;
     public Dictionary<int, GameObject> playerDictionary;
 
+    [SerializeField] private float scoreBoardShowTime = 3.0f;
     public float roundTotalTime = 60.0f;
     public float gameTime = 60.0f;
     public bool runningGameTime = false;
@@ -75,15 +76,15 @@ public class GameManagerCustom : PunBehaviour
         GoldThief2 = 0;
         GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
         ScoringEndRound = new Vector3(0, 0, 0);
-        ScoringOverall += v;
+        //ScoringOverall += v;
     }
 
     public void RoundReset()
     {
-        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.Others, ScoringEndRound);
-        if (Round < 3)
+        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.All, ScoringEndRound);
+        if (Round <= 3)
         {
-            Round++;
+            //Round++;
             Debug.Log("Starting round : " + Round);
             StartGame();
             var players = GameObject.FindGameObjectsWithTag("Player");
@@ -120,15 +121,24 @@ public class GameManagerCustom : PunBehaviour
 
     private IEnumerator ShowScores()
     {
-        HUD.GetComponent<UIService>().ShowScores();
+        HUD.GetComponent<UIService>().ShowRoundScores();
+        yield return new WaitForSeconds(scoreBoardShowTime);
+        HUD.GetComponent<UIService>().CloseScores();
+
         if (Round < 3)
         {
-            yield return new WaitForSeconds(5.0f);
-            HUD.GetComponent<UIService>().CloseScores();
+			Round++;
             if (PhotonNetwork.player.ID == 1)
             {
                 RoundReset();
             }
+        }
+        else
+        {
+            HUD.GetComponent<UIService>().ShowEndGameMessage();
+            yield return new WaitForSeconds(scoreBoardShowTime);
+            HUD.GetComponent<UIService>().CloseEndGameMessage();
+            HUD.GetComponent<UIService>().ShowTotalScores();
         }
     }
 
@@ -197,27 +207,19 @@ public class GameManagerCustom : PunBehaviour
                 //RoundReset();
                 if (Round == 1)
                 {
-                    ScoringEndRound = new Vector3(GoldMage, 0, 0);
+					ScoringEndRound = new Vector3(GoldMage, GoldThief1, GoldThief2);
                 }
                 else if (Round == 2)
                 {
-                    ScoringEndRound = new Vector3(0, GoldMage, 0);
+					ScoringEndRound = new Vector3(GoldThief1, GoldMage, GoldThief2);
                 }
                 else if (Round == 3)
                 {
-                    ScoringEndRound = new Vector3(0, 0, GoldMage);
+					ScoringEndRound = new Vector3(GoldThief2, GoldThief1, GoldMage);
 
                 }
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach( GameObject p in players )
-                {
-                    int id = p.GetComponent<GenericUser>().myID;
-                    if (id != Round)
-                        ScoringEndRound[id - 1] = p.GetComponent<GenericUser>().currentGold;
-
-                }
-                this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.Others, ScoringEndRound);
-                ScoringOverall += ScoringEndRound;
+                this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.All, ScoringEndRound);
+                //ScoringOverall += ScoringEndRound;
 				ResetTime();
 
             }
@@ -230,6 +232,7 @@ public class GameManagerCustom : PunBehaviour
     void sendScoreToAll(Vector3 s)
     {
         ScoringEndRound = s;
+        ScoringOverall += s;
     }
 
     #region Core Gameplay Methods

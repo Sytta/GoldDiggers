@@ -20,9 +20,15 @@ public class UIService : MonoBehaviour
 
     [Header("Scores")]
     [SerializeField] private GameObject scoreboard;
+    [SerializeField] private GameObject roundTitle;
+    [SerializeField] private GameObject finalTitle;
+    [SerializeField] private GameObject roundScoreContainer;
+    [SerializeField] private GameObject totalScoreContainer;
     [SerializeField] private Text[] playerNames;
     [SerializeField] private Text[] playerRoundScores;
     [SerializeField] private Text[] playerTotalScores;
+    [SerializeField] private GameObject endGameMessage;
+    [SerializeField] private Button menuButton;
 
     private GameManagerCustom gameManager;
 
@@ -30,6 +36,8 @@ public class UIService : MonoBehaviour
 	void Start()
 	{
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManagerCustom>();
+
+        menuButton.onClick.AddListener(OnMenuClicked);
 
         EventManager.Instance.AddListener<OnPowerUpCreated>(Handle);
         EventManager.Instance.AddListener<OnPowerUpReset>(Handle);
@@ -47,6 +55,11 @@ public class UIService : MonoBehaviour
         RefreshGoldVisuals();
 	}
 
+    void OnMenuClicked()
+    {
+        Application.LoadLevel("MainMenu");
+    }
+
     private void RefreshTimerVisuals()
     {
         timerFill.fillAmount = gameManager.gameTime / gameManager.roundTotalTime;
@@ -59,13 +72,36 @@ public class UIService : MonoBehaviour
         goldMageTxt.text = gameManager.GoldMage.ToString();
     }
 
-    public void ShowScores()
+    public void ShowRoundScores()
     {
         scoreboard.SetActive(true);
+        roundTitle.SetActive(true);
+        finalTitle.SetActive(false);
+        roundScoreContainer.SetActive(true);
+        totalScoreContainer.SetActive(false);
+        menuButton.gameObject.SetActive(false);
+
+        for (int i = 0; i < playerRoundScores.Length; i++)
+        {
+            if (PhotonPlayer.Find(i + 1) != null)
+                playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
+            playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
+        }
+    }
+
+    public void ShowTotalScores()
+    {
+        scoreboard.SetActive(true);
+        roundTitle.SetActive(false);
+        finalTitle.SetActive(true);
+        roundScoreContainer.SetActive(false);
+        totalScoreContainer.SetActive(true);
+        menuButton.gameObject.SetActive(true);
+
         for (int i = 0; i < playerTotalScores.Length; i++)
         {
-            playerNames[i].text = PhotonPlayer.Find(i+1).NickName;
-            playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
+            if (PhotonPlayer.Find(i + 1) != null)
+                playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
             playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
     }
@@ -73,6 +109,16 @@ public class UIService : MonoBehaviour
     public void CloseScores()
     {
         scoreboard.SetActive(false);
+    }
+
+    public void ShowEndGameMessage()
+    {
+        endGameMessage.SetActive(true);
+    }
+
+    public void CloseEndGameMessage()
+    {
+        endGameMessage.SetActive(false);
     }
 
     public void Handle(OnPowerUpCreated e)
