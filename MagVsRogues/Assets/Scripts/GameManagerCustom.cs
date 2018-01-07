@@ -24,12 +24,77 @@ public class GameManagerCustom : PunBehaviour
     public GameObject magePlayer;
     public Dictionary<int,GameObject> playerDictionary;
 
+    public float roundTotalTime = 60.0f;
+    public float gameTime = 60.0f;
+    public bool runningGameTime = false;
+    int spawnNumber = 2;
+
+
+    public void StartGame()
+    {
+        runningGameTime = true;
+    }
+
+    public void StopGameTime()
+    {
+        runningGameTime = false;
+    }
+    public void ResetTime()
+    {
+        StopGameTime();
+        gameTime = roundTotalTime;
+    }
+
+    public void RoundReset()
+    {
+        Round = (Round)%3 +1;
+        Debug.Log("Starting round : " + Round);
+        StartGame();
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players)
+        {
+            var mageNumber = Round;
+            var playerGenericUser = player.GetComponent<GenericUser>();
+            var playerNumber = playerGenericUser.myID;
+            if (playerNumber == mageNumber)
+            {
+                magePlayer = player;
+                playerGenericUser.setMage();
+                Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
+                float[] send = new float[4];
+                send[0] = startLocation.x;
+                send[1] = startLocation.y;
+                send[2] = startLocation.z;
+                send[3] = playerNumber;
+
+                player.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
+
+            }
+            else
+            {
+                playerGenericUser.setTheif();
+                float offsetX = spawnNumber == 2 ? -4.5f : 0.5f;
+                Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
+
+                spawnNumber = spawnNumber == 2 ? 1 : 2;
+                float[] send = new float[4];
+                send[0] = startLocation.x;
+                send[1] = startLocation.y;
+                send[2] = startLocation.z;
+                send[3] = playerNumber;
+
+                player.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
+
+            }
+        }
+    }
 
     public void Start()
     {
         RefreshUIViews();
         Round = 1;
         playerDictionary = new Dictionary<int, GameObject>();
+        StartGame();
     }
 
     public void Update()
@@ -65,6 +130,19 @@ public class GameManagerCustom : PunBehaviour
         if (!PhotonNetwork.connected && !PhotonNetwork.connecting && !this.DisconnectedPanel.gameObject.GetActive())
         {
             this.DisconnectedPanel.gameObject.SetActive(true);
+        }
+
+
+        if (runningGameTime)
+        {
+            gameTime -= Time.deltaTime;
+        }
+        if( gameTime <= 0.0f && runningGameTime)
+        {
+            Debug.Log("END ROUND");
+            StopGameTime();
+            ResetTime();
+            RoundReset();
         }
 
     }
