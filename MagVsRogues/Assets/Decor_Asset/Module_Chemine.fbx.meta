@@ -22,6 +22,8 @@ ModelImporter:
     400012: pCylinder7
     400014: pCylinder8
     2100000: lambert1
+    2100002: Texture_SOl_Map
+    2100004: ROndin_de_bois
     2300000: pCube27
     2300002: pCube28
     2300004: pCylinder5
