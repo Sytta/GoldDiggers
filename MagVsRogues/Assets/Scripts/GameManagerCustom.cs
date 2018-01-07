@@ -216,7 +216,7 @@ public class GameManagerCustom : PunBehaviour
 					ScoringEndRound = new Vector3(GoldThief2, GoldThief1, GoldMage);
 
                 }
-                this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.Others, ScoringEndRound);
+                this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.All, ScoringEndRound);
                 //ScoringOverall += ScoringEndRound;
 				ResetTime();
 
