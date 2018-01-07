@@ -31,6 +31,8 @@ public class GenericUser : MonoBehaviour {
                 setTheif(myID);
             }
         }
+        else
+            DisableScripts();
     }
 
     // Update is called once per frame
