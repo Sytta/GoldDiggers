@@ -16,6 +16,9 @@ public class UIService : MonoBehaviour
     [SerializeField] private Transform powerUpsContainer;
     [SerializeField] private GameObject powerUpPrefab;
 
+    [Header("Scores")]
+    [SerializeField] private GameObject scoreboard;
+
     private GameManagerCustom gameManager;
 
 	// Use this for initialization
@@ -51,10 +54,22 @@ public class UIService : MonoBehaviour
         goldMageTxt.text = gameManager.GoldMage.ToString();
     }
 
+    public void ShowScores()
+    {
+        scoreboard.SetActive(true);
+    }
+
+    public void CloseScores()
+    {
+        scoreboard.SetActive(false);
+    }
+
     public void Handle(OnPowerUpCreated e)
     {
         GameObject powerUp = Instantiate(powerUpPrefab, powerUpsContainer);
-        powerUp.GetComponent<PowerUpUI>().SetUp(e.Type);
+        PowerUpUI uiComp = powerUp.GetComponent<PowerUpUI>();
+        if (uiComp != null)
+            uiComp.SetUp(e.Type);
     }
 
     public void Handle(OnPowerUpReset e)

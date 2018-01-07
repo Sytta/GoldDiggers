@@ -65,7 +65,7 @@ public class GameManagerCustom : PunBehaviour
     {
         StopGameTime();
         gameTime = roundTotalTime;
-        this.GetComponent<PhotonView>().RPC("setGlobalTime", PhotonTargets.Others, gameTime);
+        this.GetComponent<PhotonView>().RPC("setGlobalTime", PhotonTargets.All, gameTime);
     }
 
     public void RoundReset()
@@ -81,29 +81,56 @@ public class GameManagerCustom : PunBehaviour
         var players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var player in players)
         {
-            var mageNumber = Round;
-            var playerGenericUser = player.GetComponent<GenericUser>();
-            var playerNumber = playerGenericUser.myID;
-            if (playerNumber == mageNumber)
+            if (Round < 3)
             {
-                magePlayer = player;
-                player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
-                Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
-                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
+                Round++;
+                Debug.Log("Starting round : " + Round);
+                StartGame();
+                var players = GameObject.FindGameObjectsWithTag("Player");
+                foreach (var player in players)
+                {
+                    var mageNumber = Round;
+                    var playerGenericUser = player.GetComponent<GenericUser>();
+                    var playerNumber = playerGenericUser.myID;
+                    if (playerNumber == mageNumber)
+                    {
+                        magePlayer = player;
+                        player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
+                        Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
+                        player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
+                    }
+                    else
+                    {
+                        player.GetComponent<PhotonView>().RPC("setTheif", PhotonTargets.All, playerNumber);
+                        float offsetX = spawnNumber == 2 ? -4.5f : 0.5f;
+                        Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
+
+                        spawnNumber = spawnNumber == 2 ? 1 : 2;
+                        player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
+
+                    }
+                }
+                initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
             }
             else
             {
-                player.GetComponent<PhotonView>().RPC("setTheif", PhotonTargets.All, playerNumber);
-                float offsetX = spawnNumber == 2 ? -4.5f : 0.5f;
-                Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
-
-                spawnNumber = spawnNumber == 2 ? 1 : 2;
-                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
             }
-            player.GetComponent<GenericUser>().currentGold = 0;
         }
-        initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
+    }
+
+    private IEnumerator ShowScores()
+    {
+        HUD.GetComponent<UIService>().ShowScores();
+        if (Round < 3)
+        {
+            yield return new WaitForSeconds(5.0f);
+            HUD.GetComponent<UIService>().CloseScores();
+            if (PhotonNetwork.player.ID == 1)
+            {
+                RoundReset();
+            }
+        }
     }
 
     public void Start()
@@ -167,6 +194,8 @@ public class GameManagerCustom : PunBehaviour
                 Debug.Log("END ROUND");
                 StopGameTime();
                 ResetTime();
+
+                //RoundReset();
                 if (Round == 1)
                 {
                     ScoringEndRound = new Vector3(GoldMage, GoldThief1, GoldThief2);
@@ -181,7 +210,7 @@ public class GameManagerCustom : PunBehaviour
 
                 }
                 ScoringOverall += ScoringEndRound;
-                RoundReset();
+
             }
         }
 
@@ -314,6 +343,7 @@ public class GameManagerCustom : PunBehaviour
     public void setGlobalTime(float t)
     {
         gameTime = t;
+        StartCoroutine(ShowScores());
     }
 
     public void ChangeMageCharacter(int id)
