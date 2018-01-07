@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 1c4c09954c3700a4898bfc23965f9686
+timeCreated: 1515306698
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Thief_Rig_01:annotation1
+    100002: Thief_Rig_01:BodyJ
+    100004: Thief_Rig_01:Clavicules_Ctrl_Droite
+    100006: Thief_Rig_01:Clavicules_Ctrl_Gauche
+    100008: Thief_Rig_01:Controller_Visibility_UPDATENOTE
+    100010: Thief_Rig_01:Ctrl_Elbow_Left_FK
+    100012: Thief_Rig_01:Ctrl_Elbow_Right
+    100014: Thief_Rig_01:Ctrl_Foot_Left
+    100016: Thief_Rig_01:Ctrl_Foot_Right
+    100018: Thief_Rig_01:Ctrl_GroupeMain
+    100020: Thief_Rig_01:Ctrl_Hand_Left_FK
+    100022: Thief_Rig_01:Ctrl_Hand_Left_IK
+    100024: Thief_Rig_01:Ctrl_Hand_Right
+    100026: Thief_Rig_01:Ctrl_Hand_Right_IK
+    100028: Thief_Rig_01:Ctrl_Head
+    100030: Thief_Rig_01:Ctrl_head
+    100032: Thief_Rig_01:Ctrl_IK_FK_LEFT_ARM
+    100034: Thief_Rig_01:Ctrl_IK_FK_RIGHT_ARM
+    100036: Thief_Rig_01:Ctrl_Main
+    100038: Thief_Rig_01:Ctrl_MainHips
+    100040: Thief_Rig_01:Ctrl_Neck
+    100042: Thief_Rig_01:Ctrl_Shoulder_Left_FK
+    100044: Thief_Rig_01:Ctrl_Shoulder_Right_FK
+    100046: Thief_Rig_01:Ctrl_Spine_01
+    100048: Thief_Rig_01:Ctrl_Spine_02
+    100050: Thief_Rig_01:CtrlPelvis
+    100052: Thief_Rig_01:Elbow_CtrlPoleVector_Left
+    100054: Thief_Rig_01:Elbow_CtrlPoleVector_Right
+    100056: Thief_Rig_01:ElbowJ_01_Left_REAL
+    100058: Thief_Rig_01:ElbowJ_01_Right_REAL
+    100060: Thief_Rig_01:EyeCtrl_Left
+    100062: Thief_Rig_01:EyeCtrl_Main
+    100064: Thief_Rig_01:EyeCtrl_Right
+    100066: Thief_Rig_01:FootCtrl_Left
+    100068: Thief_Rig_01:FootCtrl_Right
+    100070: Thief_Rig_01:FootJ_01_Left
+    100072: Thief_Rig_01:FootJ_01_Right
+    100074: Thief_Rig_01:FootJ_End_Left
+    100076: Thief_Rig_01:FootJ_End_Right
+    100078: Thief_Rig_01:FootPivTipytoe_Left
+    100080: Thief_Rig_01:FootPivTipytoe_Right
+    100082: Thief_Rig_01:FootRollPiv_Left
+    100084: Thief_Rig_01:FootRollPiv_Right
+    100086: Thief_Rig_01:Geo
+    100088: Thief_Rig_01:Hand_End_Left_REAL
+    100090: Thief_Rig_01:Hand_End_Right_REAL
+    100092: Thief_Rig_01:Head_01
+    100094: Thief_Rig_01:Head_End
+    100096: Thief_Rig_01:Heel_Piv_Left
+    100098: Thief_Rig_01:HeelPiv_Right
+    100100: Thief_Rig_01:IkFootBall_Left
+    100102: Thief_Rig_01:IkFootBall_Right
+    100104: Thief_Rig_01:IkFootEnd_Left
+    100106: Thief_Rig_01:IkFootEnd_Right
+    100108: Thief_Rig_01:IkLeg_Left
+    100110: Thief_Rig_01:IkLeg_Right
+    100112: Thief_Rig_01:LegJ_01_Left
+    100114: Thief_Rig_01:LegJ_01_Right
+    100116: Thief_Rig_01:LegJ_02_Left
+    100118: Thief_Rig_01:LegJ_02_Right
+    100120: Thief_Rig_01:LegJ_03_Left
+    100122: Thief_Rig_01:LegJ_03_Right
+    100124: Thief_Rig_01:LegPoleVector_Left
+    100126: Thief_Rig_01:LegPoleVector_Right
+    100128: Thief_Rig_01:NeckJ_01
+    100130: Thief_Rig_01:Pelvis
+    100132: Thief_Rig_01:Scale_Controller
+    100134: Thief_Rig_01:ShoulderJ_01_Left_REAL
+    100136: Thief_Rig_01:ShoulderJ_01_Right_REAL
+    100138: Thief_Rig_01:SpaculaJ_01_Left_REAL
+    100140: Thief_Rig_01:SpaculaJ_01_Right_REAL
+    100142: Thief_Rig_01:SpineJ_01
+    100144: Thief_Rig_01:SpineJ_02
+    100146: Thief_Rig_01:SpineJ_03
+    100148: Thief_Rig_01:thief
+    100150: Thief_Rig_01:ToeRollPiv_Left
+    100152: Thief_Rig_01:ToeRollPiv_Right
+    100154: Thief_Rig_01:WristJ_01_Left_REAL
+    100156: Thief_Rig_01:WristJ_01_Right_REAL
+    100158: //RootNode
+    400000: Thief_Rig_01:annotation1
+    400002: Thief_Rig_01:BodyJ
+    400004: Thief_Rig_01:Clavicules_Ctrl_Droite
+    400006: Thief_Rig_01:Clavicules_Ctrl_Gauche
+    400008: Thief_Rig_01:Controller_Visibility_UPDATENOTE
+    400010: Thief_Rig_01:Ctrl_Elbow_Left_FK
+    400012: Thief_Rig_01:Ctrl_Elbow_Right
+    400014: Thief_Rig_01:Ctrl_Foot_Left
+    400016: Thief_Rig_01:Ctrl_Foot_Right
+    400018: Thief_Rig_01:Ctrl_GroupeMain
+    400020: Thief_Rig_01:Ctrl_Hand_Left_FK
+    400022: Thief_Rig_01:Ctrl_Hand_Left_IK
+    400024: Thief_Rig_01:Ctrl_Hand_Right
+    400026: Thief_Rig_01:Ctrl_Hand_Right_IK
+    400028: Thief_Rig_01:Ctrl_Head
+    400030: Thief_Rig_01:Ctrl_head
+    400032: Thief_Rig_01:Ctrl_IK_FK_LEFT_ARM
+    400034: Thief_Rig_01:Ctrl_IK_FK_RIGHT_ARM
+    400036: Thief_Rig_01:Ctrl_Main
+    400038: Thief_Rig_01:Ctrl_MainHips
+    400040: Thief_Rig_01:Ctrl_Neck
+    400042: Thief_Rig_01:Ctrl_Shoulder_Left_FK
+    400044: Thief_Rig_01:Ctrl_Shoulder_Right_FK
+    400046: Thief_Rig_01:Ctrl_Spine_01
+    400048: Thief_Rig_01:Ctrl_Spine_02
+    400050: Thief_Rig_01:CtrlPelvis
+    400052: Thief_Rig_01:Elbow_CtrlPoleVector_Left
+    400054: Thief_Rig_01:Elbow_CtrlPoleVector_Right
+    400056: Thief_Rig_01:ElbowJ_01_Left_REAL
+    400058: Thief_Rig_01:ElbowJ_01_Right_REAL
+    400060: Thief_Rig_01:EyeCtrl_Left
+    400062: Thief_Rig_01:EyeCtrl_Main
+    400064: Thief_Rig_01:EyeCtrl_Right
+    400066: Thief_Rig_01:FootCtrl_Left
+    400068: Thief_Rig_01:FootCtrl_Right
+    400070: Thief_Rig_01:FootJ_01_Left
+    400072: Thief_Rig_01:FootJ_01_Right
+    400074: Thief_Rig_01:FootJ_End_Left
+    400076: Thief_Rig_01:FootJ_End_Right
+    400078: Thief_Rig_01:FootPivTipytoe_Left
+    400080: Thief_Rig_01:FootPivTipytoe_Right
+    400082: Thief_Rig_01:FootRollPiv_Left
+    400084: Thief_Rig_01:FootRollPiv_Right
+    400086: Thief_Rig_01:Geo
+    400088: Thief_Rig_01:Hand_End_Left_REAL
+    400090: Thief_Rig_01:Hand_End_Right_REAL
+    400092: Thief_Rig_01:Head_01
+    400094: Thief_Rig_01:Head_End
+    400096: Thief_Rig_01:Heel_Piv_Left
+    400098: Thief_Rig_01:HeelPiv_Right
+    400100: Thief_Rig_01:IkFootBall_Left
+    400102: Thief_Rig_01:IkFootBall_Right
+    400104: Thief_Rig_01:IkFootEnd_Left
+    400106: Thief_Rig_01:IkFootEnd_Right
+    400108: Thief_Rig_01:IkLeg_Left
+    400110: Thief_Rig_01:IkLeg_Right
+    400112: Thief_Rig_01:LegJ_01_Left
+    400114: Thief_Rig_01:LegJ_01_Right
+    400116: Thief_Rig_01:LegJ_02_Left
+    400118: Thief_Rig_01:LegJ_02_Right
+    400120: Thief_Rig_01:LegJ_03_Left
+    400122: Thief_Rig_01:LegJ_03_Right
+    400124: Thief_Rig_01:LegPoleVector_Left
+    400126: Thief_Rig_01:LegPoleVector_Right
+    400128: Thief_Rig_01:NeckJ_01
+    400130: Thief_Rig_01:Pelvis
+    400132: Thief_Rig_01:Scale_Controller
+    400134: Thief_Rig_01:ShoulderJ_01_Left_REAL
+    400136: Thief_Rig_01:ShoulderJ_01_Right_REAL
+    400138: Thief_Rig_01:SpaculaJ_01_Left_REAL
+    400140: Thief_Rig_01:SpaculaJ_01_Right_REAL
+    400142: Thief_Rig_01:SpineJ_01
+    400144: Thief_Rig_01:SpineJ_02
+    400146: Thief_Rig_01:SpineJ_03
+    400148: Thief_Rig_01:thief
+    400150: Thief_Rig_01:ToeRollPiv_Left
+    400152: Thief_Rig_01:ToeRollPiv_Right
+    400154: Thief_Rig_01:WristJ_01_Left_REAL
+    400156: Thief_Rig_01:WristJ_01_Right_REAL
+    400158: //RootNode
+    2100000: 'Thief_Rig_01_Material #42'
+    2100002: 'Thief_Rig_01_Material #43'
+    2100004: 'Thief_Rig_01_Material #44'
+    4300000: Thief_Rig_01:thief
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Thief_Rig_01:thief
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
