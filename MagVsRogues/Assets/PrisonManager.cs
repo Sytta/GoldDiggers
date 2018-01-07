@@ -17,6 +17,7 @@ public class PrisonManager : MonoBehaviour {
         {
             if(isOpen == false) // opening
             {
+				SoundManager.instance.playIronGate ();
                 if(this.gameObject.transform.parent.transform.rotation.eulerAngles.y < 90 || this.gameObject.transform.parent.transform.rotation.eulerAngles.y >= 180)
                     this.gameObject.transform.parent.transform.Rotate(new Vector3(0, 60f * Time.deltaTime, 0));
                 else
