@@ -18,7 +18,9 @@ public class UIService : MonoBehaviour
 
     [Header("Scores")]
     [SerializeField] private GameObject scoreboard;
-    [SerializeField] private Text[] scorePlayer;
+    [SerializeField] private Text[] playerNames;
+    [SerializeField] private Text[] playerRoundScores;
+    [SerializeField] private Text[] playerTotalScores;
 
     private GameManagerCustom gameManager;
 
@@ -58,9 +60,11 @@ public class UIService : MonoBehaviour
     public void ShowScores()
     {
         scoreboard.SetActive(true);
-        for (int i = 0; i < scorePlayer.Length; i++)
+        for (int i = 0; i < playerTotalScores.Length; i++)
         {
-            scorePlayer[i].text = gameManager.ScoringEndRound[i].ToString();
+            playerNames[i].text = PhotonNetwork.playerList[i].NickName;
+            playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
+            playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
     }
 
