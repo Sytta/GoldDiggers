@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CharacterController))]
 public class ChestController : MonoBehaviour
 {
     public float magicH = -0.2f;
     public int gold;
     public Transform goldPile;
-    private int initialGold;
+    public int initialGold;
     private float initialHight;
 
     void Start()
@@ -56,4 +55,6 @@ public class ChestController : MonoBehaviour
     {
         return gold <= 0;
     }
+
+
 }

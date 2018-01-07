@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33154225686781572}
   - component: {fileID: 23310163731843230}
   - component: {fileID: 65143468113390574}
-  - component: {fileID: 143338512015937816}
   - component: {fileID: 114136690000886992}
   - component: {fileID: 114484976548642584}
   - component: {fileID: 114295942755941424}
+  - component: {fileID: 65586705068568596}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Chest
@@ -87,6 +87,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -102,6 +103,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -119,6 +121,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -134,6 +137,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -166,8 +170,20 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.28, y: 0.81, z: 1.2}
-  m_Center: {x: -0.17, y: 0, z: 0.33042637}
+  m_Size: {x: 2, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0.33042637}
+--- !u!65 &65586705068568596
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466273187148330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.88040495, y: 0.7238, z: 1}
+  m_Center: {x: 0.16572809, y: 0.0020999908, z: 0.54}
 --- !u!95 &95565963983298278
 Animator:
   serializedVersion: 3
@@ -199,6 +215,7 @@ MonoBehaviour:
   magicH: -0.2
   gold: 200
   goldPile: {fileID: 4335967342241404}
+  initialGold: 0
 --- !u!114 &114295942755941424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,20 +307,3 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
---- !u!143 &143338512015937816
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466273187148330}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.72800016
-  m_Radius: 0.66085273
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}

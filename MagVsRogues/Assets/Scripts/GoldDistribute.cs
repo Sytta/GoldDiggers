@@ -26,9 +26,27 @@ public class GoldDistribute : MonoBehaviour {
         chests[chests.Length - 1].GetComponent<ChestController>().gold = total;
         chests[chests.Length - 1].GetComponent<PhotonView>().RPC("initGold", PhotonTargets.All, total);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void resetGold(GameObject go)
+    {
+        GameObject[] chests = GameObject.FindGameObjectsWithTag("Chest");
+        for (int i = 0; i < chests.Length; ++i)
+        {
+            chests[i].gameObject.tag = "Untagged";
+            Destroy(chests[i].gameObject);
+        }
+        this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[0].GetComponent<ChestSpawner>().spawn();
+        this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[1].GetComponent<ChestSpawner>().spawn();
+        this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[2].GetComponent<ChestSpawner>().spawn();
+        this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[3].GetComponent<ChestSpawner>().spawn();
+        this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[4].GetComponent<ChestSpawner>().spawn();
+
+        var test  = GameObject.FindGameObjectsWithTag("Chest").Length;
+        Start();
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

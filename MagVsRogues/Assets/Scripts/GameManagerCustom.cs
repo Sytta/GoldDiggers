@@ -19,7 +19,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] private RectTransform DisconnectedPanel;
 
     [SerializeField] private int PlayerCount = 3;
-    [SerializeField] private List<GameObject> initialiser;
+    [SerializeField] public List<GameObject> initialiser;
     [SerializeField] public List<Transform> teleportLocations;
     public GameObject magePlayer;
     public Dictionary<int,GameObject> playerDictionary;
@@ -75,6 +75,7 @@ public class GameManagerCustom : PunBehaviour
 
             }
         }
+        initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
     }
 
     public void Start()
