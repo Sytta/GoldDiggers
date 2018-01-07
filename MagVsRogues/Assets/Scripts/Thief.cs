@@ -83,6 +83,7 @@ public class Thief: MonoBehaviour
         this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
 
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<PhotonView>().RPC("stolenCash", PhotonTargets.All, data);
+		SoundManager.instance.playPrison ();
 
     }
 
@@ -130,6 +131,7 @@ public class Thief: MonoBehaviour
         goldYield += collected;
         this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
         Debug.Log("Got :" + goldYield + "g");
+		SoundManager.instance.playCoin ();
         isLooting = false;
 
     }
@@ -189,6 +191,7 @@ public class Thief: MonoBehaviour
             {
                 var teleportLocation = SelectTeleport();
                 this.gameObject.GetComponent<GenericUser>().Teleport(teleportLocation.position, this.gameObject);
+				SoundManager.instance.playTeleport ();
 
             }
             canTeleport = false;
