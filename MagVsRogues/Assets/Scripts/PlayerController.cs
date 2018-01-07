@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     public float StrafeSpeed;
     public float RotateSpeed;
 
-    private bool isSoundPlaying;
-
     CharacterController m_CharacterController;
     Vector3 m_LastPosition;
     Animator m_Animator;
@@ -85,36 +83,7 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetFloat("Speed", Mathf.Abs(m_AnimatorSpeed));
         //m_Animator.SetFloat("Direction", direction);
 
-        if (m_LastPosition != transform.position)
-            keepSoundWalking();
-        else
-            stopSoundWalking();
-
         m_LastPosition = transform.position;
-    }
-
-    void keepSoundWalking()
-    {
-        if (isSoundPlaying)
-            return;
-        else
-        {
-            isSoundPlaying = true;
-            SoundManager.instance.playWalk();
-        }
-
-    }
-
-    void stopSoundWalking()
-    {
-        if (isSoundPlaying == false)
-            return;
-        else
-        {
-            isSoundPlaying = false;
-            SoundManager.instance.stopWalk();
-        }
-
     }
 
     void ResetSpeedValues()
@@ -135,7 +104,6 @@ public class PlayerController : MonoBehaviour
 
     void MoveCharacterController()
     {
-        
         m_CharacterController.Move(m_CurrentMovement * Time.deltaTime);
     }
 
