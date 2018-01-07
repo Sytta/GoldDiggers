@@ -242,8 +242,11 @@ public class GameManagerCustom : PunBehaviour
             {
                 CreatePlayerObject(player.GetComponent<GenericUser>().myID);
                 //this.GetComponent<PhotonView>().ownerId = player.GetComponent<GenericUser>().myID;
-                PhotonNetwork.Destroy(player);
-                
+                if (player.GetComponent<PhotonView>().isMine)
+                {
+                    PhotonNetwork.Destroy(player);
+                }
+
             }
         }
         
