@@ -12077,7 +12077,7 @@ MonoBehaviour:
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
   HUD: {fileID: 540190628}
-  PlayerCount: 1
+  PlayerCount: 3
   initialiser:
   - {fileID: 1896675114}
   - {fileID: 1414354775}
