@@ -1753,7 +1753,7 @@ Prefab:
     - target: {fileID: 224087253680912988, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224253719643114648, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -1773,7 +1773,7 @@ Prefab:
     - target: {fileID: 224253719643114648, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224000144745614472, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -1782,11 +1782,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1944451127228258, guid: 1b6c9f2874d2a486fb5d77df60ef6b28, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b6c9f2874d2a486fb5d77df60ef6b28, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &540190628 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1944451127228258, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
+    type: 2}
+  m_PrefabInternal: {fileID: 540190627}
 --- !u!4 &610161271 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4985254172631092, guid: 9be01a1805abe99429f12bbf67b67772,
@@ -5991,6 +5996,7 @@ MonoBehaviour:
   ConnectUiView: {fileID: 1244915656}
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
+  HUD: {fileID: 0}
   PlayerCount: 2
   initialiser:
   - {fileID: 674884995}
@@ -6005,7 +6011,7 @@ MonoBehaviour:
   - {fileID: 1759050270}
   - {fileID: 1432585358}
   - {fileID: 925590788}
-  magePlayer: {fileID: 0}
+  magePlayer: {fileID: 540190628}
   roundTotalTime: 10
   gameTime: 10
   runningGameTime: 0
