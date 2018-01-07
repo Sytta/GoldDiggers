@@ -138,7 +138,7 @@ public class Thief: MonoBehaviour
         }
         if(canLoot && coll != null)
         {
-            if (Input.GetKeyUp(KeyCode.Z))
+			if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 if (isLooting == false)
                 {
@@ -151,14 +151,14 @@ public class Thief: MonoBehaviour
             if(isLooting)
             {
                 timeMultiplier += Time.deltaTime;
-                if (Input.GetKeyDown(KeyCode.Z))
+				if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     keyDownCounter += 1;
                 }
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.T) && canTeleport)
+        if (Input.GetKeyUp(KeyCode.Mouse1) && canTeleport)
         {
             EventManager.Instance.QueueEvent(new OnPowerUpUsed(PowerUpType.Teleportation));
             gameManger.FindMage();
