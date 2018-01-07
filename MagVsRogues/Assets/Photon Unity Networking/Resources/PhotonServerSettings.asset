@@ -45,4 +45,6 @@ MonoBehaviour:
   - UpdateSync
   - Prison
   - initGold
+  - setMage
+  - setTheif
   DisableAutoOpenWizard: 1
