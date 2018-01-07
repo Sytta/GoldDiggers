@@ -33,7 +33,7 @@ public class GoldDistribute : MonoBehaviour {
         for (int i = 0; i < chests.Length; ++i)
         {
             chests[i].gameObject.tag = "Untagged";
-            Destroy(chests[i].gameObject);
+            PhotonNetwork.Destroy(chests[i].gameObject);
         }
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[0].GetComponent<ChestSpawner>().spawn();
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[1].GetComponent<ChestSpawner>().spawn();

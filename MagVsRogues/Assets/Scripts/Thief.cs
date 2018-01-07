@@ -132,7 +132,7 @@ public class Thief: MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Diablo") != null)
         {
-            PhotonNetwork.Destroy(GameObject.FindGameObjectWithTag("Diablo"));
+            Destroy(GameObject.FindGameObjectWithTag("Diablo"));
         }
         if(canLoot && coll != null)
         {
