@@ -75,6 +75,8 @@ public class Thief: MonoBehaviour
 
     public void SpawnThief(int location)
     {   
+        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Teleportation, teleportCooldown));
+
         if(location == 2)
         {
             this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(0.5f, -2f, -5.5f), this.gameObject);

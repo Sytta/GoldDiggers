@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 224132744937339860}
   - component: {fileID: 222691060551771282}
   - component: {fileID: 114450125018895904}
+  - component: {fileID: 114546990653344614}
   m_Layer: 5
   m_Name: PowerUpUI
   m_TagString: Untagged
@@ -116,6 +117,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114546990653344614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993800877811832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f827a30dfd834424a834df6975db8849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpBackground: {fileID: 114877721365928088}
+  powerUpCooldown: {fileID: 114389930358612644}
+  cooldown: 0
+  powerUpImgs:
+  - {fileID: 21300000, guid: b1d88e383c1a24b4ca6e0645fdc3f3a0, type: 3}
+  - {fileID: 21300000, guid: b84f3bbfdc682415fa4b8d146ac5682e, type: 3}
+  - {fileID: 21300000, guid: db89ce376537141e7bd87bced6789f5f, type: 3}
 --- !u!114 &114877721365928088
 MonoBehaviour:
   m_ObjectHideFlags: 1

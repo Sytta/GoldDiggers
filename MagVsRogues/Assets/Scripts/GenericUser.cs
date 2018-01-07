@@ -43,21 +43,23 @@ public class GenericUser : MonoBehaviour {
     [PunRPC]
     public void setMage(int player)
     {
+        EventManager.Instance.QueueEvent(new OnPowerUpReset());
+        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
+
         if(player == myID)
         { 
             this.GetComponent<Thief>().enabled = (false);
             this.GetComponent<Mage>().enabled = (true);
         }
         // TODO Swap UI and swap skins
-
-        EventManager.Instance.QueueEvent(new OnPowerUpReset());
-        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
     }
 
 
     [PunRPC]
     public void setTheif(int player)
     {
+        EventManager.Instance.QueueEvent(new OnPowerUpReset());
+
         if (player == myID)
         {
             this.GetComponent<Thief>().enabled = (true);
@@ -65,8 +67,6 @@ public class GenericUser : MonoBehaviour {
             this.GetComponent<Mage>().enabled = (false);
         }
         // TODO Swap UI and swap skins
-
-        EventManager.Instance.QueueEvent(new OnPowerUpReset());
     }
 
     void DisableScripts()

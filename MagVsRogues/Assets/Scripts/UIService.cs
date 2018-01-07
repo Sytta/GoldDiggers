@@ -126,7 +126,7 @@ public class UIService : MonoBehaviour
         GameObject powerUp = Instantiate(powerUpPrefab, powerUpsContainer);
         PowerUpUI uiComp = powerUp.GetComponent<PowerUpUI>();
         if (uiComp != null)
-            uiComp.SetUp(e.Type);
+            uiComp.SetUp(e.Type, e.Cooldown);
     }
 
     public void Handle(OnPowerUpReset e)
