@@ -132,20 +132,7 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-        if(PhotonNetwork.player.ID == 1)
-        {
-            if (runningGameTime)
-            {
-                gameTime -= Time.deltaTime;
-            }
-            if (gameTime <= 0.0f && runningGameTime)
-            {
-                Debug.Log("END ROUND");
-                //StopGameTime();
-                //ResetTime();
-                //RoundReset();
-            }
-        }
+
       
 
     }

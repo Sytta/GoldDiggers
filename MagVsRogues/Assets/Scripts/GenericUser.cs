@@ -47,7 +47,6 @@ public class GenericUser : MonoBehaviour {
         // TODO Swap UI and swap skins
     }
 
-    [PunRPC]
     public void setTheif(int player)
     {
         if (player == myID)
@@ -65,7 +64,6 @@ public class GenericUser : MonoBehaviour {
         GetComponent<Thief>().enabled = m_PhotonView.isMine;
     }
 
-    [PunRPC]
     void Prison(float[] p)
     {
         if ((int)(p[3]) == this.gameObject.GetComponent<GenericUser>().myID)
