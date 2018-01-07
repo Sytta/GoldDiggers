@@ -297,7 +297,7 @@ public class GameManagerCustom : PunBehaviour
     public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
     {
         Debug.Log("Other player arrived");
-
+		RefreshUIViews ();
         if (PhotonNetwork.room.PlayerCount == PlayerCount)
         {
             //////////// START GAME ////////////
