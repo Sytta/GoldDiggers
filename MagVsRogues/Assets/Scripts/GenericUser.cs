@@ -36,7 +36,6 @@ public class GenericUser : MonoBehaviour {
 
     }
 
-    [PunRPC]
     public void setMage(int player)
     {
         if(player == myID)
@@ -64,6 +63,7 @@ public class GenericUser : MonoBehaviour {
         GetComponent<Thief>().enabled = m_PhotonView.isMine;
     }
 
+    [PunRPC]
     void Prison(float[] p)
     {
         if ((int)(p[3]) == this.gameObject.GetComponent<GenericUser>().myID)
