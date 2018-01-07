@@ -4823,7 +4823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741fc552e75514c458e8bd459f3b68ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MageGold: 20000
+  MageGold: 200
 --- !u!1 &1565348782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,7 +6054,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1360751448194448, guid: 3d50d5d0c69e84c3c8964b27c91635a5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d50d5d0c69e84c3c8964b27c91635a5, type: 2}
