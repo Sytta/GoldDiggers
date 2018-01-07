@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GenericUser : MonoBehaviour {
     public int myID = -1;
+    public int currentGold = 0;
     private GameManagerCustom gm;
     [SerializeField] private Transform playerPosition;
     PhotonView m_PhotonView;
@@ -22,6 +23,7 @@ public class GenericUser : MonoBehaviour {
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
                 setMage(myID);
+                currentGold = gm.initialiser[5].GetComponent<GoldDistribute>().MageGold;
             }
             else
             {
