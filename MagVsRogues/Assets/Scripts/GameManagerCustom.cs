@@ -32,6 +32,9 @@ public class GameManagerCustom : PunBehaviour
     public int GoldThief1 = 0;
     public int GoldThief2 = 0;
     public int GoldMage = -1;
+
+    private Vector3 ScoringOverall;
+    private Vector3 ScoringEndRound;
     int spawnNumber = 2;
 
     [PunRPC]
@@ -100,6 +103,11 @@ public class GameManagerCustom : PunBehaviour
 
     public void Start()
     {
+
+
+        ScoringOverall = new Vector3(0, 0, 0);
+        ScoringEndRound = new Vector3(0, 0, 0);
+
         RefreshUIViews();
         Round = 1;
         GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
@@ -154,6 +162,20 @@ public class GameManagerCustom : PunBehaviour
                 Debug.Log("END ROUND");
                 StopGameTime();
                 ResetTime();
+                if (Round == 1)
+                {
+                    ScoringEndRound = new Vector3(GoldMage, GoldThief1, GoldThief2);
+                }
+                else if (Round == 2)
+                {
+                    ScoringEndRound = new Vector3(GoldThief2, GoldMage, GoldThief1);
+                }
+                else if (Round == 3)
+                {
+                    ScoringEndRound = new Vector3(GoldThief2, GoldThief1, GoldMage);
+
+                }
+                ScoringOverall += ScoringEndRound;
                 RoundReset();
             }
         }
