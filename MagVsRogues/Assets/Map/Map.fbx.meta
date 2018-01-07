@@ -183,6 +183,9 @@ ModelImporter:
     100350: Escalier_03
     100352: Mur_de_pierre25
     100354: Plafond
+    100356: Mur_de_pierre
+    100358: Plancher2
+    100360: Toit
     400000: //RootNode
     400002: polySurface1
     400004: polySurface10
@@ -361,11 +364,15 @@ ModelImporter:
     400350: Escalier_03
     400352: Mur_de_pierre25
     400354: Plafond
+    400356: Mur_de_pierre
+    400358: Plancher2
+    400360: Toit
     2100000: lambert1
     2100002: Mur_Pierre
     2100004: PlainteDessousPierre
     2100006: Sol_Pierre
     2100008: lambert3
+    2100010: Texture_SOl_Map
     2300000: //RootNode
     2300002: polySurface1
     2300004: polySurface10
@@ -544,6 +551,9 @@ ModelImporter:
     2300350: Escalier_03
     2300352: Mur_de_pierre25
     2300354: Plafond
+    2300356: Mur_de_pierre
+    2300358: Plancher2
+    2300360: Toit
     3300000: //RootNode
     3300002: polySurface1
     3300004: polySurface10
@@ -722,6 +732,9 @@ ModelImporter:
     3300350: Escalier_03
     3300352: Mur_de_pierre25
     3300354: Plafond
+    3300356: Mur_de_pierre
+    3300358: Plancher2
+    3300360: Toit
     4300000: Map
     4300002: polySurface1
     4300004: polySurface2
@@ -900,6 +913,9 @@ ModelImporter:
     4300350: Escalier_03
     4300352: Mur_de_pierre25
     4300354: Plafond
+    4300356: Plancher2
+    4300358: Toit
+    4300360: Mur_de_pierre
     9500000: //RootNode
   externalObjects: {}
   materials:
