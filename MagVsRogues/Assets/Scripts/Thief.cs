@@ -50,6 +50,9 @@ public class Thief: MonoBehaviour
         {
             coll = other.gameObject;
             canLoot = !coll.GetComponent<ChestController>().isEmpty();
+            gameManger.FindMage();
+            if (!gameManger.magePlayer.GetPhotonView().isMine)
+                coll.GetComponent<ChestController>().ShowInviteMessage();
         }
         else
             canLoot = false;
@@ -58,6 +61,10 @@ public class Thief: MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         canLoot = false;
+        if (other.tag == "Chest")
+        {
+            other.gameObject.GetComponent<ChestController>().CloseInviteMessage();
+        }
     }
 
     [PunRPC]
