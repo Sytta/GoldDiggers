@@ -61,7 +61,7 @@ public class Thief: MonoBehaviour
     }
 
     public void SpawnThief(int location)
-    {
+    {   /*
         if(location == 2)
         {
             this.transform.position = new Vector3(0.5f, -2f, -7.5f);
@@ -71,6 +71,7 @@ public class Thief: MonoBehaviour
             this.transform.position = new Vector3(4.5f, -2f, -7.5f);
 
         }
+        */
     }
 
     private IEnumerator WaitForLoot()
