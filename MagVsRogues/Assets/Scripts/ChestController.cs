@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ChestController : MonoBehaviour
 {
+    [SerializeField] private GameObject inviteMessage;
     public float magicH = -0.2f;
     public int gold;
     public Transform goldPile;
@@ -22,6 +23,21 @@ public class ChestController : MonoBehaviour
         goldPile.localPosition = new Vector3(goldPile.localPosition.x, goldPile.localPosition.y , z);
         if (gold <= 0)
             goldPile.gameObject.active = false;
+
+        if(isEmpty() && inviteMessage.activeSelf)
+        {
+            CloseInviteMessage();
+        }
+    }
+
+    public void ShowInviteMessage()
+    {
+        inviteMessage.SetActive(!isEmpty());
+    }
+
+    public void CloseInviteMessage()
+    {
+        inviteMessage.SetActive(false);
     }
 
     public int DecreaseGold(int ammount)
