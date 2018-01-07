@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 4b2ad028b3f3fff41abe498314ea152a
+timeCreated: 1515313396
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Barreau_prison1
+    100002: Barreau_prison10
+    100004: Barreau_prison11
+    100006: Barreau_prison12
+    100008: Barreau_prison13
+    100010: Barreau_prison14
+    100012: Barreau_prison15
+    100014: Barreau_prison2
+    100016: Barreau_prison3
+    100018: Barreau_prison5
+    100020: Barreau_prison6
+    100022: Barreau_prison7
+    100024: Barreau_prison8
+    100026: Barreau_prison9
+    100028: //RootNode
+    100030: group1_pTorus12
+    100032: group1_pTorus13
+    100034: pCylinder16
+    100036: Table_torture
+    100038: transform1
+    100040: transform2
+    400000: Barreau_prison1
+    400002: Barreau_prison10
+    400004: Barreau_prison11
+    400006: Barreau_prison12
+    400008: Barreau_prison13
+    400010: Barreau_prison14
+    400012: Barreau_prison15
+    400014: Barreau_prison2
+    400016: Barreau_prison3
+    400018: Barreau_prison5
+    400020: Barreau_prison6
+    400022: Barreau_prison7
+    400024: Barreau_prison8
+    400026: Barreau_prison9
+    400028: //RootNode
+    400030: group1_pTorus12
+    400032: group1_pTorus13
+    400034: pCylinder16
+    400036: Table_torture
+    400038: transform1
+    400040: transform2
+    2100000: Acier_Prison
+    2100002: lambert1
+    2100004: Bois_metal_Biblio
+    2300000: Barreau_prison1
+    2300002: Barreau_prison10
+    2300004: Barreau_prison11
+    2300006: Barreau_prison12
+    2300008: Barreau_prison13
+    2300010: Barreau_prison14
+    2300012: Barreau_prison15
+    2300014: Barreau_prison2
+    2300016: Barreau_prison3
+    2300018: Barreau_prison5
+    2300020: Barreau_prison6
+    2300022: Barreau_prison7
+    2300024: Barreau_prison8
+    2300026: Barreau_prison9
+    2300028: group1_pTorus12
+    2300030: group1_pTorus13
+    2300032: pCylinder16
+    2300034: Table_torture
+    3300000: Barreau_prison1
+    3300002: Barreau_prison10
+    3300004: Barreau_prison11
+    3300006: Barreau_prison12
+    3300008: Barreau_prison13
+    3300010: Barreau_prison14
+    3300012: Barreau_prison15
+    3300014: Barreau_prison2
+    3300016: Barreau_prison3
+    3300018: Barreau_prison5
+    3300020: Barreau_prison6
+    3300022: Barreau_prison7
+    3300024: Barreau_prison8
+    3300026: Barreau_prison9
+    3300028: group1_pTorus12
+    3300030: group1_pTorus13
+    3300032: pCylinder16
+    3300034: Table_torture
+    4300000: Barreau_prison1
+    4300002: Barreau_prison2
+    4300004: Barreau_prison3
+    4300006: Barreau_prison5
+    4300008: Barreau_prison6
+    4300010: group1_pTorus12
+    4300012: Barreau_prison7
+    4300014: Barreau_prison8
+    4300016: Barreau_prison9
+    4300018: Barreau_prison10
+    4300020: Barreau_prison11
+    4300022: Barreau_prison12
+    4300024: Barreau_prison13
+    4300026: Barreau_prison14
+    4300028: Barreau_prison15
+    4300030: Table_torture
+    4300032: group1_pTorus13
+    4300034: pCylinder16
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

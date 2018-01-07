@@ -34,7 +34,7 @@ public class Mage : MonoBehaviour {
             diablo.GetComponent<TeleporterDiablo>().Jail();
             diablo.SetActive(false);
         }
-        if (diablo.activeSelf)
+        if (diablo != null && diablo.activeSelf)
         {
             diablo.transform.Rotate(0, 4.0f, 0, Space.Self);
         }
