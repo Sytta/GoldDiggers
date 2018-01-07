@@ -243,7 +243,7 @@ public class GameManagerCustom : PunBehaviour
         foreach (var player in players)
         {
             var mageNumber = Round;
-            if (player.GetComponent<GenericUser>().myID == this.GetComponent<PhotonView>().viewID)
+            if (player.GetComponent<GenericUser>().myID == PhotonNetwork.player.ID)
             {
                 CreatePlayerObject(player.GetComponent<GenericUser>().myID);
                 //this.GetComponent<PhotonView>().ownerId = player.GetComponent<GenericUser>().myID;
