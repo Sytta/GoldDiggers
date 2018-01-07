@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     {
         if (m_PhotonView.isMine == true)
         {
+			if (GetComponent<Thief> ().isLooting)
+				return;
             ResetSpeedValues();
 
             UpdateRotateMovement();
