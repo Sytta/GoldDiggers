@@ -51,6 +51,7 @@ public class GameManagerCustom : PunBehaviour
     public void StartGame()
     {
         runningGameTime = true;
+        EventManager.Instance.QueueEvent(new OnRoundStarted());
     }
 
     public void StopGameTime()

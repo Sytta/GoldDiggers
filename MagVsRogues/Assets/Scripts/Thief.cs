@@ -6,7 +6,7 @@ using System.Linq;
 public class Thief: MonoBehaviour
 {
     private bool canLoot = false;
-    private bool isLooting = false;
+    public bool isLooting = false;
     private float animatonSpeed;
     private float timeMultiplier = 0;
     private int keyDownCounter = 0;
