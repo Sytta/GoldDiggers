@@ -17,6 +17,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] private RectTransform ConnectUiView;
     [SerializeField] private RectTransform WaitingUiView;
     [SerializeField] private RectTransform DisconnectedPanel;
+    [SerializeField] private GameObject HUD;
 
     [SerializeField] private int PlayerCount = 3;
     [SerializeField] public List<GameObject> initialiser;
@@ -53,7 +54,6 @@ public class GameManagerCustom : PunBehaviour
         StopAllCoroutines();
         StartCoroutine(SendGameTime());
         runningGameTime = true;
-        EventManager.Instance.QueueEvent(new OnRoundStarted());
     }
 
     public void StopGameTime()
@@ -187,6 +187,7 @@ public class GameManagerCustom : PunBehaviour
     {
         ConnectUiView.gameObject.SetActive(!PhotonNetwork.inRoom);
         WaitingUiView.gameObject.SetActive(PhotonNetwork.inRoom && PhotonNetwork.room.PlayerCount < PlayerCount);
+        HUD.SetActive(PhotonNetwork.inRoom && PhotonNetwork.room.PlayerCount >= PlayerCount);
     }
 
 
