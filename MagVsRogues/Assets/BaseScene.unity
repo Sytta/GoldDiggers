@@ -1748,7 +1748,7 @@ Prefab:
     - target: {fileID: 224087253680912988, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224253719643114648, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -1768,7 +1768,7 @@ Prefab:
     - target: {fileID: 224253719643114648, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224000144745614472, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -1777,7 +1777,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1944451127228258, guid: 1b6c9f2874d2a486fb5d77df60ef6b28, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 223018555260319040, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -3232,6 +3232,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1144715596 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1944451127228258, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
+    type: 2}
+  m_PrefabInternal: {fileID: 540190627}
 --- !u!1 &1147672096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,6 +6008,7 @@ MonoBehaviour:
   ConnectUiView: {fileID: 1244915656}
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
+  HUD: {fileID: 1144715596}
   PlayerCount: 1
   initialiser:
   - {fileID: 674884995}
