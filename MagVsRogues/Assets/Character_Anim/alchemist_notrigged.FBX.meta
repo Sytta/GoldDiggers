@@ -14,7 +14,17 @@ ModelImporter:
     3300000: //RootNode
     4300000: alchemist
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #39'
+    second: {fileID: 2100000, guid: a3327ed5e29422f47aa6ad2da1af3991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #40'
+    second: {fileID: 2100000, guid: 094cfc8a5d9d7314d8d994468793fabf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -14,7 +14,22 @@ ModelImporter:
     3300000: //RootNode
     4300000: thief
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #39'
+    second: {fileID: 2100000, guid: d7b1475bc2fd47348a46b3735afa5170, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #40'
+    second: {fileID: 2100000, guid: 3e9b5c0cb5718f94fa9eb2ec782fb1b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #41'
+    second: {fileID: 2100010, guid: 00b699a35b2ba3f43ab1a807c2ebec11, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

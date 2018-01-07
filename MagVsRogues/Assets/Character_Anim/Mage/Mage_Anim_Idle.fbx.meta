@@ -358,7 +358,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 'MAge_Rig_01_Material #29'
-    second: {fileID: 2100000, guid: 094cfc8a5d9d7314d8d994468793fabf, type: 2}
+    second: {fileID: 2100000, guid: 0a4c32ae4a97ec9449222f17a0f6ae8b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
