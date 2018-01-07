@@ -3772,6 +3772,71 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 557861340}
   m_Mesh: {fileID: 4300004, guid: 94391c57f2c308142a029dc5afdf28c7, type: 3}
+--- !u!1 &559371100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 559371102}
+  - component: {fileID: 559371101}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &559371101
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559371100}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.2
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &559371102
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559371100}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -30.3, y: -32.7, z: 38.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &590062257
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,7 +4401,7 @@ MonoBehaviour:
   Positions:
   - {x: -20, y: -2.1, z: -14.02}
   - {x: -13.80125, y: -2.1, z: -4.545}
-  - {x: -13.8, y: -2.1, z: 545}
+  - {x: -13.8, y: -2.1, z: 5.45}
   Rotations:
   - {x: -90, y: 0, z: 90}
   - {x: -90, y: 0, z: 180}
@@ -7871,13 +7936,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoldMultiplier: 2
   Positions:
-  - {x: -14, y: -2.1, z: -10.25}
-  - {x: -20.507, y: -2.1, z: -4.571}
-  - {x: -20.507, y: -2.1, z: -12.17}
+  - {x: -16.04, y: -2.1, z: -7.31}
+  - {x: -20.26, y: -2.1, z: -4.23}
+  - {x: -16.82, y: -2.1, z: 9.77}
   Rotations:
   - {x: -90, y: 0, z: 0}
   - {x: -90, y: 0, z: 180}
-  - {x: -90, y: 0, z: 180}
+  - {x: -90, y: 0, z: 0}
 --- !u!4 &1414354777
 Transform:
   m_ObjectHideFlags: 0
@@ -10438,8 +10503,8 @@ MonoBehaviour:
   - {fileID: 0}
   magePlayer: {fileID: 0}
   scoreBoardShowTime: 3
-  roundTotalTime: 10
-  gameTime: 10
+  roundTotalTime: 100000
+  gameTime: 100000
   runningGameTime: 0
   GoldThief1: 0
   GoldThief2: 0
