@@ -197,15 +197,23 @@ public class GameManagerCustom : PunBehaviour
                 //RoundReset();
                 if (Round == 1)
                 {
-                    ScoringEndRound = new Vector3(GoldMage, GoldThief1, GoldThief2);
+                    ScoringEndRound = new Vector3(GoldMage, 0, 0);
                 }
                 else if (Round == 2)
                 {
-                    ScoringEndRound = new Vector3(GoldThief2, GoldMage, GoldThief1);
+                    ScoringEndRound = new Vector3(0, GoldMage, 0);
                 }
                 else if (Round == 3)
                 {
-                    ScoringEndRound = new Vector3(GoldThief2, GoldThief1, GoldMage);
+                    ScoringEndRound = new Vector3(0, 0, GoldMage);
+
+                }
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach( GameObject p in players )
+                {
+                    int id = p.GetComponent<GenericUser>().myID;
+                    if (id != Round)
+                        ScoringEndRound[id - 1] = p.GetComponent<GenericUser>().currentGold;
 
                 }
                 this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.Others, ScoringEndRound);

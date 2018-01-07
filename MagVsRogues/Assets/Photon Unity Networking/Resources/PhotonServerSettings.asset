@@ -51,4 +51,6 @@ MonoBehaviour:
   - stolenCash
   - setGlobalTime
   - Bust
+  - RounPrepnextRound
+  - sendScoreToAll
   DisableAutoOpenWizard: 1
