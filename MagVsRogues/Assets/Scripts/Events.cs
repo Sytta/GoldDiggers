@@ -23,10 +23,18 @@ public class OnGoldModified : IGameEvent
 public class OnPowerUpCreated : IGameEvent
 {
     public PowerUpType Type;
+    public float Cooldown;
+
+    public OnPowerUpCreated(PowerUpType type, float cooldown)
+    {
+        Type = type;
+        Cooldown = cooldown;
+    }
 
     public OnPowerUpCreated(PowerUpType type)
     {
         Type = type;
+        Cooldown = 0.0f;
     }
 }
 

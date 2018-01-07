@@ -121,12 +121,12 @@ public class GameManagerCustom : PunBehaviour
 
     private IEnumerator ShowScores()
     {
-        //HUD.GetComponent<UIService>().ShowScores();
         HUD.GetComponent<UIService>().ShowRoundScores();
+        yield return new WaitForSeconds(scoreBoardShowTime);
+        HUD.GetComponent<UIService>().CloseScores();
+
         if (Round < 3)
         {
-            yield return new WaitForSeconds(scoreBoardShowTime);
-            HUD.GetComponent<UIService>().CloseScores();
 			Round++;
             if (PhotonNetwork.player.ID == 1)
             {
@@ -135,7 +135,9 @@ public class GameManagerCustom : PunBehaviour
         }
         else
         {
+            HUD.GetComponent<UIService>().ShowEndGameMessage();
             yield return new WaitForSeconds(scoreBoardShowTime);
+            HUD.GetComponent<UIService>().CloseEndGameMessage();
             HUD.GetComponent<UIService>().ShowTotalScores();
         }
     }
