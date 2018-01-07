@@ -20,7 +20,7 @@ public class Mage : MonoBehaviour {
             diablo = Instantiate(Resources.Load("Diablo", typeof(GameObject))) as GameObject;
             diablo.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+		if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (!diablo.activeSelf)
             {
@@ -34,7 +34,7 @@ public class Mage : MonoBehaviour {
             }
             
         }
-        else if (Input.GetKeyUp(KeyCode.Z))
+		else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             diablo.GetComponent<TeleporterDiablo>().Jail();
             diablo.SetActive(false);

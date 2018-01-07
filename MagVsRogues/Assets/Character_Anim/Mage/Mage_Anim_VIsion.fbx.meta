@@ -176,11 +176,24 @@ ModelImporter:
     2100000: 'MAge_Rig_01_Material #39'
     2100002: 'MAge_Rig_01_Material #40'
     2100004: lambert1
+    2100006: 'MAge_Rig_01_Material #41'
+    2100008: 'MAge_Rig_01_Material #42'
+    2100010: 'MAge_Rig_01_Material #29'
     4300000: MAge_Rig_01:alchemist_Body
     7400000: Take 001
     9500000: //RootNode
     13700000: MAge_Rig_01:alchemist_Body
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'MAge_Rig_01_Material #41'
+    second: {fileID: 2100000, guid: a3327ed5e29422f47aa6ad2da1af3991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'MAge_Rig_01_Material #42'
+    second: {fileID: 2100000, guid: 094cfc8a5d9d7314d8d994468793fabf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
