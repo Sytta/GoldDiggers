@@ -23,7 +23,7 @@ public class GameManagerCustom : PunBehaviour
     [SerializeField] public List<GameObject> initialiser;
     [SerializeField] public List<Transform> teleportLocations;
     public GameObject magePlayer;
-    public Dictionary<int,GameObject> playerDictionary;
+    public Dictionary<int, GameObject> playerDictionary;
 
     public float roundTotalTime = 60.0f;
     public float gameTime = 60.0f;
@@ -44,13 +44,15 @@ public class GameManagerCustom : PunBehaviour
             GoldThief1 += ammount;
         else
             GoldThief2 += ammount;
-        
+
         GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold - GoldThief1 - GoldThief2;
         Debug.Log(GoldMage);
     }
 
     public void StartGame()
     {
+        StopAllCoroutines();
+        StartCoroutine(SendGameTime());
         runningGameTime = true;
     }
 
@@ -66,7 +68,7 @@ public class GameManagerCustom : PunBehaviour
 
     public void RoundReset()
     {
-        Round = (Round)%3 +1;
+        Round = (Round) % 3 + 1;
         Debug.Log("Starting round : " + Round);
         StartGame();
         var players = GameObject.FindGameObjectsWithTag("Player");
@@ -161,7 +163,7 @@ public class GameManagerCustom : PunBehaviour
     #region Core Gameplay Methods
     private void UpdatePlayerTexts()
     {
-        
+
     }
     #endregion
 
@@ -212,7 +214,7 @@ public class GameManagerCustom : PunBehaviour
                 if (go != null)
                     go.SetActive(true);
             }
-       
+
         }
         else
         {
@@ -249,7 +251,7 @@ public class GameManagerCustom : PunBehaviour
 
     void CreatePlayerObject()
     {
-        Vector3 position = new Vector3( 0f, 2.5f, 0f );
+        Vector3 position = new Vector3(0f, 2.5f, 0f);
 
         //GameObject newPlayerObject = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
 
@@ -261,7 +263,7 @@ public class GameManagerCustom : PunBehaviour
 
         var newPlayerId = newPlayerObject.GetComponent<PhotonView>().ownerId;
         Debug.Log("spawned player with id : " + newPlayerId);
-      
+
 
     }
 
@@ -269,10 +271,10 @@ public class GameManagerCustom : PunBehaviour
     {
         var players = GameObject.FindGameObjectsWithTag("Player");
 
-        foreach(var player in players)
+        foreach (var player in players)
         {
             var mageNumber = Round;
-            if(player.GetComponent<GenericUser>().myID == mageNumber)
+            if (player.GetComponent<GenericUser>().myID == mageNumber)
             {
                 magePlayer = player;
                 return;
@@ -280,12 +282,18 @@ public class GameManagerCustom : PunBehaviour
         }
     }
 
+    [PunRPC]
+    public void setGlobalTime(int t)
+    {
+        gameTime = t;
+    }
+
     public void ChangeMageCharacter(int id)
     {
         int currId = 0;
-        foreach(var kvp in playerDictionary)
+        foreach (var kvp in playerDictionary)
         {
-            if(kvp.Value == magePlayer)
+            if (kvp.Value == magePlayer)
             {
                 currId = kvp.Key;
             }
@@ -294,4 +302,15 @@ public class GameManagerCustom : PunBehaviour
 
         magePlayer = playerDictionary[currId];
     }
+
+    private IEnumerator SendGameTime()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(1.0f);
+           this.GetComponent<PhotonView>().RPC("setGlobalTime", PhotonTargets.Others, gameTime);
+        }
+    }
+
+
 }
