@@ -33,8 +33,8 @@ public class GameManagerCustom : PunBehaviour
     public int GoldThief2 = 0;
     public int GoldMage = -1;
 
-    private Vector3 ScoringOverall;
-    private Vector3 ScoringEndRound;
+    public Vector3 ScoringOverall;
+    public Vector3 ScoringEndRound;
     int spawnNumber = 2;
 
     [PunRPC]
@@ -70,52 +70,45 @@ public class GameManagerCustom : PunBehaviour
 
     public void RoundReset()
     {
-        Round = (Round) % 3 + 1;
-        Debug.Log("Starting round : " + Round);
-        StartGame();
-
-        GoldThief1 = 0;
-        GoldThief2 = 0;
-        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
-        ScoringEndRound = new Vector3(0, 0, 0);
-        var players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (var player in players)
+        if (Round < 3)
         {
-            if (Round < 3)
+            GoldThief1 = 0;
+            GoldThief2 = 0;
+            GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
+            ScoringEndRound = new Vector3(0, 0, 0);
+
+            Round++;
+            Debug.Log("Starting round : " + Round);
+            StartGame();
+            var players = GameObject.FindGameObjectsWithTag("Player");
+            foreach (var player in players)
             {
-                Round++;
-                Debug.Log("Starting round : " + Round);
-                StartGame();
-                var players = GameObject.FindGameObjectsWithTag("Player");
-                foreach (var player in players)
+                var mageNumber = Round;
+                var playerGenericUser = player.GetComponent<GenericUser>();
+                var playerNumber = playerGenericUser.myID;
+                if (playerNumber == mageNumber)
                 {
-                    var mageNumber = Round;
-                    var playerGenericUser = player.GetComponent<GenericUser>();
-                    var playerNumber = playerGenericUser.myID;
-                    if (playerNumber == mageNumber)
-                    {
-                        magePlayer = player;
-                        player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
-                        Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
-                        player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
+                    magePlayer = player;
+                    player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
+                    Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
+                    player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
-                    }
-                    else
-                    {
-                        player.GetComponent<PhotonView>().RPC("setTheif", PhotonTargets.All, playerNumber);
-                        float offsetX = spawnNumber == 2 ? -4.5f : 0.5f;
-                        Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
-
-                        spawnNumber = spawnNumber == 2 ? 1 : 2;
-                        player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
-
-                    }
                 }
-                initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
+                else
+                {
+                    player.GetComponent<PhotonView>().RPC("setTheif", PhotonTargets.All, playerNumber);
+                    float offsetX = spawnNumber == 2 ? -4.5f : 0.5f;
+                    Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
+
+                    spawnNumber = spawnNumber == 2 ? 1 : 2;
+                    player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
+
+                }
             }
-            else
-            {
-            }
+            initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
+        }
+        else
+        {
         }
     }
 
