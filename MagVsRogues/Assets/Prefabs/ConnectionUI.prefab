@@ -1174,7 +1174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MAG VS. ROGUES
+  m_Text: GOLD DIGGER
 --- !u!114 &114879646268302570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1234,7 +1234,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MAG VS. ROGUES
+  m_Text: GOLD DIGGER
 --- !u!114 &114936299081014726
 MonoBehaviour:
   m_ObjectHideFlags: 1
