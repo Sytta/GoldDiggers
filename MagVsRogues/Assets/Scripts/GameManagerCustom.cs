@@ -68,15 +68,21 @@ public class GameManagerCustom : PunBehaviour
         this.GetComponent<PhotonView>().RPC("setGlobalTime", PhotonTargets.All, gameTime);
     }
 
+    [PunRPC]
+    public void RounPrepnextRound(Vector3 v)
+    {
+        GoldThief1 = 0;
+        GoldThief2 = 0;
+        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
+        ScoringEndRound = new Vector3(0, 0, 0);
+        ScoringOverall += v;
+    }
+
     public void RoundReset()
     {
+        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.All, ScoringEndRound);
         if (Round < 3)
         {
-            GoldThief1 = 0;
-            GoldThief2 = 0;
-            GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
-            ScoringEndRound = new Vector3(0, 0, 0);
-
             Round++;
             Debug.Log("Starting round : " + Round);
             StartGame();
