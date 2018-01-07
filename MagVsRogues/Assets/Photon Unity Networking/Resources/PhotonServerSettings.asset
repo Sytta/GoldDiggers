@@ -50,4 +50,5 @@ MonoBehaviour:
   - Withdraw
   - stolenCash
   - setGlobalTime
+  - Bust
   DisableAutoOpenWizard: 1
