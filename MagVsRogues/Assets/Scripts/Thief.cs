@@ -160,6 +160,7 @@ public class Thief: MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.T) && canTeleport)
         {
+            EventManager.Instance.QueueEvent(new OnPowerUpUsed(PowerUpType.Teleportation));
             gameManger.FindMage();
             mageCharacter = gameManger.magePlayer;
             {
