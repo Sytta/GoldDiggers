@@ -18,6 +18,7 @@ public class UIService : MonoBehaviour
 
     [Header("Scores")]
     [SerializeField] private GameObject scoreboard;
+    [SerializeField] private Text[] scorePlayer;
 
     private GameManagerCustom gameManager;
 
@@ -57,6 +58,10 @@ public class UIService : MonoBehaviour
     public void ShowScores()
     {
         scoreboard.SetActive(true);
+        for (int i = 0; i < scorePlayer.Length; i++)
+        {
+            scorePlayer[i].text = gameManager.ScoringEndRound[i].ToString();
+        }
     }
 
     public void CloseScores()
