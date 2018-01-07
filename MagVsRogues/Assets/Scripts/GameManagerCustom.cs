@@ -362,9 +362,18 @@ public class GameManagerCustom : PunBehaviour
         if (PhotonNetwork.player.ID == Round)
         {
             newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
+
         } else
         {
             newPlayerObject = PhotonNetwork.Instantiate("Thief", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Teleportation, 15.0f));
         }
 
         if (newPlayerObject != null)
@@ -386,10 +395,17 @@ public class GameManagerCustom : PunBehaviour
         if (id == Round)
         {
             newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
         }
         else
         {
             newPlayerObject = PhotonNetwork.Instantiate("Thief", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Teleportation, 15.0f));
         }
 
         if (newPlayerObject != null)

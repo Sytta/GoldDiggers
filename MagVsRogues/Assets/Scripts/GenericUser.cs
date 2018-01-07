@@ -22,13 +22,13 @@ public class GenericUser : MonoBehaviour {
             if (myID == gm.Round)
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
-                setMage(myID);
+                //setMage(myID);
                 currentGold = gm.initialiser[5].GetComponent<GoldDistribute>().MageGold;
             }
             else
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(1f, 0f, 0f);
-                setTheif(myID);
+                //setTheif(myID);
             }
         }
         else
@@ -43,9 +43,7 @@ public class GenericUser : MonoBehaviour {
     [PunRPC]
     public void setMage(int player)
     {
-        EventManager.Instance.QueueEvent(new OnPowerUpReset());
-        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
-        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
+        
 
         if(player == myID)
         {
@@ -63,7 +61,7 @@ public class GenericUser : MonoBehaviour {
     [PunRPC]
     public void setTheif(int player)
     {
-        EventManager.Instance.QueueEvent(new OnPowerUpReset());
+        //EventManager.Instance.QueueEvent(new OnPowerUpReset());
 
         if (player == myID)
         {
