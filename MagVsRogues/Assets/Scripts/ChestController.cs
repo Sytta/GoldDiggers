@@ -41,6 +41,15 @@ public class ChestController : MonoBehaviour
     void UpdateSync(int g)
     {
         gold = g;
+        UpdateMesh();
+    }
+
+
+    [PunRPC]
+    void initGold(int g)
+    {
+        gold = g;
+        initialGold = g;
     }
 
     public bool isEmpty()
