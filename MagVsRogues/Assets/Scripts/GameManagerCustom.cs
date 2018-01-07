@@ -61,7 +61,7 @@ public class GameManagerCustom : PunBehaviour
                 magePlayer = player;
                 player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
                 Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
-                this.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
+                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
             }
             else
@@ -71,7 +71,7 @@ public class GameManagerCustom : PunBehaviour
                 Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
 
                 spawnNumber = spawnNumber == 2 ? 1 : 2;
-                this.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
+                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
             }
         }
@@ -120,8 +120,20 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-
-      
+        if (PhotonNetwork.player.ID == 1)
+        {
+            if (runningGameTime)
+            {
+                gameTime -= Time.deltaTime;
+            }
+            if (gameTime <= 0.0f && runningGameTime)
+            {
+                Debug.Log("END ROUND");
+                StopGameTime();
+                ResetTime();
+                RoundReset();
+            }
+        }
 
     }
 
