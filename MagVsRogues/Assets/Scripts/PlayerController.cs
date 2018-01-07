@@ -85,12 +85,12 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetFloat("Speed", Mathf.Abs(m_AnimatorSpeed));
         //m_Animator.SetFloat("Direction", direction);
 
-        m_LastPosition = transform.position;
-
         if (m_LastPosition != transform.position)
             keepSoundWalking();
         else
             stopSoundWalking();
+
+        m_LastPosition = transform.position;
     }
 
     void keepSoundWalking()
