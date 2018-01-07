@@ -29,6 +29,7 @@ public class CameraShaderSwitch : MonoBehaviour
             var myPlayerId = mainCamera.Target.GetComponent<GenericUser>().myID;
             if (myPlayerId == gm.Round)
             {
+
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                 //Debug.Log("player count : " + players.Length);
                 for (int i = 0; i < players.Length; i++)
@@ -72,6 +73,9 @@ public class CameraShaderSwitch : MonoBehaviour
 
     void SeeThrough()
     {
+        // Animation
+        mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", true);
+
         foreach (Renderer thief in thiefs.Values)
         {
             if (thief.material.shader != null)
@@ -81,10 +85,9 @@ public class CameraShaderSwitch : MonoBehaviour
 
     void Recover()
     {
-        //for (int i = 0; i < thiefs.Count; i++)
-        //{
-        //    thiefs[i].material.shader = originalShaders[i];
-        //}
+        // Animation
+        mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", false);
+
         int cnt = 0;
         foreach (Renderer thief in thiefs.Values)
         {
