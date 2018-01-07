@@ -81,6 +81,7 @@ public class CameraSimple : MonoBehaviour
                         mat.shader = Shader.Find("Hole Shader");
                     }
                 }
+				dstFromTarget = -2.2f;
             }
         }
 
@@ -95,6 +96,8 @@ public class CameraSimple : MonoBehaviour
                 }
             }
         }
+
+		dstFromTarget = 0.1f;
 
         meshes = ms;
     }

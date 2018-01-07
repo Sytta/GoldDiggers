@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Cameras;
 
 [ExecuteInEditMode]
 public class CameraShaderSwitch : MonoBehaviour
@@ -8,7 +9,7 @@ public class CameraShaderSwitch : MonoBehaviour
     private Dictionary<int,Renderer> thiefs = new Dictionary<int, Renderer>();
     private GameManagerCustom gm;
     private PhotonView photonview;
-    public CameraSimple mainCamera;
+	public AbstractTargetFollower mainCamera;
     public Shader seeThroughShader;
     public List<Shader> originalShaders = new List<Shader>();
 

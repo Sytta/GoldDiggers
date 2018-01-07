@@ -5,12 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using System.Collections.Generic;
-
+using UnityStandardAssets.Cameras;
 using ExitGames.Client.Photon;
 
 public class GameManagerCustom : PunBehaviour
 {
-    public CameraSimple Camera;
+    public AbstractTargetFollower Camera;
 
     [SerializeField] public int Round { get; set; }
     [SerializeField] private GameObject UiScreens;

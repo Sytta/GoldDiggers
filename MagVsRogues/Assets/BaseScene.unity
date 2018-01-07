@@ -1530,6 +1530,8 @@ GameObject:
   - component: {fileID: 185198103}
   - component: {fileID: 185198102}
   - component: {fileID: 185198104}
+  - component: {fileID: 185198106}
+  - component: {fileID: 185198105}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -1558,7 +1560,7 @@ Transform:
   m_LocalPosition: {x: 33.55249, y: 1.5998926, z: 20.104156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1565348783}
+  - {fileID: 1664977690}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1568,7 +1570,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185198101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f360a6dce841ca6468682a759101f140, type: 3}
   m_Name: 
@@ -1584,6 +1586,44 @@ MonoBehaviour:
   transparentLayers:
     serializedVersion: 2
     m_Bits: 4294960383
+--- !u!114 &185198105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185198101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7845b57b407c85741964ea45f363d2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  m_AutoTargetPlayer: 1
+  m_UpdateType: 1
+  m_MoveSpeed: 100
+  m_TurnSpeed: 1.5
+  m_TurnSmoothing: 0
+  m_TiltMax: 5
+  m_TiltMin: 10
+  m_LockCursor: 0
+  m_VerticalAutoReturn: 0
+--- !u!114 &185198106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185198101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6290c680b37ad4994ed061c34ae0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipMoveTime: 0.05
+  returnTime: 0.4
+  sphereCastRadius: 0.1
+  visualiseInEditor: 0
+  closestDistance: 0.5
+  dontClipTag: Player
 --- !u!1 &187889741
 GameObject:
   m_ObjectHideFlags: 0
@@ -8921,11 +8961,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1565348782}
-  m_LocalRotation: {x: 0.11648694, y: 0, z: 0, w: 0.99319226}
+  m_LocalRotation: {x: 0.11648694, y: -0, z: -0, w: 0.99319226}
   m_LocalPosition: {x: 0, y: 1.5, z: -3.6545372}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 185198103}
+  m_Father: {fileID: 1664977690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1565348784
@@ -8996,7 +9036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f16255a57bbcb4fbd7209818fc968b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 185198104}
+  mainCamera: {fileID: 0}
   seeThroughShader: {fileID: 4800000, guid: 7562b1042bbbed047beb852748c87eba, type: 3}
   originalShaders: []
   visionCooldown: 15
@@ -9535,6 +9575,35 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300348, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
+--- !u!1 &1664977689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1664977690}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664977690
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1664977689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1565348783}
+  m_Father: {fileID: 185198103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680086543
 GameObject:
   m_ObjectHideFlags: 0
@@ -10551,7 +10620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe4b46f167e2441bbc14797417e0f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 185198104}
+  Camera: {fileID: 185198105}
   UiScreens: {fileID: 276772633}
   ConnectUiView: {fileID: 1244915656}
   WaitingUiView: {fileID: 1280702096}
