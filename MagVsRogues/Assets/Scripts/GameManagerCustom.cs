@@ -61,7 +61,6 @@ public class GameManagerCustom : PunBehaviour
     public void StartGame()
     {
         runningGameTime = true;
-		SoundManager.instance.playBgMusic ();
     }
 
     public void StopGameTime()

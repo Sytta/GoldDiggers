@@ -13,7 +13,6 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource bgMusic;
 	public AudioSource ironGate;
 	public AudioSource walkSound;
-	public AudioSource spellChannelSound;
 	// Use this for initialization
 	void Start () {
 		instance = this;
@@ -42,9 +41,4 @@ public class SoundManager : MonoBehaviour {
 		walkSound.Play ();}
 	public void stopWalk(){
 		walkSound.Stop ();}
-
-	public void playChannelSpell(){
-		spellChannelSound.Play ();}
-	public void stopChannelSpell(){
-		spellChannelSound.Stop ();}
 }
