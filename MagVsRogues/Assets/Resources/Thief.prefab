@@ -2464,8 +2464,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 3
+  instantiationId: 3
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114556003399609238
@@ -2598,8 +2598,8 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c4da7ab5001c0804683dc67f4c45ec7c, type: 3}
-  - {fileID: 2100002, guid: c4da7ab5001c0804683dc67f4c45ec7c, type: 3}
+  - {fileID: 2100000, guid: dae64d02051cc3b46b120a15c4a280e3, type: 2}
+  - {fileID: 2100000, guid: 86445f31231ea2b439e8ec6d37bbfa2e, type: 2}
   - {fileID: 2100004, guid: c4da7ab5001c0804683dc67f4c45ec7c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
