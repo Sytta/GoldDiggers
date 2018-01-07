@@ -27,8 +27,8 @@ public class CameraShaderSwitch : MonoBehaviour
 		if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
-            var myPlayerId = mainCamera.Target.GetComponent<GenericUser>().myID;
-            if (myPlayerId == gm.Round)
+            var myPlayer = mainCamera.Target.GetComponent<GenericUser>();
+            if (myPlayer == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
             {
 
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -36,7 +36,7 @@ public class CameraShaderSwitch : MonoBehaviour
                 for (int i = 0; i < players.Length; i++)
                 {
                     var playerId = players[i].GetComponent<GenericUser>().myID;
-                    if (!thiefs.ContainsKey(playerId) && playerId != myPlayerId)
+                    if (!thiefs.ContainsKey(playerId) && playerId != myPlayer.GetComponent<GenericUser>().myID)
                     {
                         //Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
                         thiefs.Add(playerId, players[i].GetComponentInChildren<Renderer>());

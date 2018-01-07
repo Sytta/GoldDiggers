@@ -9036,7 +9036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f16255a57bbcb4fbd7209818fc968b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 185198105}
   seeThroughShader: {fileID: 4800000, guid: 7562b1042bbbed047beb852748c87eba, type: 3}
   originalShaders: []
   visionCooldown: 15

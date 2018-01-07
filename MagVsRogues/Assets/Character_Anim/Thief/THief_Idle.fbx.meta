@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 0866548d69e52b54fa46056109a309d6
-timeCreated: 1515336291
-=======
-guid: fbafc821c082bec46a2a9aa93a24eafe
-timeCreated: 1515336839
->>>>>>> c951d4b1d0c4b3670a9a5b188b8de78eba97c989
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -177,21 +170,7 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     13700000: Thief_Rig_01:thief
-<<<<<<< HEAD
   externalObjects: {}
-=======
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Thief_Rig_01_Material #42'
-    second: {fileID: 2100000, guid: d7b1475bc2fd47348a46b3735afa5170, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Thief_Rig_01_Material #43'
-    second: {fileID: 2100000, guid: 3e9b5c0cb5718f94fa9eb2ec782fb1b0, type: 2}
->>>>>>> c951d4b1d0c4b3670a9a5b188b8de78eba97c989
   materials:
     importMaterials: 1
     materialName: 0
