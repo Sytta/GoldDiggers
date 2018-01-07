@@ -22,22 +22,24 @@ public class OnGoldModified : IGameEvent
 
 public class OnPowerUpCreated : IGameEvent
 {
-    public int ID;
     public PowerUpType Type;
 
-    public OnPowerUpCreated(int id, PowerUpType type)
+    public OnPowerUpCreated(PowerUpType type)
     {
-        ID = id;
         Type = type;
     }
 }
 
 public class OnPowerUpUsed : IGameEvent
 {
-    public int ID;
+    public PowerUpType Type;
 
-    public OnPowerUpUsed(int powerUpId)
+    public OnPowerUpUsed(PowerUpType type)
     {
-        ID = powerUpId;
+        Type = type;
     }
+}
+
+public class OnPowerUpReset : IGameEvent
+{
 }
