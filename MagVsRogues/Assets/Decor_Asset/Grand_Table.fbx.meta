@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 94391c57f2c308142a029dc5afdf28c7
+timeCreated: 1515314583
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Chaise_01
+    100002: Chaise_02
+    100004: Chaise_03
+    100006: Chaise_04
+    100008: Chaise_05
+    100010: Chaise_06
+    100012: Chaise_07
+    100014: Chaise_08
+    100016: dagger
+    100018: Dagger:dagger
+    100020: FantasyHelmet:Helmet
+    100022: //RootNode
+    100024: Tables
+    400000: Chaise_01
+    400002: Chaise_02
+    400004: Chaise_03
+    400006: Chaise_04
+    400008: Chaise_05
+    400010: Chaise_06
+    400012: Chaise_07
+    400014: Chaise_08
+    400016: dagger
+    400018: Dagger:dagger
+    400020: FantasyHelmet:Helmet
+    400022: //RootNode
+    400024: Tables
+    2100000: Bois_metal_Biblio
+    2100002: Acier_Prison
+    2300000: Chaise_01
+    2300002: Chaise_02
+    2300004: Chaise_03
+    2300006: Chaise_04
+    2300008: Chaise_05
+    2300010: Chaise_06
+    2300012: Chaise_07
+    2300014: Chaise_08
+    2300016: dagger
+    2300018: Dagger:dagger
+    2300020: FantasyHelmet:Helmet
+    2300022: Tables
+    3300000: Chaise_01
+    3300002: Chaise_02
+    3300004: Chaise_03
+    3300006: Chaise_04
+    3300008: Chaise_05
+    3300010: Chaise_06
+    3300012: Chaise_07
+    3300014: Chaise_08
+    3300016: dagger
+    3300018: Dagger:dagger
+    3300020: FantasyHelmet:Helmet
+    3300022: Tables
+    4300000: Tables
+    4300002: Chaise_01
+    4300004: Chaise_02
+    4300006: Chaise_03
+    4300008: Chaise_04
+    4300010: Chaise_05
+    4300012: Chaise_06
+    4300014: Chaise_07
+    4300016: Chaise_08
+    4300018: Dagger:dagger
+    4300020: FantasyHelmet:Helmet
+    4300022: dagger
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
