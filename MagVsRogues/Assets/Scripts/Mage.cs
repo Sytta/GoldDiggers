@@ -9,15 +9,17 @@ public class Mage : MonoBehaviour {
     [SerializeField] private int size = 2;
     // Use this for initialization
     void Start () {
-        diablo = Instantiate(Resources.Load("Diablo", typeof(GameObject))) as GameObject;
-        diablo.SetActive(false);    
     }
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-
+            if (diablo == null)
+            {
+                diablo = Instantiate(Resources.Load("Diablo", typeof(GameObject))) as GameObject;
+                diablo.SetActive(false);
+            }
             if (!diablo.activeSelf)
             {
                 diablo.SetActive(true);

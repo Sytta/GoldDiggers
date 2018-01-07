@@ -47,6 +47,8 @@ public class TeleporterDiablo : MonoBehaviour {
 
             coll.GetComponent<Thief>().GetComponent<PhotonView>().RPC("Bust", PhotonTargets.All, null);
             coll.GetComponent<GenericUser>().Teleport(prisonCoord, coll);
+
+            coll = null;
         }
     }
 }
