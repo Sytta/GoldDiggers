@@ -51,8 +51,6 @@ public class GameManagerCustom : PunBehaviour
 
     public void StartGame()
     {
-        StopAllCoroutines();
-        StartCoroutine(SendGameTime());
         runningGameTime = true;
     }
 
@@ -64,6 +62,7 @@ public class GameManagerCustom : PunBehaviour
     {
         StopGameTime();
         gameTime = roundTotalTime;
+        this.GetComponent<PhotonView>().RPC("setGlobalTime", PhotonTargets.Others, gameTime);
     }
 
     public void RoundReset()
@@ -143,12 +142,13 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
+        if (runningGameTime)
+        {
+            gameTime -= Time.deltaTime;
+        }
+
         if (PhotonNetwork.player.ID == 1)
         {
-            if (runningGameTime)
-            {
-                gameTime -= Time.deltaTime;
-            }
             if (gameTime <= 0.0f && runningGameTime)
             {
                 Debug.Log("END ROUND");
@@ -283,7 +283,7 @@ public class GameManagerCustom : PunBehaviour
     }
 
     [PunRPC]
-    public void setGlobalTime(int t)
+    public void setGlobalTime(float t)
     {
         gameTime = t;
     }
@@ -302,15 +302,4 @@ public class GameManagerCustom : PunBehaviour
 
         magePlayer = playerDictionary[currId];
     }
-
-    private IEnumerator SendGameTime()
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(1.0f);
-           this.GetComponent<PhotonView>().RPC("setGlobalTime", PhotonTargets.Others, gameTime);
-        }
-    }
-
-
 }
