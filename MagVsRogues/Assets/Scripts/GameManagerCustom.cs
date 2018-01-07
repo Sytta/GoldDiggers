@@ -353,8 +353,8 @@ public class GameManagerCustom : PunBehaviour
 
         GameObject newPlayerObject;// = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
 
-        Debug.Log("UserId: " + this.GetComponent<PhotonView>().viewID);
-        if (this.GetComponent<PhotonView>().viewID == Round)
+        Debug.Log("UserId: " + PhotonNetwork.player.ID);
+        if (PhotonNetwork.player.ID == Round)
         {
             newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
         } else

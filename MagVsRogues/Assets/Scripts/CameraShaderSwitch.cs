@@ -24,11 +24,14 @@ public class CameraShaderSwitch : MonoBehaviour
 
     private void Update()
     {
-		if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
+		if (mainCamera.Target == null)
+			return;
+        var myPlayer = mainCamera.Target.GetComponent<GenericUser>();
+        if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
-            var myPlayerId = mainCamera.Target.GetComponent<GenericUser>().myID;
-            if (myPlayerId == gm.Round)
+            
+            if (myPlayer == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
             {
 
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -36,7 +39,7 @@ public class CameraShaderSwitch : MonoBehaviour
                 for (int i = 0; i < players.Length; i++)
                 {
                     var playerId = players[i].GetComponent<GenericUser>().myID;
-                    if (!thiefs.ContainsKey(playerId) && playerId != myPlayerId)
+                    if (!thiefs.ContainsKey(playerId) && playerId != myPlayer.GetComponent<GenericUser>().myID)
                     {
                         //Debug.Log("Added player : " + players[i].GetComponent<GenericUser>().myID);
                         thiefs.Add(playerId, players[i].GetComponentInChildren<Renderer>());
@@ -51,8 +54,8 @@ public class CameraShaderSwitch : MonoBehaviour
 
         } else 
         {
-            
-            Recover();
+            if (myPlayer == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
+                Recover();
         }
 		if (Input.GetKeyUp(KeyCode.Mouse1) && canUseVision) {
 			canUseVision = false;
@@ -74,6 +77,7 @@ public class CameraShaderSwitch : MonoBehaviour
 
     void SeeThrough()
     {
+
         // Animation
         if (mainCamera.Target != null)
             mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", true);
