@@ -31,6 +31,10 @@ ModelImporter:
     100046: pCube53 2
     100048: pCube53 3
     100050: //RootNode
+    100052: Bibliotheque_coin
+    100054: Bibliotheque_Coin1
+    100056: Bibliotheque_Milieu
+    100058: Bibliotheque_Murale
     400000: Echelle
     400002: Module_Bibliotheque1
     400004: Module_Bibliotheque2
@@ -57,7 +61,13 @@ ModelImporter:
     400046: pCube53 2
     400048: pCube53 3
     400050: //RootNode
+    400052: Bibliotheque_coin
+    400054: Bibliotheque_Coin1
+    400056: Bibliotheque_Milieu
+    400058: Bibliotheque_Murale
     2100000: lambert1
+    2100002: Livres
+    2100004: Bois_metal_Biblio
     2300000: Echelle
     2300002: pCube49
     2300004: pCube49 1
@@ -79,6 +89,10 @@ ModelImporter:
     2300036: pCube53 1
     2300038: pCube53 2
     2300040: pCube53 3
+    2300042: Bibliotheque_coin
+    2300044: Bibliotheque_Coin1
+    2300046: Bibliotheque_Milieu
+    2300048: Bibliotheque_Murale
     3300000: Echelle
     3300002: pCube49
     3300004: pCube49 1
@@ -100,6 +114,10 @@ ModelImporter:
     3300036: pCube53 1
     3300038: pCube53 2
     3300040: pCube53 3
+    3300042: Bibliotheque_coin
+    3300044: Bibliotheque_Coin1
+    3300046: Bibliotheque_Milieu
+    3300048: Bibliotheque_Murale
     4300000: pCube49
     4300002: pCube50
     4300004: pCube51
@@ -121,6 +139,10 @@ ModelImporter:
     4300036: pCube52
     4300038: pCube53
     4300040: Echelle
+    4300042: Bibliotheque_Milieu
+    4300044: Bibliotheque_Murale
+    4300046: Bibliotheque_coin
+    4300048: Bibliotheque_Coin1
     9500000: //RootNode
   externalObjects: {}
   materials:
