@@ -3688,7 +3688,7 @@ Prefab:
     - target: {fileID: 224087253680912988, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224253719643114648, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -3708,7 +3708,7 @@ Prefab:
     - target: {fileID: 224253719643114648, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224000144745614472, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
@@ -3737,7 +3737,7 @@ Prefab:
     - target: {fileID: 224335756796306534, guid: 1b6c9f2874d2a486fb5d77df60ef6b28,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b6c9f2874d2a486fb5d77df60ef6b28, type: 2}
@@ -10627,7 +10627,7 @@ MonoBehaviour:
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
   HUD: {fileID: 540190628}
-  PlayerCount: 1
+  PlayerCount: 3
   initialiser:
   - {fileID: 1896675114}
   - {fileID: 1414354775}
@@ -10643,8 +10643,8 @@ MonoBehaviour:
   - {fileID: 764481196}
   magePlayer: {fileID: 0}
   scoreBoardShowTime: 3
-  roundTotalTime: 100000
-  gameTime: 100000
+  roundTotalTime: 60
+  gameTime: 60
   runningGameTime: 0
   GoldThief1: 0
   GoldThief2: 0
@@ -11075,7 +11075,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100360, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}

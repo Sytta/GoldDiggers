@@ -55,9 +55,11 @@ public class Thief: MonoBehaviour
         {
             coll = other.gameObject;
             canLoot = !coll.GetComponent<ChestController>().isEmpty();
-            gameManger.FindMage();
-            if (!gameManger.magePlayer.GetPhotonView().isMine)
-                coll.GetComponent<ChestController>().ShowInviteMessage();
+			if (gameManger != null) {
+				gameManger.FindMage ();
+				if (!gameManger.magePlayer.GetPhotonView ().isMine)
+					coll.GetComponent<ChestController> ().ShowInviteMessage ();
+			}
         }
         else
             canLoot = false;
