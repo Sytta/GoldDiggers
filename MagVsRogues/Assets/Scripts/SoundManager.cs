@@ -11,6 +11,8 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource coinPickUpSound;
 	public AudioSource winSound;
 	public AudioSource bgMusic;
+	public AudioSource ironGate;
+	public AudioSource walkSound;
 	// Use this for initialization
 	void Start () {
 		instance = this;
@@ -32,4 +34,11 @@ public class SoundManager : MonoBehaviour {
 		bgMusic.Play ();}
 	public void playWin(){
 		winSound.Play ();}
+	public void playIronGate(){
+		ironGate.Play ();}
+
+	public void playWalk(){
+		walkSound.Play ();}
+	public void stopWalk(){
+		walkSound.Stop ();}
 }
