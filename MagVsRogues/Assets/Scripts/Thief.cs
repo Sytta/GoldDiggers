@@ -164,14 +164,14 @@ public class Thief: MonoBehaviour
         }
     }
 
-    [PunRPC]
-    void Prison(float[] p)
-    {
-        if ((int)(p[3]) == this.gameObject.GetComponent<GenericUser>().myID)
-        {
-            Vector3 pos = new Vector3(p[0], p[1], p[2]);
-            this.gameObject.transform.position = pos;
-        }
-    }
+    //[PunRPC]
+    //void Prison(float[] p)
+    //{
+    //    if ((int)(p[3]) == this.gameObject.GetComponent<GenericUser>().myID)
+    //    {
+    //        Vector3 pos = new Vector3(p[0], p[1], p[2]);
+    //        this.gameObject.transform.position = pos;
+    //    }
+    //}
 
 }

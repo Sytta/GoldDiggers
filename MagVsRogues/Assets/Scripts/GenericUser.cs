@@ -36,14 +36,14 @@ public class GenericUser : MonoBehaviour {
 
     }
 
-    void setMage()
+    public void setMage()
     {
         this.GetComponent<Thief>().enabled = (false);
         this.GetComponent<Mage>().enabled = (true);
         // TODO Swap UI and swap skins
     }
 
-    void setTheif()
+    public void setTheif()
     {
         this.GetComponent<Thief>().enabled = (true);
         this.GetComponent<Thief>().SpawnThief(myID);
@@ -55,5 +55,15 @@ public class GenericUser : MonoBehaviour {
     {
         GetComponent<Mage>().enabled = m_PhotonView.isMine;
         GetComponent<Thief>().enabled = m_PhotonView.isMine;
+    }
+
+    [PunRPC]
+    void Prison(float[] p)
+    {
+        if ((int)(p[3]) == this.gameObject.GetComponent<GenericUser>().myID)
+        {
+            Vector3 pos = new Vector3(p[0], p[1], p[2]);
+            this.gameObject.transform.position = pos;
+        }
     }
 }
