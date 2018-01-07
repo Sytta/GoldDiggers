@@ -40,6 +40,7 @@ public class Mage : MonoBehaviour {
             diablo.SetActive(false);
             // Animation
             animator.SetBool("PutInPrison", false);
+			SoundManager.instance.playSpell ();
 
         }
         if (diablo != null && diablo.activeSelf)

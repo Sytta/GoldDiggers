@@ -87,6 +87,8 @@ public class UIService : MonoBehaviour
                 playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
             playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
         }
+
+		SoundManager.instance.playWin ();
     }
 
     public void ShowTotalScores()
@@ -104,6 +106,8 @@ public class UIService : MonoBehaviour
                 playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
             playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
+
+		SoundManager.instance.playWin ();
     }
 
     public void CloseScores()
