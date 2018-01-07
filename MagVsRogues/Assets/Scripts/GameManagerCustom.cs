@@ -38,6 +38,11 @@ public class GameManagerCustom : PunBehaviour
     public Vector3 ScoringEndRound;
     int spawnNumber = 2;
 
+    private void OnDestroy()
+    {
+        PhotonNetwork.Disconnect();
+    }
+
     [PunRPC]
     public void stolenCash(int[] data)
     {
@@ -238,7 +243,7 @@ public class GameManagerCustom : PunBehaviour
         foreach (var player in players)
         {
             var mageNumber = Round;
-            if (player.GetComponent<GenericUser>().myID == this.GetComponent<PhotonView>().viewID)
+            if (player.GetComponent<GenericUser>().myID == PhotonNetwork.player.ID)
             {
                 CreatePlayerObject(player.GetComponent<GenericUser>().myID);
                 //this.GetComponent<PhotonView>().ownerId = player.GetComponent<GenericUser>().myID;
@@ -357,9 +362,18 @@ public class GameManagerCustom : PunBehaviour
         if (PhotonNetwork.player.ID == Round)
         {
             newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
+
         } else
         {
             newPlayerObject = PhotonNetwork.Instantiate("Thief", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Teleportation, 15.0f));
         }
 
         if (newPlayerObject != null)
@@ -381,10 +395,17 @@ public class GameManagerCustom : PunBehaviour
         if (id == Round)
         {
             newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
         }
         else
         {
             newPlayerObject = PhotonNetwork.Instantiate("Thief", position, Quaternion.identity, 0);
+
+            EventManager.Instance.QueueEvent(new OnPowerUpReset());
+            EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Teleportation, 15.0f));
         }
 
         if (newPlayerObject != null)

@@ -31,6 +31,11 @@ public class PowerUpUI : MonoBehaviour
         EventManager.Instance.AddListener<OnPowerUpUsed>(Handle);
     }
 
+    public void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener<OnPowerUpUsed>(Handle);
+    }
+
     private void RefreshVisuals()
     {
         if (cooldown != 0)

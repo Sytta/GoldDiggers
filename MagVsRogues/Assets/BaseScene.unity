@@ -1026,27 +1026,27 @@ Prefab:
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 233.91446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.38268343
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
@@ -1056,22 +1056,22 @@ Prefab:
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 214.09425
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 177.286
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 638
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 359
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
@@ -1126,17 +1126,17 @@ Prefab:
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224854077513513832, guid: dfee385e7400e684490f989520133c10,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfee385e7400e684490f989520133c10, type: 2}
@@ -10627,7 +10627,7 @@ MonoBehaviour:
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
   HUD: {fileID: 540190628}
-  PlayerCount: 1
+  PlayerCount: 3
   initialiser:
   - {fileID: 1896675114}
   - {fileID: 1414354775}
@@ -10643,8 +10643,8 @@ MonoBehaviour:
   - {fileID: 764481196}
   magePlayer: {fileID: 0}
   scoreBoardShowTime: 3
-  roundTotalTime: 100000
-  gameTime: 100000
+  roundTotalTime: 60
+  gameTime: 60
   runningGameTime: 0
   GoldThief1: 0
   GoldThief2: 0
@@ -11075,7 +11075,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100360, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd49200ee0c11a4587957f69bd3b6c2, type: 3}

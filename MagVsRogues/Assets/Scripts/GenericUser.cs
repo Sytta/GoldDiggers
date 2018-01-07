@@ -43,9 +43,7 @@ public class GenericUser : MonoBehaviour {
     [PunRPC]
     public void setMage(int player)
     {
-        EventManager.Instance.QueueEvent(new OnPowerUpReset());
-        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
-        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
+        
 
         if(player == myID)
         {
@@ -63,7 +61,7 @@ public class GenericUser : MonoBehaviour {
     [PunRPC]
     public void setTheif(int player)
     {
-        EventManager.Instance.QueueEvent(new OnPowerUpReset());
+        //EventManager.Instance.QueueEvent(new OnPowerUpReset());
 
         if (player == myID)
         {
