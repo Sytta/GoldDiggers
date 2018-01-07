@@ -38,7 +38,7 @@ public class Mage : MonoBehaviour {
         {
             diablo.GetComponent<TeleporterDiablo>().Jail();
             diablo.SetActive(false);
-
+            // Animation
             animator.SetBool("PutInPrison", false);
 
         }

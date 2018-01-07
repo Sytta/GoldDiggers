@@ -87,6 +87,7 @@ public class GameManagerCustom : PunBehaviour
             //Round++;
             Debug.Log("Starting round : " + Round);
             StartGame();
+
             var players = GameObject.FindGameObjectsWithTag("Player");
             foreach (var player in players)
             {
@@ -128,10 +129,13 @@ public class GameManagerCustom : PunBehaviour
         if (Round < 3)
         {
 			Round++;
+            ReInstantiate();
+
             if (PhotonNetwork.player.ID == 1)
             {
                 RoundReset();
             }
+            
         }
         else
         {
@@ -225,6 +229,24 @@ public class GameManagerCustom : PunBehaviour
             }
         }
 
+    }
+
+    void ReInstantiate()
+    {
+        var players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (var player in players)
+        {
+            var mageNumber = Round;
+            if (player.GetComponent<GenericUser>().myID == this.GetComponent<PhotonView>().viewID)
+            {
+                CreatePlayerObject(player.GetComponent<GenericUser>().myID);
+                //this.GetComponent<PhotonView>().ownerId = player.GetComponent<GenericUser>().myID;
+                PhotonNetwork.Destroy(player);
+                
+            }
+        }
+        
     }
 
 
@@ -329,9 +351,16 @@ public class GameManagerCustom : PunBehaviour
     {
         Vector3 position = new Vector3(0f, 2.5f, 0f);
 
-        //GameObject newPlayerObject = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
+        GameObject newPlayerObject;// = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
 
-        GameObject newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+        Debug.Log("UserId: " + this.GetComponent<PhotonView>().viewID);
+        if (this.GetComponent<PhotonView>().viewID == Round)
+        {
+            newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+        } else
+        {
+            newPlayerObject = PhotonNetwork.Instantiate("Thief", position, Quaternion.identity, 0);
+        }
 
         if (newPlayerObject != null)
             Camera.Target = newPlayerObject.transform;
@@ -339,6 +368,31 @@ public class GameManagerCustom : PunBehaviour
 
         var newPlayerId = newPlayerObject.GetComponent<PhotonView>().ownerId;
         Debug.Log("spawned player with id : " + newPlayerId);
+
+
+    }
+
+    void CreatePlayerObject(int id)
+    {
+        Vector3 position = new Vector3(0f, 2.5f, 0f);
+
+        GameObject newPlayerObject;// = PhotonNetwork.Instantiate("PlayerPrefab", position, Quaternion.identity, 0 );
+
+        if (id == Round)
+        {
+            newPlayerObject = PhotonNetwork.Instantiate("Mage", position, Quaternion.identity, 0);
+        }
+        else
+        {
+            newPlayerObject = PhotonNetwork.Instantiate("Thief", position, Quaternion.identity, 0);
+        }
+
+        if (newPlayerObject != null)
+            Camera.Target = newPlayerObject.transform;
+
+
+        newPlayerObject.GetComponent<GenericUser>().myID = id;
+        Debug.Log("spawned player with id : " + id);
 
 
     }

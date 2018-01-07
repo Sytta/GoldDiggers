@@ -48,7 +48,7 @@ public class CameraShaderSwitch : MonoBehaviour
 
             EventManager.Instance.QueueEvent(new OnPowerUpUsed(PowerUpType.Infrared));
 
-        } else if (originalShaders.Count > 0)
+        } else 
         {
             
             Recover();
@@ -74,7 +74,8 @@ public class CameraShaderSwitch : MonoBehaviour
     void SeeThrough()
     {
         // Animation
-        mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", true);
+        if (mainCamera.Target != null)
+            mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", true);
 
         foreach (Renderer thief in thiefs.Values)
         {
@@ -86,7 +87,8 @@ public class CameraShaderSwitch : MonoBehaviour
     void Recover()
     {
         // Animation
-        mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", false);
+        if (mainCamera.Target != null)
+            mainCamera.Target.GetComponent<Animator>().SetBool("SeeThrough", false);
 
         int cnt = 0;
         foreach (Renderer thief in thiefs.Values)

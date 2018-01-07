@@ -5,6 +5,8 @@ using System.Linq;
 
 public class Thief: MonoBehaviour
 {
+    private Animator animator;
+
     private bool canLoot = false;
     public bool isLooting = false;
     private float animatonSpeed;
@@ -41,7 +43,9 @@ public class Thief: MonoBehaviour
         a = (magicMaxSpeedUp - magicMinSpeedUp) / (magicMaxPPS - magicMinPPS);
         b = magicMaxSpeedUp - a * magicMaxPPS;
         // TODO Get time from animation
-        animatonSpeed = 1.0f;
+        animatonSpeed = 1.958f;
+
+        animator = GetComponent<Animator>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -63,6 +67,7 @@ public class Thief: MonoBehaviour
     [PunRPC]
     public void Bust()
     {
+        animator.SetTrigger("PutInPrison");
         int[] data = new int[2];
         data[0] = -1 * (int)(goldYield / 2);
         data[1] = this.GetComponent<GenericUser>().myID;
@@ -96,9 +101,18 @@ public class Thief: MonoBehaviour
         else
             timeModifier = 1;
         timeMultiplier = 0;
+
+        // Animation
+        animator.speed = timeModifier;
+        
+
         keyDownCounter = 0;
         Debug.Log("Getting $$$ in " + animatonSpeed / timeModifier + " second(s)" );
+
+        animator.SetBool("Robber", true);
         yield return new WaitForSecondsRealtime(animatonSpeed / timeModifier);
+        // Stop animation
+        animator.SetBool("Robber", false);
 
         int collected = coll.GetComponent<ChestController>().DecreaseGold(goldAmount);
         int[] data = new int[2];
@@ -109,6 +123,7 @@ public class Thief: MonoBehaviour
         this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
         Debug.Log("Got :" + goldYield + "g");
         isLooting = false;
+
     }
 
     private Transform SelectTeleport()

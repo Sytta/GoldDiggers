@@ -48,9 +48,13 @@ public class GenericUser : MonoBehaviour {
         EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
 
         if(player == myID)
-        { 
-            this.GetComponent<Thief>().enabled = (false);
-            this.GetComponent<Mage>().enabled = (true);
+        {
+            Mage mage = GetComponent<Mage>();
+            Thief thief = GetComponent<Thief>();
+            if (thief != null)
+                this.GetComponent<Thief>().enabled = (false);
+            if (mage != null)
+                this.GetComponent<Mage>().enabled = (true);
         }
         // TODO Swap UI and swap skins
     }
@@ -63,17 +67,30 @@ public class GenericUser : MonoBehaviour {
 
         if (player == myID)
         {
-            this.GetComponent<Thief>().enabled = (true);
-            this.GetComponent<Thief>().SpawnThief(myID);
-            this.GetComponent<Mage>().enabled = (false);
+            Mage mage = GetComponent<Mage>();
+            Thief thief = GetComponent<Thief>();
+            if (mage != null)
+                this.GetComponent<Mage>().enabled = (false);
+
+            if (thief != null)
+            {
+                this.GetComponent<Thief>().enabled = (true);
+                this.GetComponent<Thief>().SpawnThief(myID);
+            }
+            
         }
         // TODO Swap UI and swap skins
     }
 
     void DisableScripts()
     {
-        GetComponent<Mage>().enabled = m_PhotonView.isMine;
-        GetComponent<Thief>().enabled = m_PhotonView.isMine;
+
+        Mage mage = GetComponent<Mage>();
+        Thief thief = GetComponent<Thief>();
+        if (mage != null)
+            mage.enabled = m_PhotonView.isMine;
+        if (thief != null)
+            GetComponent<Thief>().enabled = m_PhotonView.isMine;
     }
 
     public void Teleport(Vector3 v, GameObject go)
