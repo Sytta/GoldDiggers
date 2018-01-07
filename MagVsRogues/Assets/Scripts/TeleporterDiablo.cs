@@ -41,10 +41,6 @@ public class TeleporterDiablo : MonoBehaviour {
 
     public void Jail()
     {
-        Debug.Log(coll);
-        Debug.Log(this.gameObject.activeSelf);
-        Debug.Log(coll.gameObject.GetComponent<GenericUser>().myID);
-        Debug.Log(this.gameObject.transform.parent.GetComponent<GenericUser>().myID);
         if (coll != null && this.gameObject.activeSelf && coll.gameObject.GetComponent<GenericUser>().myID
                                                    != this.gameObject.transform.parent.GetComponent<GenericUser>().myID)
         {
