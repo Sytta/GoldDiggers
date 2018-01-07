@@ -75,7 +75,7 @@ public class Thief: MonoBehaviour
     [PunRPC]
     public void Bust()
     {
-        animator.SetTrigger("PutInPrison");
+         //animator.SetTrigger("PutInPrison");
         int[] data = new int[2];
         data[0] = -1 * (int)(goldYield / 2);
         data[1] = this.GetComponent<GenericUser>().myID;
