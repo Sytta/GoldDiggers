@@ -80,7 +80,7 @@ public class GameManagerCustom : PunBehaviour
 
     public void RoundReset()
     {
-        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.All, ScoringEndRound);
+        this.gameObject.GetComponent<PhotonView>().RPC("RounPrepnextRound", PhotonTargets.Others, ScoringEndRound);
         if (Round < 3)
         {
             Round++;
@@ -208,12 +208,20 @@ public class GameManagerCustom : PunBehaviour
                     ScoringEndRound = new Vector3(GoldThief2, GoldThief1, GoldMage);
 
                 }
+                this.gameObject.GetComponent<PhotonView>().RPC("sendScoreToAll", PhotonTargets.Others, ScoringEndRound);
                 ScoringOverall += ScoringEndRound;
 				ResetTime();
 
             }
         }
 
+    }
+
+
+    [PunRPC]
+    void sendScoreToAll(Vector3 s)
+    {
+        ScoringEndRound = s;
     }
 
     #region Core Gameplay Methods
