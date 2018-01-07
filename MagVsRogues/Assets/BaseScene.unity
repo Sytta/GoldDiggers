@@ -4407,12 +4407,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoldMultiplier: 2
   Positions:
-  - {x: -20, y: -2.1, z: -14.02}
-  - {x: -13.80125, y: -2.1, z: -4.545}
-  - {x: -13.8, y: -2.1, z: 5.45}
+  - {x: 14, y: -2.1, z: -14}
+  - {x: 14.6, y: -2.1, z: -7.32}
+  - {x: 13.7, y: -2.1, z: -4.62}
   Rotations:
   - {x: -90, y: 0, z: 90}
-  - {x: -90, y: 0, z: 180}
+  - {x: -90, y: 0, z: 90}
   - {x: -90, y: 0, z: 180}
 --- !u!4 &764481196
 Transform:
