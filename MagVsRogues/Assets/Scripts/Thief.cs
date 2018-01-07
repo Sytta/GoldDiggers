@@ -50,6 +50,9 @@ public class Thief: MonoBehaviour
         {
             coll = other.gameObject;
             canLoot = !coll.GetComponent<ChestController>().isEmpty();
+            gameManger.FindMage();
+            if (!gameManger.magePlayer.GetPhotonView().isMine)
+                coll.GetComponent<ChestController>().ShowInviteMessage();
         }
         else
             canLoot = false;
@@ -58,6 +61,10 @@ public class Thief: MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         canLoot = false;
+        if (other.tag == "Chest")
+        {
+            other.gameObject.GetComponent<ChestController>().CloseInviteMessage();
+        }
     }
 
     [PunRPC]
@@ -75,6 +82,8 @@ public class Thief: MonoBehaviour
 
     public void SpawnThief(int location)
     {   
+        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Teleportation, teleportCooldown));
+
         if(location == 2)
         {
             this.gameObject.GetComponent<GenericUser>().Teleport(new Vector3(0.5f, -2f, -5.5f), this.gameObject);
@@ -158,6 +167,7 @@ public class Thief: MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.T) && canTeleport)
         {
+            EventManager.Instance.QueueEvent(new OnPowerUpUsed(PowerUpType.Teleportation));
             gameManger.FindMage();
             mageCharacter = gameManger.magePlayer;
             {
