@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class UIService : MonoBehaviour
 {
@@ -60,9 +62,10 @@ public class UIService : MonoBehaviour
     public void ShowScores()
     {
         scoreboard.SetActive(true);
+        List<PhotonPlayer> players = PhotonNetwork.playerList.ToList();
         for (int i = 0; i < playerTotalScores.Length; i++)
         {
-            playerNames[i].text = PhotonNetwork.playerList[i].NickName;
+            playerNames[i].text = players.Find(x => x.ID == i).NickName;
             playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
             playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
