@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: ed5a8abe7886ba44499cecfda596c304
+timeCreated: 1515317366
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: GROS_POT
+    100002: GROS_POT1
+    100004: //RootNode
+    100006: pSphere10
+    100008: pSphere11
+    100010: pSphere12
+    100012: pSphere5
+    100014: pSphere6
+    100016: pSphere7
+    100018: pSphere8
+    100020: pSphere9
+    400000: GROS_POT
+    400002: GROS_POT1
+    400004: //RootNode
+    400006: pSphere10
+    400008: pSphere11
+    400010: pSphere12
+    400012: pSphere5
+    400014: pSphere6
+    400016: pSphere7
+    400018: pSphere8
+    400020: pSphere9
+    2100000: PlainteDessousPierre
+    2300000: GROS_POT
+    2300002: GROS_POT1
+    2300004: pSphere10
+    2300006: pSphere11
+    2300008: pSphere12
+    2300010: pSphere5
+    2300012: pSphere6
+    2300014: pSphere7
+    2300016: pSphere8
+    2300018: pSphere9
+    3300000: GROS_POT
+    3300002: GROS_POT1
+    3300004: pSphere10
+    3300006: pSphere11
+    3300008: pSphere12
+    3300010: pSphere5
+    3300012: pSphere6
+    3300014: pSphere7
+    3300016: pSphere8
+    3300018: pSphere9
+    4300000: pSphere5
+    4300002: pSphere6
+    4300004: pSphere7
+    4300006: pSphere8
+    4300008: pSphere9
+    4300010: pSphere10
+    4300012: pSphere11
+    4300014: pSphere12
+    4300016: GROS_POT
+    4300018: GROS_POT1
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
