@@ -45,6 +45,7 @@ public class GenericUser : MonoBehaviour {
     {
         EventManager.Instance.QueueEvent(new OnPowerUpReset());
         EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
+        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Infrared, 15.0f));
 
         if(player == myID)
         { 

@@ -45,6 +45,8 @@ public class CameraShaderSwitch : MonoBehaviour
 
             SeeThrough();
 
+            EventManager.Instance.QueueEvent(new OnPowerUpUsed(PowerUpType.Infrared));
+
         } else if (originalShaders.Count > 0)
         {
             
