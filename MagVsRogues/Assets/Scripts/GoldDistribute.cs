@@ -27,14 +27,22 @@ public class GoldDistribute : MonoBehaviour {
         chests[chests.Length - 1].GetComponent<PhotonView>().RPC("initGold", PhotonTargets.All, total);
     }
 
-    public void resetGold(GameObject go)
+    [PunRPC]
+    public void destroyChests()
     {
         GameObject[] chests = GameObject.FindGameObjectsWithTag("Chest");
         for (int i = 0; i < chests.Length; ++i)
         {
             chests[i].gameObject.tag = "Untagged";
-            PhotonNetwork.Destroy(chests[i].gameObject);
+            if (chests[i].gameObject.GetComponent<PhotonView>().isMine)
+                PhotonNetwork.Destroy(chests[i].gameObject);
         }
+    }
+
+    public void resetGold(GameObject go)
+    {
+
+        this.gameObject.transform.parent.gameObject.GetComponent<PhotonView>().RPC("destroyChests", PhotonTargets.All, null);
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[0].GetComponent<ChestSpawner>().spawn();
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[1].GetComponent<ChestSpawner>().spawn();
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[2].GetComponent<ChestSpawner>().spawn();
