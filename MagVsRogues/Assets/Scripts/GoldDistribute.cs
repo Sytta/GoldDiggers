@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoldDistribute : MonoBehaviour {
 
-    [SerializeField] private int MageGold = 1000;
+    [SerializeField] public int MageGold = 1000;
     // Use this for initialization
     void Start () {
         GameObject[] chests = GameObject.FindGameObjectsWithTag("Chest");

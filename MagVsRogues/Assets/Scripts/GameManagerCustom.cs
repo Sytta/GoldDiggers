@@ -27,8 +27,26 @@ public class GameManagerCustom : PunBehaviour
     public float roundTotalTime = 60.0f;
     public float gameTime = 60.0f;
     public bool runningGameTime = false;
+
+    private int GoldThief1 = 0;
+    private int GoldThief2 = 0;
+    private int GoldMage = -1;
     int spawnNumber = 2;
 
+    [PunRPC]
+    public void stolenCash(int[] data)
+    {
+        int ammount = data[0];
+        int thief = data[1];
+
+        if (thief == 2)
+            GoldThief1 += ammount;
+        else
+            GoldThief2 += ammount;
+        
+        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold - GoldThief1 - GoldThief2;
+        Debug.Log(GoldMage);
+    }
 
     public void StartGame()
     {
@@ -82,6 +100,7 @@ public class GameManagerCustom : PunBehaviour
     {
         RefreshUIViews();
         Round = 1;
+        GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
         playerDictionary = new Dictionary<int, GameObject>();
         StartGame();
     }

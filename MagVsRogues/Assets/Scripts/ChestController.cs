@@ -15,7 +15,10 @@ public class ChestController : MonoBehaviour
         initialHight = goldPile.localPosition.z - magicH;
     }
 
-
+    private void LateUpdate()
+    {
+        this.gameObject.GetComponent<GenericUser>().currentGold = gold;
+    }
 
     void UpdateMesh()
     {
@@ -31,9 +34,11 @@ public class ChestController : MonoBehaviour
         gold -= ammount;
         if (gold < 0)
             gold = 0;
-        this.gameObject.GetComponent<PhotonView>().RPC("UpdateSync", PhotonTargets.All, gold);
+        int withdraw = taken - gold;
+        gold += withdraw;
+        this.gameObject.GetComponent<PhotonView>().RPC("Withdraw", PhotonTargets.All, withdraw);
         UpdateMesh();
-        return taken - gold;
+        return withdraw;
     }
 
     [PunRPC]
@@ -43,6 +48,12 @@ public class ChestController : MonoBehaviour
         UpdateMesh();
     }
 
+    [PunRPC]
+    void Withdraw(int g)
+    {
+        gold -= g;
+        UpdateMesh();
+    }
 
     [PunRPC]
     void initGold(int g)
