@@ -29,9 +29,9 @@ public class GameManagerCustom : PunBehaviour
     public float gameTime = 60.0f;
     public bool runningGameTime = false;
 
-    private int GoldThief1 = 0;
-    private int GoldThief2 = 0;
-    private int GoldMage = -1;
+    public int GoldThief1 = 0;
+    public int GoldThief2 = 0;
+    public int GoldMage = -1;
     int spawnNumber = 2;
 
     [PunRPC]
@@ -144,7 +144,8 @@ public class GameManagerCustom : PunBehaviour
 
         if (runningGameTime)
         {
-            gameTime -= Time.deltaTime;
+            if (gameTime > 0.0f)
+                gameTime -= Time.deltaTime;
         }
 
         if (PhotonNetwork.player.ID == 1)

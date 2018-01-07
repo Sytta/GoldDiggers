@@ -31,7 +31,8 @@ public class UIService : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-        RefreshTimerVisuals();	
+        RefreshTimerVisuals();
+        RefreshGoldVisuals();
 	}
 
     private void RefreshTimerVisuals()
@@ -40,14 +41,14 @@ public class UIService : MonoBehaviour
         timerTxt.text = ((int)(gameManager.gameTime)).ToString();
     }
 
-    private void RefreshGoldVisuals(int gold)
+    private void RefreshGoldVisuals()
     {
-        goldThiefTxt.text = gold.ToString();
-        goldMageTxt.text = (maxGold - gold).ToString();
+        goldThiefTxt.text = (gameManager.GoldThief1 + gameManager.GoldThief2).ToString();
+        goldMageTxt.text = gameManager.GoldMage.ToString();
     }
 
     public void Handle(OnGoldModified e)
     {
-        RefreshGoldVisuals(e.goldAmount);
+        //RefreshGoldVisuals(e.goldAmount);
     }
 }
