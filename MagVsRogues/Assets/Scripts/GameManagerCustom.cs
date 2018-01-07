@@ -186,7 +186,7 @@ public class GameManagerCustom : PunBehaviour
             {
                 Debug.Log("END ROUND");
                 StopGameTime();
-                ResetTime();
+                
 
                 //RoundReset();
                 if (Round == 1)
@@ -203,6 +203,7 @@ public class GameManagerCustom : PunBehaviour
 
                 }
                 ScoringOverall += ScoringEndRound;
+				ResetTime();
 
             }
         }
