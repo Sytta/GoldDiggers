@@ -47,9 +47,12 @@ public class CameraShaderSwitch : MonoBehaviour
 
         } else if (originalShaders.Count > 0)
         {
-            canUseVision = false;
+            
             Recover();
         }
+		if (Input.GetKeyUp ("p") && canUseVision) {
+			canUseVision = false;
+		}
 
         if (!canUseVision)
         {

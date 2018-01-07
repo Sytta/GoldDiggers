@@ -49,6 +49,9 @@ public class GenericUser : MonoBehaviour {
             this.GetComponent<Mage>().enabled = (true);
         }
         // TODO Swap UI and swap skins
+
+        EventManager.Instance.QueueEvent(new OnPowerUpReset());
+        EventManager.Instance.QueueEvent(new OnPowerUpCreated(PowerUpType.Jail));
     }
 
 
@@ -62,6 +65,8 @@ public class GenericUser : MonoBehaviour {
             this.GetComponent<Mage>().enabled = (false);
         }
         // TODO Swap UI and swap skins
+
+        EventManager.Instance.QueueEvent(new OnPowerUpReset());
     }
 
     void DisableScripts()
