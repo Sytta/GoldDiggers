@@ -3229,6 +3229,7 @@ Transform:
   - {fileID: 1857637869}
   - {fileID: 423181280}
   - {fileID: 610480992}
+  - {fileID: 1613259406}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9090,6 +9091,52 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &1613259405
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 471882930}
+    m_Modifications:
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.806
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6810002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1613259406 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: ca82fc5da8e22314281d298ef622c084, type: 3}
+  m_PrefabInternal: {fileID: 1613259405}
 --- !u!1001 &1627337273
 Prefab:
   m_ObjectHideFlags: 0
