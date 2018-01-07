@@ -29,6 +29,8 @@ public class CameraShaderSwitch : MonoBehaviour
         var myPlayer = mainCamera.Target.gameObject;
         if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
         {
+			if (!SoundManager.instance.spellChannelSound.isPlaying) {
+				SoundManager.instance.playChannelSpell ();}
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
             
             if (myPlayer == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
@@ -56,6 +58,7 @@ public class CameraShaderSwitch : MonoBehaviour
         {
             if (mainCamera.Target.gameObject == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
                 Recover();
+			SoundManager.instance.stopChannelSpell ();
         }
 		if (Input.GetKeyUp(KeyCode.Mouse1) && canUseVision) {
 			canUseVision = false;
