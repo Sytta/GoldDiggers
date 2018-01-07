@@ -89,7 +89,7 @@ public class Thief: MonoBehaviour
         int[] data = new int[2];
         data[0] = collected;
         data[1] = this.GetComponent<GenericUser>().myID;
-        GameObject.FindGameObjectsWithTag("GameManager")[0].GetComponent<GameManagerCustom>().GetComponent<PhotonView>().RPC("stolenCash", PhotonTargets.All, data);
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<PhotonView>().RPC("stolenCash", PhotonTargets.All, data);
         goldYield += collected;
         this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
         Debug.Log("Got :" + goldYield + "g");
