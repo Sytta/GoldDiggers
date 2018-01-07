@@ -17,6 +17,7 @@ TagManager:
   - Terrain
   - Teleporter
   - Fire
+  - Diablo
   layers:
   - Default
   - TransparentFX

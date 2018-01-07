@@ -95,8 +95,8 @@ public class GameManagerCustom : PunBehaviour
 
                 spawnNumber = spawnNumber == 2 ? 1 : 2;
                 player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
-
             }
+            player.GetComponent<GenericUser>().currentGold = 0;
         }
         initialiser[5].GetComponent<GoldDistribute>().resetGold(this.gameObject);
     }

@@ -130,6 +130,10 @@ public class Thief: MonoBehaviour
 
     private void Update()
     {
+        if (GameObject.FindGameObjectWithTag("Diablo") != null)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Diablo"));
+        }
         if(canLoot && coll != null)
         {
             if (Input.GetKeyUp(KeyCode.Z))
