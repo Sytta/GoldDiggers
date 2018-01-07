@@ -8,12 +8,12 @@ public class PowerUpUI : MonoBehaviour
     [SerializeField] private Image powerUpCooldown;
     [SerializeField] private float cooldown;
     private float timer;
-    private int powerUpId;
+    private PowerUpType type;
 
-    public void SetUp(int id, PowerUpType type)
+    public void SetUp(PowerUpType t)
     {
         // Assign correct images when they'll be created
-        powerUpId = id;
+        type = t;
 
         EventManager.Instance.AddListener<OnPowerUpUsed>(Handle);
     }
@@ -35,7 +35,7 @@ public class PowerUpUI : MonoBehaviour
 
     public void Handle(OnPowerUpUsed e)
     {
-        if (e.ID != powerUpId)
+        if (e.Type != type)
             return;
 
         timer = 0.0f;
@@ -49,5 +49,6 @@ public enum PowerUpType
 {
     Teleportation,
     SpeedUp,
-    Infrared
+    Infrared,
+    Jail
 }

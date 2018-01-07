@@ -6,11 +6,9 @@ public class UIService : MonoBehaviour
 {
     [Header("Timer")]
     [SerializeField] private Image timerFill;
-    [SerializeField] private float roundTime = 60.0f;
     [SerializeField] private Text timerTxt;
 
     [Header("Gold")]
-    [SerializeField] private float maxGold = 1000;
     [SerializeField] private Text goldMageTxt;
     [SerializeField] private Text goldThiefTxt;
 
@@ -25,8 +23,14 @@ public class UIService : MonoBehaviour
 	{
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManagerCustom>();
 
-        EventManager.Instance.AddListener<OnGoldModified>(Handle);
+        EventManager.Instance.AddListener<OnPowerUpCreated>(Handle);
+        EventManager.Instance.AddListener<OnPowerUpReset>(Handle);
 	}
+
+    void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener<OnPowerUpCreated>(Handle);
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -47,8 +51,17 @@ public class UIService : MonoBehaviour
         goldMageTxt.text = gameManager.GoldMage.ToString();
     }
 
-    public void Handle(OnGoldModified e)
+    public void Handle(OnPowerUpCreated e)
     {
-        //RefreshGoldVisuals(e.goldAmount);
+        GameObject powerUp = Instantiate(powerUpPrefab, powerUpsContainer);
+        powerUp.GetComponent<PowerUpUI>().SetUp(e.Type);
+    }
+
+    public void Handle(OnPowerUpReset e)
+    {
+        foreach (Transform child in powerUpsContainer)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 }
