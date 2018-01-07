@@ -44,4 +44,5 @@ MonoBehaviour:
   - TaggedPlayer
   - UpdateSync
   - Prison
+  - initGold
   DisableAutoOpenWizard: 1

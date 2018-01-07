@@ -49,9 +49,7 @@ public class ChestController : MonoBehaviour
     void initGold(int g)
     {
         gold = g;
-        initialGold = gold;
-        initialHight = goldPile.localPosition.z - magicH;
-        UpdateMesh();
+        initialGold = g;
     }
 
     public bool isEmpty()
