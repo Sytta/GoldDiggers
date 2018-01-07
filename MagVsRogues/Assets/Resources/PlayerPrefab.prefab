@@ -1593,8 +1593,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 11400000}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 2
+  instantiationId: 2
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!137 &13700000
@@ -1801,6 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab928229a3fc1234dacf3770a92b4c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLooting: 0
   goldAmount: 5
   magicMinPPS: 4
   magicMaxPPS: 20
@@ -1809,7 +1810,7 @@ MonoBehaviour:
   teleportCooldown: 15
   teleportTimer: 15
   canTeleport: 1
-  hasTeleportPower: 0
+  hasTeleportPower: 1
   TeleporterLocations: []
   gameManger: {fileID: 0}
 --- !u!114 &114388806202206362
@@ -1824,6 +1825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myID: -1
+  currentGold: 0
   playerPosition: {fileID: 4310054492741280}
 --- !u!114 &114616614841091702
 MonoBehaviour:

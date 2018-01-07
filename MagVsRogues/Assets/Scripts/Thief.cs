@@ -27,7 +27,7 @@ public class Thief: MonoBehaviour
     public float teleportCooldown = 15.0f;
     public float teleportTimer = 15.0f;
     public bool canTeleport = true;
-    public bool hasTeleportPower = false;
+    public bool hasTeleportPower = true;
     public List<Transform> TeleporterLocations;
     public GameManagerCustom gameManger;
     private GameObject mageCharacter;
