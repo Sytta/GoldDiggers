@@ -5927,7 +5927,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1860739895}
-  - component: {fileID: 1860739897}
   - component: {fileID: 1860739896}
   - component: {fileID: 1860739898}
   - component: {fileID: 1860739899}
@@ -5971,17 +5970,6 @@ MonoBehaviour:
   InputField: {fileID: 1570420217}
   UserId: 
   previousRoom: 
---- !u!114 &1860739897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1860739894}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beaae63f7865d7c41b3aced4e96e790d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1860739898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,7 +5986,7 @@ MonoBehaviour:
   ConnectUiView: {fileID: 1244915656}
   WaitingUiView: {fileID: 1280702096}
   DisconnectedPanel: {fileID: 196499497}
-  PlayerCount: 1
+  PlayerCount: 2
   initialiser:
   - {fileID: 674884995}
   - {fileID: 1635761187}

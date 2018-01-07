@@ -49,4 +49,5 @@ MonoBehaviour:
   - setTheif
   - Withdraw
   - stolenCash
+  - setGlobalTime
   DisableAutoOpenWizard: 1
