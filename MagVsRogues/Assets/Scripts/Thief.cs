@@ -91,7 +91,7 @@ public class Thief: MonoBehaviour
         data[1] = this.GetComponent<GenericUser>().myID;
         GameObject.FindGameObjectsWithTag("GameManager")[0].GetComponent<GameManagerCustom>().GetComponent<PhotonView>().RPC("stolenCash", PhotonTargets.All, data);
         goldYield += collected;
-
+        this.gameObject.GetComponent<GenericUser>().currentGold = goldYield;
         Debug.Log("Got :" + goldYield + "g");
         isLooting = false;
     }

@@ -15,10 +15,6 @@ public class ChestController : MonoBehaviour
         initialHight = goldPile.localPosition.z - magicH;
     }
 
-    private void LateUpdate()
-    {
-        this.gameObject.GetComponent<GenericUser>().currentGold = gold;
-    }
 
     void UpdateMesh()
     {
