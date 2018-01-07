@@ -26,7 +26,7 @@ public class CameraShaderSwitch : MonoBehaviour
     {
 		if (mainCamera.Target == null)
 			return;
-        var myPlayer = mainCamera.Target.GetComponent<GenericUser>();
+        var myPlayer = mainCamera.Target.gameObject;
         if (Input.GetKey(KeyCode.Mouse1) && canUseVision)
         {
             gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>();
@@ -54,7 +54,7 @@ public class CameraShaderSwitch : MonoBehaviour
 
         } else 
         {
-            if (myPlayer == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
+            if (mainCamera.Target.gameObject == GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerCustom>().magePlayer)
                 Recover();
         }
 		if (Input.GetKeyUp(KeyCode.Mouse1) && canUseVision) {
