@@ -353,7 +353,22 @@ ModelImporter:
     9500000: //RootNode
     13700000: alchemist_Body
     13700002: MAge_Rig_01:alchemist_Body
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'MAge_Rig_01_Material #29'
+    second: {fileID: 2100000, guid: 094cfc8a5d9d7314d8d994468793fabf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'MAge_Rig_01_Material #41'
+    second: {fileID: 2100000, guid: a3327ed5e29422f47aa6ad2da1af3991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'MAge_Rig_01_Material #42'
+    second: {fileID: 2100000, guid: 094cfc8a5d9d7314d8d994468793fabf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
