@@ -229,9 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoldMultiplier: 2
   Positions:
-  - {x: -20.7, y: -2.1, z: 9}
-  - {x: -15, y: -2.1, z: 2.107}
-  - {x: -20, y: -2.1, z: 2.75}
+  - {x: 20.7, y: -2.1, z: 9}
+  - {x: 15, y: -2.1, z: 2.107}
+  - {x: 20, y: -2.1, z: 2.75}
   Rotations:
   - {x: -90, y: 0, z: 0}
   - {x: -90, y: 0, z: 90}
@@ -7946,7 +7946,7 @@ MonoBehaviour:
   Positions:
   - {x: -16.04, y: -2.1, z: -7.31}
   - {x: -20.26, y: -2.1, z: -4.23}
-  - {x: -16.82, y: -2.1, z: 9.77}
+  - {x: -16.82, y: -2.1, z: -9.77}
   Rotations:
   - {x: -90, y: 0, z: 0}
   - {x: -90, y: 0, z: 180}
