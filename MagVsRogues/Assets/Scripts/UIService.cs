@@ -68,7 +68,8 @@ public class UIService : MonoBehaviour
         scoreboard.SetActive(true);
         for (int i = 0; i < playerTotalScores.Length; i++)
         {
-            playerNames[i].text = PhotonPlayer.Find(i+1).NickName;
+            if (PhotonPlayer.Find(i + 1) != null)
+                playerNames[i].text = PhotonPlayer.Find(i+1).NickName;
             playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
             playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
@@ -84,7 +85,8 @@ public class UIService : MonoBehaviour
 
         for (int i = 0; i < playerRoundScores.Length; i++)
         {
-            playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
+            if (PhotonPlayer.Find(i + 1) != null)
+                playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
             playerRoundScores[i].text = gameManager.ScoringEndRound[i].ToString();
         }
     }
@@ -99,7 +101,8 @@ public class UIService : MonoBehaviour
 
         for (int i = 0; i < playerTotalScores.Length; i++)
         {
-            playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
+            if (PhotonPlayer.Find(i + 1) != null)
+                playerNames[i].text = PhotonPlayer.Find(i + 1).NickName;
             playerTotalScores[i].text = gameManager.ScoringOverall[i].ToString();
         }
     }
