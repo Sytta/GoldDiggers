@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class OpenMap : MonoBehaviour {
 
     [SerializeField] private float prisonArea;
-    [SerializeField] private Button open;
-    [SerializeField] private Button close;
+    [SerializeField] private GameObject open;
+    [SerializeField] private GameObject close;
 
     [SerializeField] private GameObject map;
     private GameManagerCustom gm;
@@ -26,11 +26,24 @@ public class OpenMap : MonoBehaviour {
             if (Vector3.Distance(transform.position, gm.magePlayer.transform.position) < prisonArea)
             {
                 if (!map.active)
-                    open.gameObject.SetActive(true);
+                {
+                    open.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.M))
+                    {
+                        ActivateMap();
+                    }
+                }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.M))
+                    {
+                        DeactivateMap();
+                    }
+                }
             }
             else
             {
-                open.gameObject.SetActive(false);
+                open.SetActive(false);
                 DeactivateMap();
             }
         }
@@ -39,13 +52,13 @@ public class OpenMap : MonoBehaviour {
     public void ActivateMap()
     {
         map.SetActive(true);
-        open.gameObject.SetActive(false);
-        close.gameObject.SetActive(true);
+        open.SetActive(false);
+        close.SetActive(true);
     }
 
     public void DeactivateMap()
     {
         map.SetActive(false);
-        close.gameObject.SetActive(false);
+        close.SetActive(false);
     }
 }

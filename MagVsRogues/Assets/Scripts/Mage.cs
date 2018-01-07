@@ -5,10 +5,12 @@ using UnityEngine;
 public class Mage : MonoBehaviour {
 
     private GameObject diablo = null;
+    private Animator animator;
 
     [SerializeField] private int size = 2;
     // Use this for initialization
     void Start () {
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,9 @@ public class Mage : MonoBehaviour {
             if (!diablo.activeSelf)
             {
                 diablo.SetActive(true);
+                // Animation
+                animator.SetBool("PutInPrison", true);
+
                 diablo.transform.SetParent(this.gameObject.transform);
                 diablo.transform.localPosition = new Vector3(0, 0, size);
                 diablo.transform.localScale = new Vector3(size, 0.01f, size);
@@ -33,6 +38,9 @@ public class Mage : MonoBehaviour {
         {
             diablo.GetComponent<TeleporterDiablo>().Jail();
             diablo.SetActive(false);
+
+            animator.SetBool("PutInPrison", false);
+
         }
         if (diablo != null && diablo.activeSelf)
         {
