@@ -27,6 +27,7 @@ public class UIService : MonoBehaviour
     [SerializeField] private Text[] playerNames;
     [SerializeField] private Text[] playerRoundScores;
     [SerializeField] private Text[] playerTotalScores;
+    [SerializeField] private GameObject endGameMessage;
 
     private GameManagerCustom gameManager;
 
@@ -110,6 +111,16 @@ public class UIService : MonoBehaviour
     public void CloseScores()
     {
         scoreboard.SetActive(false);
+    }
+
+    public void ShowEndGameMessage()
+    {
+        endGameMessage.SetActive(true);
+    }
+
+    public void CloseEndGameMessage()
+    {
+        endGameMessage.SetActive(false);
     }
 
     public void Handle(OnPowerUpCreated e)
