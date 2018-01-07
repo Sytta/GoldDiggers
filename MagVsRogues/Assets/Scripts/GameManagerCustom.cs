@@ -76,7 +76,7 @@ public class GameManagerCustom : PunBehaviour
         GoldThief2 = 0;
         GoldMage = initialiser[5].GetComponent<GoldDistribute>().MageGold;
         ScoringEndRound = new Vector3(0, 0, 0);
-        ScoringOverall += v;
+        //ScoringOverall += v;
     }
 
     public void RoundReset()
@@ -230,6 +230,7 @@ public class GameManagerCustom : PunBehaviour
     void sendScoreToAll(Vector3 s)
     {
         ScoringEndRound = s;
+        ScoringOverall += s;
     }
 
     #region Core Gameplay Methods
