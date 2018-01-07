@@ -5398,6 +5398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564619893}
   - component: {fileID: 1564619894}
+  - component: {fileID: 1564619895}
   m_Layer: 0
   m_Name: GoldDistributor
   m_TagString: Untagged
@@ -5430,6 +5431,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MageGold: 200
+--- !u!114 &1564619895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564619892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1564619894}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 2
+  instantiationId: 2
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1565348782
 GameObject:
   m_ObjectHideFlags: 0

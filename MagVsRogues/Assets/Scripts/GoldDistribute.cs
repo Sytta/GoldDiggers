@@ -42,7 +42,7 @@ public class GoldDistribute : MonoBehaviour {
     public void resetGold(GameObject go)
     {
 
-        this.gameObject.transform.parent.gameObject.GetComponent<PhotonView>().RPC("destroyChests", PhotonTargets.All, null);
+        this.gameObject.GetComponent<PhotonView>().RPC("destroyChests", PhotonTargets.All, null);
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[0].GetComponent<ChestSpawner>().spawn();
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[1].GetComponent<ChestSpawner>().spawn();
         this.gameObject.transform.parent.GetComponent<GameManagerCustom>().initialiser[2].GetComponent<ChestSpawner>().spawn();
