@@ -60,6 +60,7 @@ public class Thief: MonoBehaviour
         canLoot = false;
     }
 
+    [PunRPC]
     public void Bust()
     {
         goldYield = (int)(goldYield / 2);
