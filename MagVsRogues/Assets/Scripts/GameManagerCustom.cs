@@ -61,13 +61,7 @@ public class GameManagerCustom : PunBehaviour
                 magePlayer = player;
                 player.GetComponent<PhotonView>().RPC("setMage", PhotonTargets.All, playerNumber);
                 Vector3 startLocation = new Vector3(0f, 2.5f, 0f);
-                float[] send = new float[4];
-                send[0] = startLocation.x;
-                send[1] = startLocation.y;
-                send[2] = startLocation.z;
-                send[3] = playerNumber;
-
-                player.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
+                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
             }
             else
@@ -77,13 +71,7 @@ public class GameManagerCustom : PunBehaviour
                 Vector3 startLocation = new Vector3(offsetX, -2f, -7.5f);
 
                 spawnNumber = spawnNumber == 2 ? 1 : 2;
-                float[] send = new float[4];
-                send[0] = startLocation.x;
-                send[1] = startLocation.y;
-                send[2] = startLocation.z;
-                send[3] = playerNumber;
-
-                player.GetComponent<PhotonView>().RPC("Prison", PhotonTargets.All, send);
+                player.gameObject.GetComponent<GenericUser>().Teleport(startLocation, player);
 
             }
         }
@@ -132,7 +120,7 @@ public class GameManagerCustom : PunBehaviour
             this.DisconnectedPanel.gameObject.SetActive(true);
         }
 
-        if(PhotonNetwork.player.ID == 1)
+        if (PhotonNetwork.player.ID == 1)
         {
             if (runningGameTime)
             {
@@ -141,12 +129,11 @@ public class GameManagerCustom : PunBehaviour
             if (gameTime <= 0.0f && runningGameTime)
             {
                 Debug.Log("END ROUND");
-                //StopGameTime();
-                //ResetTime();
-                //RoundReset();
+                StopGameTime();
+                ResetTime();
+                RoundReset();
             }
         }
-      
 
     }
 
