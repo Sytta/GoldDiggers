@@ -22,13 +22,13 @@ public class GenericUser : MonoBehaviour {
             if (myID == gm.Round)
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0f);
-                //setMage(myID);
+                setMage(myID);
                 currentGold = gm.initialiser[5].GetComponent<GoldDistribute>().MageGold;
             }
             else
             {
                 playerPosition.GetComponent<Renderer>().material.color = new Color(1f, 0f, 0f);
-                //setTheif(myID);
+                setTheif(myID);
             }
         }
         else
